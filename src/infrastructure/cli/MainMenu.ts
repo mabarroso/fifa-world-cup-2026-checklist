@@ -1,0 +1,57 @@
+import inquirer from 'inquirer';
+import chalk from 'chalk';
+
+export interface MenuOption {
+  name: string;
+  value: string;
+  description?: string;
+}
+
+export class MainMenu {
+  async show(): Promise<string> {
+    const answers = await inquirer.prompt([
+      {
+        type: 'list',
+        name: 'action',
+        message: chalk.bold.cyan('\n=== ALBUM PANINI FIFA WORLD CUP 2026 ==='),
+        choices: [
+          { name: '📋 Ver colección', value: 'view' },
+          { name: '✅ Marcar figurita como obtenida', value: 'mark_owned' },
+          { name: '🔄 Marcar figurita como repetida', value: 'mark_duplicate' },
+          { name: '📊 Estadísticas', value: 'stats' },
+          { name: '🔍 Buscar figurita', value: 'search' },
+          { name: '📤 Exportar faltantes', value: 'export' },
+          { name: '🔄 Resetear colección', value: 'reset' },
+          { name: '👋 Salir', value: 'exit' },
+        ],
+        pageSize: 8,
+      },
+    ]);
+
+    return answers.action;
+  }
+
+  async confirmExit(): Promise<boolean> {
+    const answers = await inquirer.prompt([
+      {
+        type: 'confirm',
+        name: 'confirm',
+        message: chalk.yellow('¿Estás seguro de que quieres salir?'),
+        default: false,
+      },
+    ]);
+
+    return answers.confirm;
+  }
+
+  printHeader(): void {
+    console.log(chalk.bold.cyan('\n====================================='));
+    console.log(chalk.bold.cyan('  PANINI WORLD CUP 2026 CHECKLIST'));
+    console.log(chalk.bold.cyan('=====================================\n'));
+  }
+
+  printFarewell(): void {
+    console.log(chalk.green('\n¡Gracias por usar Panini WC 2026 Checklist!'));
+    console.log(chalk.green('¡Buena suerte completando tu álbum! 🎉\n'));
+  }
+}

@@ -1,11 +1,6 @@
 import { rollup } from 'rollup';
 import { nodeResolve } from '@rollup/plugin-node-resolve';
-import { builtinModules } from 'module';
-
-const external = [
-  ...builtinModules,
-  ...builtinModules.map(m => `node:${m}`)
-];
+import typescript from '@rollup/plugin-typescript';
 
 const config = {
   input: './src/index.ts',
@@ -14,25 +9,32 @@ const config = {
     format: 'node',
     platform: 'node',
     banner: '#!/usr/bin/env node',
-    freeze: false
+    freeze: false,
+    inlineDynamicImports: true,
   },
-  external,
+  external: ['chalk', 'inquirer', 'pdfkit', 'conf', 'fs', 'os', 'path'],
   plugins: [
+    typescript({
+      compilerOptions: {
+        module: 'ESNext',
+        moduleResolution: 'Node',
+        target: 'ESNext',
+        declaration: false,
+        outDir: './dist',
+      },
+      include: ['src/**/*'],
+    }),
     nodeResolve({
       preferBuiltins: true,
-      exportConditions: ['node']
-    })
-  ]
+      exportConditions: ['node'],
+    }),
+  ],
 };
 
-if (process.argv[1]?.endsWith('rollup.config.ts')) {
-  rollup(config).then(async (bundle) => {
-    await bundle.write(config.output);
-    console.log('Build complete: dist/panini-stickers.js');
-  }).catch((err) => {
-    console.error('Build failed:', err);
-    process.exit(1);
-  });
-}
-
-export default config;
+rollup(config).then(async (bundle) => {
+  await bundle.write(config.output);
+  console.log('Build complete: dist/panini-stickers.js');
+}).catch((err) => {
+  console.error('Build failed:', err);
+  process.exit(1);
+});
