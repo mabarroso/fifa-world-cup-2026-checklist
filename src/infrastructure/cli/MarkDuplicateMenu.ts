@@ -5,13 +5,13 @@ import type { MarkStickerDuplicateCommand } from '../../application/commands/Mar
 
 export class MarkDuplicateMenu {
   async show(command: MarkStickerDuplicateCommand): Promise<void> {
-    console.log(chalk.cyan('\n--- Marcar figurita como repetida ---\n'));
+    console.log(chalk.cyan('\n--- Marcar cromo como repetido ---\n'));
 
     const answers = await inquirer.prompt([
       {
         type: 'input',
         name: 'stickerId',
-        message: 'Ingresa el ID de la figurita repetida (ej: MEX-01):',
+        message: 'Ingresa el ID del cromo repetido (ej: MEX-01):',
         validate: (input: string) => {
           if (!input.trim()) return 'Debes ingresar un ID';
           return true;
@@ -32,23 +32,23 @@ export class MarkDuplicateMenu {
     const sticker = getStickerById(stickerId);
 
     if (!sticker) {
-      console.log(chalk.red(`\n❌ Figurita "${stickerId}" no encontrada.`));
+      console.log(chalk.red(`\n❌ Cromo "${stickerId}" no encontrado.`));
       return;
     }
 
     await command.execute(stickerId, quantity);
 
-    console.log(chalk.yellow(`\n✓ Marcada(s) ${quantity} unidad(es) repetida(s) de [${stickerId}] ${sticker.name}`));
+    console.log(chalk.yellow(`\n✓ Marcado(s) ${quantity} unidad(es) repetida(s) de [${stickerId}] ${sticker.name}`));
   }
 
   async quickMark(command: MarkStickerDuplicateCommand): Promise<string | null> {
-    console.log(chalk.cyan('\n--- Marcar figurita como repetida ---\n'));
+    console.log(chalk.cyan('\n--- Marcar cromo como repetido ---\n'));
 
     const answers = await inquirer.prompt([
       {
         type: 'input',
         name: 'stickerId',
-        message: 'Ingresa el ID de la figurita (ej: MEX-01) o "salir" para volver:',
+        message: 'Ingresa el ID del cromo (ej: MEX-01) o "salir" para volver:',
         validate: (input: string) => {
           if (input.toLowerCase() === 'salir') return true;
           if (!input.trim()) return 'Debes ingresar un ID';
@@ -65,13 +65,13 @@ export class MarkDuplicateMenu {
     const sticker = getStickerById(stickerId);
 
     if (!sticker) {
-      console.log(chalk.red(`\n❌ Figurita "${stickerId}" no encontrada.`));
+      console.log(chalk.red(`\n❌ Cromo "${stickerId}" no encontrado.`));
       return null;
     }
 
     await command.execute(stickerId, 1);
 
-    console.log(chalk.yellow(`\n✓ Marcada repetida [${stickerId}] ${sticker.name}`));
+    console.log(chalk.yellow(`\n✓ Marcado repetido [${stickerId}] ${sticker.name}`));
     return stickerId;
   }
 }

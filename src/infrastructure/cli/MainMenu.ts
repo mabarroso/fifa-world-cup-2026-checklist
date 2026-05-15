@@ -16,10 +16,10 @@ export class MainMenu {
         message: chalk.bold.cyan('\n=== ALBUM PANINI FIFA WORLD CUP 2026 ==='),
         choices: [
           { name: '📋 Ver colección', value: 'view' },
-          { name: '✅ Marcar figurita como obtenida', value: 'mark_owned' },
-          { name: '🔄 Marcar figurita como repetida', value: 'mark_duplicate' },
+          { name: '✅ Marcar cromo como obtenido', value: 'mark_owned' },
+          { name: '🔄 Marcar cromo como repetido', value: 'mark_duplicate' },
           { name: '📊 Estadísticas', value: 'stats' },
-          { name: '🔍 Buscar figurita', value: 'search' },
+          { name: '🔍 Buscar cromo', value: 'search' },
           { name: '📤 Exportar faltantes', value: 'export' },
           { name: '🔄 Resetear colección', value: 'reset' },
           { name: '👋 Salir', value: 'exit' },

@@ -5,13 +5,13 @@ import type { MarkStickerOwnedCommand } from '../../application/commands/MarkSti
 
 export class MarkOwnedMenu {
   async show(command: MarkStickerOwnedCommand): Promise<void> {
-    console.log(chalk.cyan('\n--- Marcar figurita como obtenida ---\n'));
+    console.log(chalk.cyan('\n--- Marcar cromo como obtenido ---\n'));
 
     const answers = await inquirer.prompt([
       {
         type: 'input',
         name: 'stickerId',
-        message: 'Ingresa el ID de la figurita (ej: MEX-01):',
+        message: 'Ingresa el ID del cromo (ej: MEX-01):',
         validate: (input: string) => {
           if (!input.trim()) return 'Debes ingresar un ID';
           return true;
@@ -42,13 +42,13 @@ export class MarkOwnedMenu {
   }
 
   async quickMark(command: MarkStickerOwnedCommand): Promise<string | null> {
-    console.log(chalk.cyan('\n--- Marcar figurita como obtenida ---\n'));
+    console.log(chalk.cyan('\n--- Marcar cromo como obtenido ---\n'));
 
     const answers = await inquirer.prompt([
       {
         type: 'input',
         name: 'stickerId',
-        message: 'Ingresa el ID de la figurita (ej: MEX-01) o "salir" para volver:',
+        message: 'Ingresa el ID del cromo (ej: MEX-01) o "salir" para volver:',
         validate: (input: string) => {
           if (input.toLowerCase() === 'salir') return true;
           if (!input.trim()) return 'Debes ingresar un ID';
@@ -65,25 +65,25 @@ export class MarkOwnedMenu {
     const sticker = getStickerById(stickerId);
 
     if (!sticker) {
-      console.log(chalk.red(`\n❌ Figurita "${stickerId}" no encontrada.`));
+      console.log(chalk.red(`\n❌ Cromo "${stickerId}" no encontrado.`));
       return null;
     }
 
     await command.execute(stickerId, 1);
 
-    console.log(chalk.green(`\n✓ Marcada [${stickerId}] ${sticker.name}`));
+    console.log(chalk.green(`\n✓ Marcado [${stickerId}] ${sticker.name}`));
     return stickerId;
   }
 
   async interactiveMark(command: MarkStickerOwnedCommand): Promise<void> {
-    console.log(chalk.cyan('\n--- Modo interactivo: Marcar figuritas ---\n'));
-    console.log(chalk.gray('Ingresa el ID de cada figurita. Escribe "salir" para terminar.\n'));
+    console.log(chalk.cyan('\n--- Modo interactivo: Marcar cromos ---\n'));
+    console.log(chalk.gray('Ingresa el ID de cada cromo. Escribe "salir" para terminar.\n'));
 
     while (true) {
       const result = await this.quickMark(command);
       if (result === null) break;
 
-      console.log(chalk.gray('Presiona Enter para marcar otra figurita...\n'));
+      console.log(chalk.gray('Presiona Enter para marcar otro cromo...\n'));
       await inquirer.prompt([
         {
           type: 'input',

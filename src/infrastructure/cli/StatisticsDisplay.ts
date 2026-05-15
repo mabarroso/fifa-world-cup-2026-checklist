@@ -9,7 +9,7 @@ export class StatisticsDisplay {
     console.log(chalk.bold.cyan('║    ESTADÍSTICAS DE COLECCIÓN         ║'));
     console.log(chalk.bold.cyan('╚══════════════════════════════════════╝\n'));
 
-    console.log(`  ${chalk.white('Total figuritas:')}     ${chalk.bold(stats.total)}`);
+    console.log(`  ${chalk.white('Total cromos:')}     ${chalk.bold(stats.total)}`);
     console.log(`  ${chalk.green('Obtenidas:')}          ${chalk.green.bold(stats.owned)}`);
     console.log(`  ${chalk.red('Faltantes:')}           ${chalk.red.bold(stats.missing)}`);
     console.log(`  ${chalk.yellow('Repetidas:')}         ${chalk.yellow.bold(stats.duplicates)}`);
@@ -81,7 +81,7 @@ export class StatisticsDisplay {
       .slice(0, limit);
 
     if (duplicates.length === 0) {
-      console.log(chalk.gray('\nNo tienes figuritas repetidas aún.\n'));
+      console.log(chalk.gray('\nNo tienes cromos repetidos aún.\n'));
       return;
     }
 

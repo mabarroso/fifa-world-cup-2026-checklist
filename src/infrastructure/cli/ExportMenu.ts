@@ -13,7 +13,7 @@ export class ExportMenu {
   }
 
   async show(): Promise<ExportFormat | null> {
-    console.log(chalk.cyan('\n--- Exportar figuritas faltantes ---\n'));
+    console.log(chalk.cyan('\n--- Exportar cromos faltantes ---\n'));
 
     const answers = await inquirer.prompt([
       {
@@ -46,11 +46,11 @@ export class ExportMenu {
     const missingStickers = allStickers.filter(s => state.getOwnedQuantity(s.id) === 0);
 
     if (missingStickers.length === 0) {
-      console.log(chalk.green('\n🎉 ¡Felicidades! No tienes figuritas faltantes.\n'));
+      console.log(chalk.green('\n🎉 ¡Felicidades! No tienes cromos faltantes.\n'));
       return null;
     }
 
-    console.log(chalk.white(`Se encontraron ${missingStickers.length} figurita(s) faltante(s).\n`));
+    console.log(chalk.white(`Se encontraron ${missingStickers.length} cromo(s) faltante(s).\n`));
 
     const answers = await inquirer.prompt([
       {

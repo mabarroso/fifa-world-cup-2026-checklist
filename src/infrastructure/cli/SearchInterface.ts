@@ -11,7 +11,7 @@ export class SearchInterface {
   }
 
   async show(state: CollectionState): Promise<void> {
-    console.log(chalk.cyan('\n--- Buscar figuritas ---\n'));
+    console.log(chalk.cyan('\n--- Buscar cromos ---\n'));
 
     const answers = await inquirer.prompt([
       {
@@ -32,11 +32,11 @@ export class SearchInterface {
     const results = this.searchQuery.execute(query);
 
     if (results.length === 0) {
-      console.log(chalk.yellow('\nNo se encontraron figuritas que coincidan.\n'));
+      console.log(chalk.yellow('\nNo se encontraron cromos que coincidan.\n'));
       return;
     }
 
-    console.log(chalk.green(`\n✓ Se encontraron ${results.length} figurita(s):\n`));
+    console.log(chalk.green(`\n✓ Se encontraron ${results.length} cromo(s):\n`));
 
     const pageSize = 20;
     let currentPage = 0;

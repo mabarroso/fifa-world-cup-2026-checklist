@@ -14,7 +14,7 @@ export class ViewCollectionMenu {
         name: 'filter',
         message: chalk.cyan('¿Qué quieres ver?'),
         choices: [
-          { name: '📋 Ver todas las figuritas', value: 'all' },
+          { name: '📋 Ver todos los cromos', value: 'all' },
           { name: '❌ Ver faltantes', value: 'missing' },
           { name: '✅ Ver obtenidas', value: 'owned' },
           { name: '🔄 Ver repetidas', value: 'duplicates' },
@@ -98,7 +98,7 @@ export class ViewCollectionMenu {
     const missing = total - uniqueOwned;
 
     console.log(chalk.bold.cyan('\n=== RESUMEN DE COLECCIÓN ===\n'));
-    console.log(`  Total figuritas: ${chalk.white(total.toString())}`);
+    console.log(`  Total cromos: ${chalk.white(total.toString())}`);
     console.log(`  Obtenidas: ${chalk.green(owned.toString())} (${uniqueOwned} únicas)`);
     console.log(`  Faltantes: ${chalk.red(missing.toString())}`);
     console.log(`  Repetidas: ${chalk.yellow(duplicates.toString())}`);
