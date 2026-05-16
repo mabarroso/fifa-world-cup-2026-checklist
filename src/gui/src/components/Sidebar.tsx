@@ -22,7 +22,7 @@ export function Sidebar() {
   return (
     <aside className="w-64 h-screen bg-[var(--color-surface)] border-r border-white/10 flex flex-col">
       <div className="p-6 border-b border-white/10">
-        <h1 className="text-2xl font-bold tracking-wider text-[var(--color-cyan)]">
+        <h1 className="text-2xl font-bold tracking-wider text-[var(--color-blue)]">
           PANINI WC 2026
         </h1>
       </div>
@@ -35,7 +35,7 @@ export function Sidebar() {
             className={({ isActive }) =>
               `flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-200 ${
                 isActive
-                  ? 'bg-[var(--color-cyan)]/15 border-l-4 border-[var(--color-cyan)] text-[var(--color-cyan)]'
+                  ? 'bg-[var(--color-blue)]/15 border-l-4 border-[var(--color-blue)] text-[var(--color-blue)]'
                   : 'hover:bg-white/5 text-[var(--color-white)] opacity-70 hover:opacity-100'
               }`
             }

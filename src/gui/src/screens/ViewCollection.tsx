@@ -103,10 +103,9 @@ const handleCardClick = useCallback((stickerId: string) => {
               >
                 <Card
                   onClick={() => {
-                    console.log('[Card onClick prop] calling handleCardClick for:', sticker.id);
                     handleCardClick(sticker.id);
                   }}
-                  className={`aspect-[3/4] bg-gradient-to-br from-[var(--color-surface)] to-[var(--color-surface-2)] relative ${
+                  className={`match-card aspect-[3/4] relative ${
                     getCardStatus(sticker.id) === 'owned'
                       ? 'border-2 border-[var(--color-cyan)]'
                       : getCardStatus(sticker.id) === 'duplicate'
@@ -115,12 +114,6 @@ const handleCardClick = useCallback((stickerId: string) => {
                   }`}
                 >
                   <div className="absolute inset-0 flex flex-col p-3">
-                    <div className="text-6xl font-bold opacity-10 absolute -bottom-2 -right-2">
-                      {sticker.number}
-                    </div>
-                    <div className="flex-1 flex items-center justify-center">
-                      <span className="text-3xl">⚽</span>
-                    </div>
                     <div className="text-center">
                       <p className="text-xs font-semibold truncate">{sticker.name}</p>
                       <p className="text-xs opacity-60">{sticker.team}</p>
@@ -130,6 +123,10 @@ const handleCardClick = useCallback((stickerId: string) => {
                       {(duplicates[sticker.id] || 0) > 0 && (
                         <Badge variant="orange" className="mt-1">R:{duplicates[sticker.id]}</Badge>
                       )}
+                    </div>
+                    <div className="flex-1 flex flex-col items-center justify-center">
+                      <span className="text-3xl">⚽</span>
+                      <span className="text-xs font-mono text-[var(--text-muted)] mt-1">{sticker.id}</span>
                     </div>
                   </div>
                 </Card>

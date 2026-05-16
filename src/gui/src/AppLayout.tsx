@@ -3,9 +3,9 @@ import { Sidebar } from './components/Sidebar';
 
 export function AppLayout() {
   return (
-    <div className="flex min-h-screen bg-[var(--color-bg)]">
+    <div className="flex min-h-screen bg-[var(--bg-main)]">
       <Sidebar />
-      <main className="flex-1 overflow-auto p-6">
+      <main className="app flex-1 overflow-auto">
         <Outlet />
       </main>
     </div>

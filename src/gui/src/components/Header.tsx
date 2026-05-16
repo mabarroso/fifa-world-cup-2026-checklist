@@ -15,7 +15,7 @@ export function Header() {
 
   return (
     <header className="mb-6">
-      <h2 className="text-4xl font-bold tracking-wider text-[var(--color-yellow)] uppercase" style={{ fontFamily: 'var(--font-heading)' }}>
+      <h2 className="header">
         {title}
       </h2>
     </header>
