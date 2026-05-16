@@ -30,3 +30,6 @@ coverage/
 
 # OpenSpec
 openspec/.cache/
+
+# Rust/Tauri build output
+src/gui/src-tauri/target/
