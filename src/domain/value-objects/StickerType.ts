@@ -3,8 +3,16 @@ export enum StickerType {
   FWC_SPECIAL = 'fwc_special',
   TEAM_BADGE = 'team_badge',
   PLAYER = 'player',
-  SPECIAL = 'special',
-  COCA_COLA = 'coca_cola',
+  PANINI_EXTRA = 'panini_extra',
+  COCA_COLA_US = 'cocacola_us',
+  COCA_COLA_LAM = 'cocacola_lam',
+  COCA_COLA_RW = 'cocacola_rw',
+  COCA_COLA_EU = 'cocacola_eu',
+  MC_DONALDS = 'mcdonalds',
+  EXTRA_BASE = 'extra_base',
+  EXTRA_BRONZE = 'extra_bronze',
+  EXTRA_SILVER = 'extra_silver',
+  EXTRA_GOLD = 'extra_gold',
 }
 
 export namespace StickerType {
@@ -13,10 +21,10 @@ export namespace StickerType {
   }
 
   export function fromString(value: string): StickerType {
-    if (!isValid(value)) {
-      throw new Error(`Invalid StickerType: ${value}`);
+    if (isValid(value)) {
+      return value;
     }
-    return value;
+    throw new Error(`Invalid StickerType: ${value}`);
   }
 
   export function getLabel(type: StickerType): string {
@@ -25,8 +33,16 @@ export namespace StickerType {
       [StickerType.FWC_SPECIAL]: 'Especial FIFA',
       [StickerType.TEAM_BADGE]: 'Escudo',
       [StickerType.PLAYER]: 'Jugador',
-      [StickerType.SPECIAL]: 'Extra',
-      [StickerType.COCA_COLA]: 'Coca-Cola',
+      [StickerType.PANINI_EXTRA]: 'Panini Extra',
+      [StickerType.COCA_COLA_US]: 'Coca-Cola USA/Canada',
+      [StickerType.COCA_COLA_LAM]: 'Coca-Cola Latin America',
+      [StickerType.COCA_COLA_RW]: 'Coca-Cola Rest of World',
+      [StickerType.COCA_COLA_EU]: 'Coca-Cola Europe',
+      [StickerType.MC_DONALDS]: "McDonald's",
+      [StickerType.EXTRA_BASE]: 'Extra Base',
+      [StickerType.EXTRA_BRONZE]: 'Extra Bronze',
+      [StickerType.EXTRA_SILVER]: 'Extra Silver',
+      [StickerType.EXTRA_GOLD]: 'Extra Gold',
     };
     return labels[type];
   }

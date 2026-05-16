@@ -36,30 +36,10 @@ export const useCollectionStore = create<CollectionStore>()(
         markOwned: (stickerId) =>
           set((state) => {
             const currentOwned = state.owned[stickerId] || 0;
-            const currentDuplicates = state.duplicates[stickerId] || 0;
-            
-            // Can only have 0 or 1 owned (in album or not)
-            // Can only have 0 or 1 duplicates (only if owned is 1)
-            let newOwned = currentOwned;
-            let newDuplicates = currentDuplicates;
-            
-            // If we don't have it in album yet, add to owned first (max 1)
-            if (newOwned === 0) {
-              newOwned = 1;
+            if (currentOwned === 0) {
+              return { owned: { ...state.owned, [stickerId]: 1 } };
             }
-            
-            // If we have it in album and don't have a duplicate yet, add to duplicates (max 1)
-            if (newOwned === 1 && newDuplicates === 0) {
-              newDuplicates = 1;
-            }
-  
-            const ownedUpdate = newOwned > 0 ? { ...state.owned, [stickerId]: newOwned } : {};
-            const duplicatesUpdate = newDuplicates > 0 ? { ...state.duplicates, [stickerId]: newDuplicates } : {};
-  
-            return {
-              owned: ownedUpdate,
-              duplicates: duplicatesUpdate,
-            };
+            return {};
           }),
 
         markDuplicate: (stickerId) =>
@@ -67,19 +47,23 @@ export const useCollectionStore = create<CollectionStore>()(
             const currentOwned = state.owned[stickerId] || 0;
             const currentDuplicates = state.duplicates[stickerId] || 0;
             
-            // Can only have duplicates if owned is 1
-            // Can only have 0 or 1 duplicates
+            let newOwned = currentOwned;
             let newDuplicates = currentDuplicates;
             
-            // Toggle duplicate state: if we have the sticker in album (owned=1)
-            if (currentOwned === 1) {
-              // Toggle between 0 and 1
+            // If not in album yet, add to album first (mark as "En el álbum")
+            if (newOwned === 0) {
+              newOwned = 1;
+              newDuplicates = 0; // Do NOT mark as duplicate
+            } else if (newOwned === 1) {
+              // If already in album, toggle duplicate state
               newDuplicates = 1 - currentDuplicates;
             }
             
+            const ownedUpdate = newOwned > 0 ? { ...state.owned, [stickerId]: newOwned } : {};
             const duplicatesUpdate = newDuplicates > 0 ? { ...state.duplicates, [stickerId]: newDuplicates } : {};
             
             return {
+              owned: ownedUpdate,
               duplicates: duplicatesUpdate,
             };
           }),

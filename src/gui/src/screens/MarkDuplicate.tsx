@@ -24,24 +24,24 @@ export function MarkDuplicateScreen() {
       .slice(0, 8);
   }, [allStickers, stickerId]);
 
-    const handleAdd = () => {
-      const trimmedStickerId = stickerId.trim();
-      if (trimmedStickerId === '') {
-        return;
-      }
-      
-      const sticker = allStickers.find(
-        (s) => s.id.toLowerCase() === trimmedStickerId.toLowerCase()
-      );
+  const handleAdd = () => {
+    const trimmedStickerId = stickerId.trim();
+    if (trimmedStickerId === '') {
+      return;
+    }
+    
+    const sticker = allStickers.find(
+      (s) => s.id.toLowerCase() === trimmedStickerId.toLowerCase()
+    );
 
-      if (sticker) {
-        markDuplicate(sticker.id, quantity);
-        setStickerId('');
-        setQuantity(1);
-      } else {
-        console.log(`Sticker not found: "${trimmedStickerId}"`);
-      }
-    };
+    if (sticker) {
+      markDuplicate(sticker.id, quantity);
+      setStickerId('');
+      setQuantity(1);
+    } else {
+      console.log(`Sticker not found: "${trimmedStickerId}"`);
+    }
+  };
 
   const duplicateList = useMemo(() => {
     return Object.entries(duplicates)
@@ -60,7 +60,8 @@ export function MarkDuplicateScreen() {
       <div className="flex gap-8">
         <div className="flex-1 max-w-xl">
           <p className="mb-4 text-[var(--color-white)] opacity-60">
-            Marca cromos duplicados que tienes para intercambiar
+            Marca cromos repetidos que tienes para intercambiar.
+            Si el cromo no está en tu álbum, se marcará primero como "En el álbum".
           </p>
 
           <div className="relative mb-4">
@@ -123,13 +124,13 @@ export function MarkDuplicateScreen() {
 
           <Button onClick={handleAdd} className="w-full">
             <Repeat size={18} className="mr-2" />
-            Marcar como Duplicada
+            Marcar como Repetida
           </Button>
         </div>
 
         <div className="w-96">
           <h2 className="text-lg font-semibold text-[var(--color-white)] mb-4">
-            Tus Duplicadas ({duplicateList.length})
+            Tus Repetidas ({duplicateList.length})
           </h2>
           <div className="space-y-2">
             <AnimatePresence>
@@ -157,7 +158,7 @@ export function MarkDuplicateScreen() {
             </AnimatePresence>
             {duplicateList.length === 0 && (
               <p className="text-[var(--color-white)] opacity-40 text-sm">
-                Aún no has marcado cromos duplicados
+                Aún no has marcado cromos repetidos
               </p>
             )}
           </div>

@@ -21,22 +21,20 @@ export class StatisticsDisplay {
     console.log('\n' + chalk.cyan('─'.repeat(42)) + '\n');
   }
 
-  printDetailedStats(state: CollectionState): void {
+printDetailedStats(state: CollectionState): void {
     const allStickers = getAllStickers();
 
-    const byGroup: Record<string, { owned: number; total: number }> = {};
+    const byTeam: Record<string, { owned: number; total: number }> = {};
     const byType: Record<string, { owned: number; total: number }> = {};
 
     for (const sticker of allStickers) {
       const isOwned = state.getOwnedQuantity(sticker.id) > 0;
 
-      if (sticker.group) {
-        if (!byGroup[sticker.group]) {
-          byGroup[sticker.group] = { owned: 0, total: 0 };
-        }
-        byGroup[sticker.group].total++;
-        if (isOwned) byGroup[sticker.group].owned++;
+      if (!byTeam[sticker.team]) {
+        byTeam[sticker.team] = { owned: 0, total: 0 };
       }
+      byTeam[sticker.team].total++;
+      if (isOwned) byTeam[sticker.team].owned++;
 
       const typeKey = sticker.type.toString();
       if (!byType[typeKey]) {
@@ -46,13 +44,13 @@ export class StatisticsDisplay {
       if (isOwned) byType[typeKey].owned++;
     }
 
-    console.log(chalk.bold.cyan('\n=== ESTADÍSTICAS POR GRUPO ===\n'));
-    const sortedGroups = Object.keys(byGroup).sort();
-    for (const group of sortedGroups) {
-      const data = byGroup[group];
+    console.log(chalk.bold.cyan('\n=== ESTADÍSTICAS POR EQUIPO ===\n'));
+    const sortedTeams = Object.keys(byTeam).sort();
+    for (const team of sortedTeams) {
+      const data = byTeam[team];
       const pct = Math.round((data.owned / data.total) * 100);
       const color = pct === 100 ? chalk.green : pct > 50 ? chalk.yellow : chalk.red;
-      console.log(`  ${chalk.white(`Grupo ${group}:`)} ${color(`${data.owned}/${data.total} (${pct}%)`)}`);
+      console.log(`  ${chalk.white(`${team}:`)} ${color(`${data.owned}/${data.total} (${pct}%)`)}`);
     }
 
     console.log(chalk.bold.cyan('\n=== ESTADÍSTICAS POR TIPO ===\n'));

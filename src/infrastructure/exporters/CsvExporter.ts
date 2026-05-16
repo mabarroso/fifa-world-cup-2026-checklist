@@ -19,10 +19,11 @@ export class CsvExporter extends BaseExporter {
   }
 
   protected generateContent(): string {
-    const header = 'numero,nombre,equipo\n';
+    const header = 'id,nombre,equipo,tipo\n';
     const rows = this.stickers.map((s) => {
       const escapedName = s.name.replace(/"/g, '""');
-      return `${s.id},${escapedName},${s.team}`;
+      const escapedTeam = s.team.replace(/"/g, '""');
+      return `${s.id},"${escapedName}","${escapedTeam}",${s.type}`;
     }).join('\n');
 
     return header + rows;

@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useMemo, useState, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Trash2, Plus, Repeat } from 'lucide-react';
 import { useCollectionStore, type FilterType } from '../stores';
@@ -36,44 +36,25 @@ export function ViewCollectionScreen() {
     });
   }, [allStickers, owned, duplicates, filter]);
 
-  const handleCardClick = (stickerId: string) => {
-    const ownedQty = owned[stickerId] || 0;
-    const dupQty = duplicates[stickerId] || 0;
-
-    if (ownedQty > 0 && dupQty > 0) {
-      markDuplicate(stickerId, -1);
-    } else if (dupQty > 0) {
-      markDuplicate(stickerId, -1);
-      markOwned(stickerId, 1);
-    } else if (ownedQty > 0) {
-      markDuplicate(stickerId, 1);
-    } else {
-      markOwned(stickerId, 1);
+const handleCardClick = useCallback((stickerId: string) => {
+    const currentOwned = owned[stickerId] || 0;
+    if (currentOwned === 0) {
+      markOwned(stickerId);
     }
     setSelectedSticker(stickerId);
-  };
+  }, [owned, markOwned, setSelectedSticker]);
 
   const handleRemoveFromAlbum = (stickerId: string) => {
     const ownedQty = owned[stickerId] || 0;
-    const dupQty = duplicates[stickerId] || 0;
-
-    if (ownedQty > 1) {
-      unmarkOwned(stickerId, 1);
-    } else if (ownedQty === 1) {
-      if (dupQty > 0) {
-        markDuplicate(stickerId, -1);
-        markOwned(stickerId, 1);
-      } else {
-        unmarkOwned(stickerId, 1);
-      }
-      setSelectedSticker(null);
+    if (ownedQty > 0) {
+      unmarkOwned(stickerId);
     }
+    setSelectedSticker(null);
   };
 
   const getCardStatus = (stickerId: string) => {
     const ownedQty = owned[stickerId] || 0;
     const dupQty = duplicates[stickerId] || 0;
-
     if (dupQty > 0) return 'duplicate';
     if (ownedQty > 0) return 'owned';
     return 'missing';
@@ -116,12 +97,15 @@ export function ViewCollectionScreen() {
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.8 }}
-                onClick={() => handleCardClick(sticker.id)}
                 className={`cursor-pointer rounded-3xl overflow-hidden transition-all duration-200 ${
                   selectedSticker === sticker.id ? 'ring-2 ring-[var(--color-cyan)]' : ''
                 }`}
               >
                 <Card
+                  onClick={() => {
+                    console.log('[Card onClick prop] calling handleCardClick for:', sticker.id);
+                    handleCardClick(sticker.id);
+                  }}
                   className={`aspect-[3/4] bg-gradient-to-br from-[var(--color-surface)] to-[var(--color-surface-2)] relative ${
                     getCardStatus(sticker.id) === 'owned'
                       ? 'border-2 border-[var(--color-cyan)]'
@@ -192,7 +176,7 @@ export function ViewCollectionScreen() {
                 className="w-full"
               >
                 <Repeat size={16} className="mr-2" />
-                Marcar como duplicada
+                Marcar como repetida
               </Button>
             </div>
           </Card>

@@ -1,912 +1,1196 @@
-id,number,name,team,teamCode,group,type,extraVariant
-LOGO-00,0,Logo Panini,Panini,LOGO,,logo,
-FWC-01,1,Logo Mundial - Parte Superior,FIFA,FWC,,fwc_special,
-FWC-02,2,Logo Mundial - Parte Inferior,FIFA,FWC,,fwc_special,
-FWC-03,3,Official Mascots,FIFA,FWC,,fwc_special,
-FWC-04,4,Official Slogan,FIFA,FWC,,fwc_special,
-FWC-05,5,Official Ball,FIFA,FWC,,fwc_special,
-FWC-06,6,Canadá - Host Country Emblem,FIFA,FWC,,fwc_special,
-FWC-07,7,México - Host Country Emblem,FIFA,FWC,,fwc_special,
-FWC-08,8,USA - Host Country Emblem,FIFA,FWC,,fwc_special,
-MEX-01,1,Escudo,Mexico,MEX,A,team_badge,
-MEX-02,2,Luis Malagón,Mexico,MEX,A,player,
-MEX-03,3,Johan Vásquez,Mexico,MEX,A,player,
-MEX-04,4,Jorge Sánchez,Mexico,MEX,A,player,
-MEX-05,5,César Montes,Mexico,MEX,A,player,
-MEX-06,6,Jesus Gallardo,Mexico,MEX,A,player,
-MEX-07,7,Israel Reyes,Mexico,MEX,A,player,
-MEX-08,8,Diego Lainez,Mexico,MEX,A,player,
-MEX-09,9,Carlos Rodríguez,Mexico,MEX,A,player,
-MEX-10,10,Edson Álvarez,Mexico,MEX,A,player,
-MEX-11,11,Orbelin Pineda,Mexico,MEX,A,player,
-MEX-12,12,Marcel Ruiz,Mexico,MEX,A,player,
-MEX-13,13,Foto Equipo,Mexico,MEX,A,player,
-MEX-14,14,Erick Sánchez,Mexico,MEX,A,player,
-MEX-15,15,Hirving Lozano,Mexico,MEX,A,player,
-MEX-16,16,Santiago Giménez,Mexico,MEX,A,player,
-MEX-17,17,Raúl Jiménez,Mexico,MEX,A,player,
-MEX-18,18,Alexis Vega,Mexico,MEX,A,player,
-MEX-19,19,Roberto Alvarado,Mexico,MEX,A,player,
-MEX-20,20,César Huerta,Mexico,MEX,A,player,
-RSA-01,1,Escudo,South Africa,RSA,A,team_badge,
-RSA-02,2,Ronwen Williams,South Africa,RSA,A,player,
-RSA-03,3,Sipho Chaine,South Africa,RSA,A,player,
-RSA-04,4,Aubrey Modiba,South Africa,RSA,A,player,
-RSA-05,5,Samukele Kabini,South Africa,RSA,A,player,
-RSA-06,6,Khuliso Mudau,South Africa,RSA,A,player,
-RSA-07,7,Khulumani Ndamane,South Africa,RSA,A,player,
-RSA-08,8,Siyabonga Ngezana,South Africa,RSA,A,player,
-RSA-09,9,Nkosinathi Sibisi,South Africa,RSA,A,player,
-RSA-10,10,Teboho Mokoena,South Africa,RSA,A,player,
-RSA-11,11,Thalente Mbatha,South Africa,RSA,A,player,
-RSA-12,12,Bathusi Aubaas,South Africa,RSA,A,player,
-RSA-13,13,Foto Equipo,South Africa,RSA,A,player,
-RSA-14,14,Yaya Sithole,South Africa,RSA,A,player,
-RSA-15,15,Sipho Mbule,South Africa,RSA,A,player,
-RSA-16,16,Lyle Foster,South Africa,RSA,A,player,
-RSA-17,17,Iqraam Rayners,South Africa,RSA,A,player,
-RSA-18,18,Mohau Nkota,South Africa,RSA,A,player,
-RSA-19,19,Oswin Appollis,South Africa,RSA,A,player,
-KOR-01,1,Escudo,Korea Republic,KOR,A,team_badge,
-KOR-02,2,Hyeonwoo Jo,Korea Republic,KOR,A,player,
-KOR-03,3,Seunggyu Kim,Korea Republic,KOR,A,player,
-KOR-04,4,Minjae Kim,Korea Republic,KOR,A,player,
-KOR-05,5,Yumin Cho,Korea Republic,KOR,A,player,
-KOR-06,6,Youngwoo Seol,Korea Republic,KOR,A,player,
-KOR-07,7,Hanbeom Lee,Korea Republic,KOR,A,player,
-KOR-08,8,Taeseok Lee,Korea Republic,KOR,A,player,
-KOR-09,9,Myungjae Lee,Korea Republic,KOR,A,player,
-KOR-10,10,Jaesung Lee,Korea Republic,KOR,A,player,
-KOR-11,11,Inbeom Hwang,Korea Republic,KOR,A,player,
-KOR-12,12,Kangin Lee,Korea Republic,KOR,A,player,
-KOR-13,13,Foto Equipo,Korea Republic,KOR,A,player,
-KOR-14,14,Seungho Paik,Korea Republic,KOR,A,player,
-KOR-15,15,Jens Castrop,Korea Republic,KOR,A,player,
-KOR-16,16,Donggyeong Lee,Korea Republic,KOR,A,player,
-KOR-17,17,Guesung Cho,Korea Republic,KOR,A,player,
-KOR-18,18,Heungmin Son,Korea Republic,KOR,A,player,
-KOR-19,19,Heechan Hwang,Korea Republic,KOR,A,player,
-KOR-20,20,Hyeongyu Oh,Korea Republic,KOR,A,player,
-CZE-01,1,Escudo,Czechia,CZE,A,team_badge,
-CZE-02,2,Matej Kovar,Czechia,CZE,A,player,
-CZE-03,3,Jindrich Stanek,Czechia,CZE,A,player,
-CZE-04,4,Ladislav Krejci,Czechia,CZE,A,player,
-CZE-05,5,Vladimir Coufal,Czechia,CZE,A,player,
-CZE-06,6,Jaroslav Zeleny,Czechia,CZE,A,player,
-CZE-07,7,Tomas Holes,Czechia,CZE,A,player,
-CZE-08,8,David Zima,Czechia,CZE,A,player,
-CZE-09,9,Michal Sadilek,Czechia,CZE,A,player,
-CZE-10,10,Lukas Provod,Czechia,CZE,A,player,
-CZE-11,11,Lukas Cerv,Czechia,CZE,A,player,
-CZE-12,12,Tomas Soucek,Czechia,CZE,A,player,
-CZE-13,13,Foto Equipo,Czechia,CZE,A,player,
-CZE-14,14,Pavel Sulc,Czechia,CZE,A,player,
-CZE-15,15,Matej Vydra,Czechia,CZE,A,player,
-CZE-16,16,Vasil Kusej,Czechia,CZE,A,player,
-CZE-17,17,Tomas Chory,Czechia,CZE,A,player,
-CZE-18,18,Vaclav Cerny,Czechia,CZE,A,player,
-CZE-19,19,Adam Hlozek,Czechia,CZE,A,player,
-CZE-20,20,Patrik Schick,Czechia,CZE,A,player,
-CAN-01,1,Escudo,Canada,CAN,B,team_badge,
-CAN-02,2,Dayne St. Clair,Canada,CAN,B,player,
-CAN-03,3,Alphonso Davies,Canada,CAN,B,player,
-CAN-04,4,Alistair Johnston,Canada,CAN,B,player,
-CAN-05,5,Samuel Adekugbe,Canada,CAN,B,player,
-CAN-06,6,Samuel Richie Larvea,Canada,CAN,B,player,
-CAN-07,7,Derek Cornelius,Canada,CAN,B,player,
-CAN-08,8,Moise Bombito,Canada,CAN,B,player,
-CAN-09,9,Kamal Miller,Canada,CAN,B,player,
-CAN-10,10,Stephen Eustaquio,Canada,CAN,B,player,
-CAN-11,11,Ismael Kone,Canada,CAN,B,player,
-CAN-12,12,Jonathan Osorio,Canada,CAN,B,player,
-CAN-13,13,Foto Equipo,Canada,CAN,B,player,
-CAN-14,14,Jacob Shaffelburg,Canada,CAN,B,player,
-CAN-15,15,Mathieu Choinere,Canada,CAN,B,player,
-CAN-16,16,Niko Sigur,Canada,CAN,B,player,
-CAN-17,17,Tajon Buchanan,Canada,CAN,B,player,
-CAN-18,18,Liam Millar,Canada,CAN,B,player,
-CAN-19,19,Dyle Larin,Canada,CAN,B,player,
-CAN-20,20,Jonathan David,Canada,CAN,B,player,
-BIH-01,1,Escudo,Bosnia-Herzegovina,BIH,B,team_badge,
-BIH-02,2,Nikola Vasilj,Bosnia-Herzegovina,BIH,B,player,
-BIH-03,3,Amar Dedic,Bosnia-Herzegovina,BIH,B,player,
-BIH-04,4,Sead Kolasinac,Bosnia-Herzegovina,BIH,B,player,
-BIH-05,5,Tarik Muharemovic,Bosnia-Herzegovina,BIH,B,player,
-BIH-06,6,Nihad Mujakic,Bosnia-Herzegovina,BIH,B,player,
-BIH-07,7,Nikola Katic,Bosnia-Herzegovina,BIH,B,player,
-BIH-08,8,Amir Hadziahmetovic,Bosnia-Herzegovina,BIH,B,player,
-BIH-09,9,Benjamin Tahirovic,Bosnia-Herzegovina,BIH,B,player,
-BIH-10,10,Armin Gigovic,Bosnia-Herzegovina,BIH,B,player,
-BIH-11,11,Ivan Sunjic,Bosnia-Herzegovina,BIH,B,player,
-BIH-12,12,Ivan Basic,Bosnia-Herzegovina,BIH,B,player,
-BIH-13,13,Foto Equipo,Bosnia-Herzegovina,BIH,B,player,
-BIH-14,14,Dzenis Burnic,Bosnia-Herzegovina,BIH,B,player,
-BIH-15,15,Esmir Bajraktarevic,Bosnia-Herzegovina,BIH,B,player,
-BIH-16,16,Amar Memic,Bosnia-Herzegovina,BIH,B,player,
-BIH-17,17,Ermedin Demirovic,Bosnia-Herzegovina,BIH,B,player,
-BIH-18,18,Edin Dzeko,Bosnia-Herzegovina,BIH,B,player,
-BIH-19,19,Samed Bazdar,Bosnia-Herzegovina,BIH,B,player,
-BIH-20,20,Haris Tabakovic,Bosnia-Herzegovina,BIH,B,player,
-QAT-01,1,Escudo,Qatar,QAT,B,team_badge,
-QAT-02,2,Meshaal Barsham,Qatar,QAT,B,player,
-QAT-03,3,Sultan Albrake,Qatar,QAT,B,player,
-QAT-04,4,Lucas Mendes,Qatar,QAT,B,player,
-QAT-05,5,Homam Ahmed,Qatar,QAT,B,player,
-QAT-06,6,Boualem Khoukhi,Qatar,QAT,B,player,
-QAT-07,7,Pedro Miguel,Qatar,QAT,B,player,
-QAT-08,8,Tarek Salman,Qatar,QAT,B,player,
-QAT-09,9,Mohammed Mannai,Qatar,QAT,B,player,
-QAT-10,10,Karim Boudiaf,Qatar,QAT,B,player,
-QAT-11,11,Assim Madibo,Qatar,QAT,B,player,
-QAT-12,12,Hamed Fatehi,Qatar,QAT,B,player,
-QAT-13,13,Foto Equipo,Qatar,QAT,B,player,
-QAT-14,14,Mohammed Waad,Qatar,QAT,B,player,
-QAT-15,15,Abdulaziz Hatem,Qatar,QAT,B,player,
-QAT-16,16,Hassan Al-Haydos,Qatar,QAT,B,player,
-QAT-17,17,Edmilson Junior,Qatar,QAT,B,player,
-QAT-18,18,Akram Hassan Afif,Qatar,QAT,B,player,
-QAT-19,19,Ahmed Al-Ganehi,Qatar,QAT,B,player,
-QAT-20,20,Almoez Ali,Qatar,QAT,B,player,
-SUI-01,1,Escudo,Switzerland,SUI,B,team_badge,
-SUI-02,2,Gregor Kobel,Switzerland,SUI,B,player,
-SUI-03,3,Yvon Mvogo,Switzerland,SUI,B,player,
-SUI-04,4,Manuel Akanji,Switzerland,SUI,B,player,
-SUI-05,5,Ricardo Rodriguez,Switzerland,SUI,B,player,
-SUI-06,6,Nico Elvedi,Switzerland,SUI,B,player,
-SUI-07,7,Aurele Amenda,Switzerland,SUI,B,player,
-SUI-08,8,Silvan Widmer,Switzerland,SUI,B,player,
-SUI-09,9,Granit Xhaka,Switzerland,SUI,B,player,
-SUI-10,10,Denis Zakaria,Switzerland,SUI,B,player,
-SUI-11,11,Remo Freuler,Switzerland,SUI,B,player,
-SUI-12,12,Fabian Rieder,Switzerland,SUI,B,player,
-SUI-13,13,Foto Equipo,Switzerland,SUI,B,player,
-SUI-14,14,Ardon Jashari,Switzerland,SUI,B,player,
-SUI-15,15,Johan Manzambi,Switzerland,SUI,B,player,
-SUI-16,16,Michel Aebischer,Switzerland,SUI,B,player,
-SUI-17,17,Breel Embolo,Switzerland,SUI,B,player,
-SUI-18,18,Ruben Vargas,Switzerland,SUI,B,player,
-SUI-19,19,Dan Ndoye,Switzerland,SUI,B,player,
-SUI-20,20,Zeki Amdouni,Switzerland,SUI,B,player,
-BRA-01,1,Escudo,Brazil,BRA,C,team_badge,
-BRA-02,2,Alisson,Brazil,BRA,C,player,
-BRA-03,3,Bento,Brazil,BRA,C,player,
-BRA-04,4,Marquinhos,Brazil,BRA,C,player,
-BRA-05,5,Eder Militao,Brazil,BRA,C,player,
-BRA-06,6,Gabriel Magalhaes,Brazil,BRA,C,player,
-BRA-07,7,Danilo,Brazil,BRA,C,player,
-BRA-08,8,Wesley,Brazil,BRA,C,player,
-BRA-09,9,Lucas Paqueta,Brazil,BRA,C,player,
-BRA-10,10,Casemiro,Brazil,BRA,C,player,
-BRA-11,11,Bruno Guimaraes,Brazil,BRA,C,player,
-BRA-12,12,Luiz Henrique,Brazil,BRA,C,player,
-BRA-13,13,Foto Equipo,Brazil,BRA,C,player,
-BRA-14,14,Vinicius Junior,Brazil,BRA,C,player,
-BRA-15,15,Rodrygo,Brazil,BRA,C,player,
-BRA-16,16,Joao Pedro,Brazil,BRA,C,player,
-BRA-17,17,Matheus Cunha,Brazil,BRA,C,player,
-BRA-18,18,Gabriel Martinelli,Brazil,BRA,C,player,
-BRA-19,19,Raphinha,Brazil,BRA,C,player,
-BRA-20,20,Estevao,Brazil,BRA,C,player,
-MAR-01,1,Escudo,Morocco,MAR,C,team_badge,
-MAR-02,2,Yassine Bounou,Morocco,MAR,C,player,
-MAR-03,3,Munir El Kajoui,Morocco,MAR,C,player,
-MAR-04,4,Achraf Hakimi,Morocco,MAR,C,player,
-MAR-05,5,Noussair Mazraoui,Morocco,MAR,C,player,
-MAR-06,6,Nayef Aguerd,Morocco,MAR,C,player,
-MAR-07,7,Romain Saiss,Morocco,MAR,C,player,
-MAR-08,8,Jawad El Yamiq,Morocco,MAR,C,player,
-MAR-09,9,Adam Masina,Morocco,MAR,C,player,
-MAR-10,10,Sofyan Amrabat,Morocco,MAR,C,player,
-MAR-11,11,Azzedine Ounahi,Morocco,MAR,C,player,
-MAR-12,12,Eliesse Ben Seghir,Morocco,MAR,C,player,
-MAR-13,13,Foto Equipo,Morocco,MAR,C,player,
-MAR-14,14,Bilal El Khannouss,Morocco,MAR,C,player,
-MAR-15,15,Ismael Saibari,Morocco,MAR,C,player,
-MAR-16,16,Youssef En-Nesyri,Morocco,MAR,C,player,
-MAR-17,17,Abde Ezzalzouli,Morocco,MAR,C,player,
-MAR-18,18,Soufiane Rahimi,Morocco,MAR,C,player,
-MAR-19,19,Brahim Diaz,Morocco,MAR,C,player,
-MAR-20,20,Ayoub El Kaabi,Morocco,MAR,C,player,
-HAI-01,1,Escudo,Haiti,HAI,C,team_badge,
-HAI-02,2,Johny Placide,Haiti,HAI,C,player,
-HAI-03,3,Carlens Arcus,Haiti,HAI,C,player,
-HAI-04,4,Martin Experience,Haiti,HAI,C,player,
-HAI-05,5,Jean-Kevin Duverne,Haiti,HAI,C,player,
-HAI-06,6,Ricardo Ade,Haiti,HAI,C,player,
-HAI-07,7,Duke Lacroix,Haiti,HAI,C,player,
-HAI-08,8,Garven Metusala,Haiti,HAI,C,player,
-HAI-09,9,Hannes Delcroix,Haiti,HAI,C,player,
-HAI-10,10,Leverton Pierre,Haiti,HAI,C,player,
-HAI-11,11,Danley Jean Jacques,Haiti,HAI,C,player,
-HAI-12,12,Jean-Ricner Bellegarde,Haiti,HAI,C,player,
-HAI-13,13,Foto Equipo,Haiti,HAI,C,player,
-HAI-14,14,Christopher Attys,Haiti,HAI,C,player,
-HAI-15,15,Derrick Etienne Jr.,Haiti,HAI,C,player,
-HAI-16,16,Josue Casimir,Haiti,HAI,C,player,
-HAI-17,17,Ruben Providence,Haiti,HAI,C,player,
-HAI-18,18,Duckens Nazon,Haiti,HAI,C,player,
-HAI-19,19,Louicius Deedson,Haiti,HAI,C,player,
-HAI-20,20,Frantzdy Pierrot,Haiti,HAI,C,player,
-SCO-01,1,Escudo,Scotland,SCO,C,team_badge,
-SCO-02,2,Angus Gunn,Scotland,SCO,C,player,
-SCO-03,3,Jack Hendry,Scotland,SCO,C,player,
-SCO-04,4,Kieran Tierney,Scotland,SCO,C,player,
-SCO-05,5,Aaron Hickey,Scotland,SCO,C,player,
-SCO-06,6,Andrew Robertson,Scotland,SCO,C,player,
-SCO-07,7,Scott McKenna,Scotland,SCO,C,player,
-SCO-08,8,John Souttar,Scotland,SCO,C,player,
-SCO-09,9,Anthony Ralston,Scotland,SCO,C,player,
-SCO-10,10,Grant Hanley,Scotland,SCO,C,player,
-SCO-11,11,Scott McTominay,Scotland,SCO,C,player,
-SCO-12,12,Billy Gilmour,Scotland,SCO,C,player,
-SCO-13,13,Foto Equipo,Scotland,SCO,C,player,
-SCO-14,14,Lewis Ferguson,Scotland,SCO,C,player,
-SCO-15,15,Ryan Christie,Scotland,SCO,C,player,
-SCO-16,16,Kenny McLean,Scotland,SCO,C,player,
-SCO-17,17,John McGinn,Scotland,SCO,C,player,
-SCO-18,18,Lyndon Dykes,Scotland,SCO,C,player,
-SCO-19,19,Che Adams,Scotland,SCO,C,player,
-SCO-20,20,Ben Gannon-Doak,Scotland,SCO,C,player,
-USA-01,1,Escudo,USA,USA,D,team_badge,
-USA-02,2,Matt Freese,USA,USA,D,player,
-USA-03,3,Chris Richards,USA,USA,D,player,
-USA-04,4,Tim Ream,USA,USA,D,player,
-USA-05,5,Mark McKenzie,USA,USA,D,player,
-USA-06,6,Alex Freeman,USA,USA,D,player,
-USA-07,7,Antonee Robinson,USA,USA,D,player,
-USA-08,8,Tyler Adams,USA,USA,D,player,
-USA-09,9,Tanner Tessmann,USA,USA,D,player,
-USA-10,10,Weston McKennie,USA,USA,D,player,
-USA-11,11,Christian Roldan,USA,USA,D,player,
-USA-12,12,Timothy Weah,USA,USA,D,player,
-USA-13,13,Foto Equipo,USA,USA,D,player,
-USA-14,14,Diego Luna,USA,USA,D,player,
-USA-15,15,Malik Tillman,USA,USA,D,player,
-USA-16,16,Christian Pulisic,USA,USA,D,player,
-USA-17,17,Brenden Aaronson,USA,USA,D,player,
-USA-18,18,Ricardo Pepi,USA,USA,D,player,
-USA-19,19,Haji Wright,USA,USA,D,player,
-USA-20,20,Folarin Balogun,USA,USA,D,player,
-PAR-01,1,Escudo,Paraguay,PAR,D,team_badge,
-PAR-02,2,Roberto Fernandez,Paraguay,PAR,D,player,
-PAR-03,3,Orlando Gill,Paraguay,PAR,D,player,
-PAR-04,4,Diego Gomez,Paraguay,PAR,D,player,
-PAR-05,5,Fabian Balbuena,Paraguay,PAR,D,player,
-PAR-06,6,Juan Jose Caceres,Paraguay,PAR,D,player,
-PAR-07,7,Omar Alderete,Paraguay,PAR,D,player,
-PAR-08,8,Junior Alonso,Paraguay,PAR,D,player,
-PAR-09,9,Mathias Villasanti,Paraguay,PAR,D,player,
-PAR-10,10,Diego Gomez,Paraguay,PAR,D,player,
-PAR-11,11,Damian Bobadilla,Paraguay,PAR,D,player,
-PAR-12,12,Andres Cubas,Paraguay,PAR,D,player,
-PAR-13,13,Foto Equipo,Paraguay,PAR,D,player,
-PAR-14,14,Matias Galarza Fonda,Paraguay,PAR,D,player,
-PAR-15,15,Julio Enciso,Paraguay,PAR,D,player,
-PAR-16,16,Alejandro Romero Gamarra,Paraguay,PAR,D,player,
-PAR-17,17,Miguel Almirón,Paraguay,PAR,D,player,
-PAR-18,18,Ramón Sosa,Paraguay,PAR,D,player,
-PAR-19,19,Angel Romero,Paraguay,PAR,D,player,
-PAR-20,20,Antonio Sanabria,Paraguay,PAR,D,player,
-AUS-01,1,Escudo,Australia,AUS,D,team_badge,
-AUS-02,2,Mathew Ryan,Australia,AUS,D,player,
-AUS-03,3,Joe Gauci,Australia,AUS,D,player,
-AUS-04,4,Harry Souttar,Australia,AUS,D,player,
-AUS-05,5,Alessandro Circati,Australia,AUS,D,player,
-AUS-06,6,Jordan Bos,Australia,AUS,D,player,
-AUS-07,7,Aziz Behich,Australia,AUS,D,player,
-AUS-08,8,Cameron Burgess,Australia,AUS,D,player,
-AUS-09,9,Lewis Miller,Australia,AUS,D,player,
-AUS-10,10,Milos Degenek,Australia,AUS,D,player,
-AUS-11,11,Jackson Irvine,Australia,AUS,D,player,
-AUS-12,12,Riley McGree,Australia,AUS,D,player,
-AUS-13,13,Foto Equipo,Australia,AUS,D,player,
-AUS-14,14,Aiden O-Neill,Australia,AUS,D,player,
-AUS-15,15,Connor Metcalfe,Australia,AUS,D,player,
-AUS-16,16,Patrick Yazbek,Australia,AUS,D,player,
-AUS-17,17,Craig Goodwin,Australia,AUS,D,player,
-AUS-18,18,Kusini Yengi,Australia,AUS,D,player,
-AUS-19,19,Nestory Irankunda,Australia,AUS,D,player,
-AUS-20,20,Mohamed Toure,Australia,AUS,D,player,
-TUR-01,1,Escudo, Turkiye,TUR,D,team_badge,
-TUR-02,2,Ugurcan Cakir, Turkiye,TUR,D,player,
-TUR-03,3,Mert Muldur, Turkiye,TUR,D,player,
-TUR-04,4,Zeki Celik, Turkiye,TUR,D,player,
-TUR-05,5,Abdulkadir Malian, Turkiye,TUR,D,player,
-TUR-06,6,Caglar Soyuncu, Turkiye,TUR,D,player,
-TUR-07,7,Merih Demiral, Turkiye,TUR,D,player,
-TUR-08,8,Ferdi Kadioglu, Turkiye,TUR,D,player,
-TUR-09,9,Kaan Ayhan, Turkiye,TUR,D,player,
-TUR-10,10,Ismail Yuksek, Turkiye,TUR,D,player,
-TUR-11,11,Hakan Calhanoglu, Turkiye,TUR,D,player,
-TUR-12,12,Orkun Kokcu, Turkiye,TUR,D,player,
-TUR-13,13,Foto Equipo, Turkiye,TUR,D,player,
-TUR-14,14,Arda Guler, Turkiye,TUR,D,player,
-TUR-15,15,Irfan Can Kahveci, Turkiye,TUR,D,player,
-TUR-16,16,Yunus Akgün, Turkiye,TUR,D,player,
-TUR-17,17,Can Uzun, Turkiye,TUR,D,player,
-TUR-18,18,Baris Alper Yilmaz, Turkiye,TUR,D,player,
-TUR-19,19,Kerem Akturkoglu, Turkiye,TUR,D,player,
-TUR-20,20,Kenan Yildiz, Turkiye,TUR,D,player,
-GER-01,1,Escudo,Germany,GER,E,team_badge,
-GER-02,2,Marc-Andre ter Stegen,Germany,GER,E,player,
-GER-03,3,Jonathan Tah,Germany,GER,E,player,
-GER-04,4,David Raum,Germany,GER,E,player,
-GER-05,5,Nico Schlotterbeck,Germany,GER,E,player,
-GER-06,6,Antonio Rudiger,Germany,GER,E,player,
-GER-07,7,Waldemar Anton,Germany,GER,E,player,
-GER-08,8,Ridle Baku,Germany,GER,E,player,
-GER-09,9,Maximilian Mittelstadt,Germany,GER,E,player,
-GER-10,10,Joshua Kimmich,Germany,GER,E,player,
-GER-11,11,Florian Wirtz,Germany,GER,E,player,
-GER-12,12,Felix Nmecha,Germany,GER,E,player,
-GER-13,13,Foto Equipo,Germany,GER,E,player,
-GER-14,14,Leon Goretzka,Germany,GER,E,player,
-GER-15,15,Jamal Musiala,Germany,GER,E,player,
-GER-16,16,Serge Gnabry,Germany,GER,E,player,
-GER-17,17,Kai Havertz,Germany,GER,E,player,
-GER-18,18,Leroy Sane,Germany,GER,E,player,
-GER-19,19,Karim Adeyemi,Germany,GER,E,player,
-GER-20,20,Nick Woltemade,Germany,GER,E,player,
-CUW-01,1,Escudo, Curacao,CUW,E,team_badge,
-CUW-02,2,Eloy Room, Curacao,CUW,E,player,
-CUW-03,3,Armando Obispo, Curacao,CUW,E,player,
-CUW-04,4,Sherel Floranus, Curacao,CUW,E,player,
-CUW-05,5,Jurien Gaari, Curacao,CUW,E,player,
-CUW-06,6,Joshua Bremet, Curacao,CUW,E,player,
-CUW-07,7,Roshon Van Eijma, Curacao,CUW,E,player,
-CUW-08,8,Shurandy Sambo, Curacao,CUW,E,player,
-CUW-09,9,Livano Comenencia, Curacao,CUW,E,player,
-CUW-10,10,Godfried Roemeratoe, Curacao,CUW,E,player,
-CUW-11,11,Juninho Bacuna, Curacao,CUW,E,player,
-CUW-12,12,Leandro Bacuna, Curacao,CUW,E,player,
-CUW-13,13,Foto Equipo, Curacao,CUW,E,player,
-CUW-14,14,Tahith Chong, Curacao,CUW,E,player,
-CUW-15,15,Kenji Gorre, Curacao,CUW,E,player,
-CUW-16,16,Jearl Margaritha, Curacao,CUW,E,player,
-CUW-17,17,Jurgen Locadia, Curacao,CUW,E,player,
-CUW-18,18,Jeremy Antonisse, Curacao,CUW,E,player,
-CUW-19,19,Gervane Kastaneer, Curacao,CUW,E,player,
-CUW-20,20,Sontje Hansen, Curacao,CUW,E,player,
-CIV-01,1,Escudo,Cote d-Ivoire,CIV,E,team_badge,
-CIV-02,2,Yahia Fofana,Cote d-Ivoire,CIV,E,player,
-CIV-03,3,Ghislain Konan,Cote d-Ivoire,CIV,E,player,
-CIV-04,4,Wilfried Singo,Cote d-Ivoire,CIV,E,player,
-CIV-05,5,Odilon Kossounou,Cote d-Ivoire,CIV,E,player,
-CIV-06,6,Evan Ndicka,Cote d-Ivoire,CIV,E,player,
-CIV-07,7,Willy Boly,Cote d-Ivoire,CIV,E,player,
-CIV-08,8,Emmanuel Agbadou,Cote d-Ivoire,CIV,E,player,
-CIV-09,9,Ousmane Diomande,Cote d-Ivoire,CIV,E,player,
-CIV-10,10,Franck Kessie,Cote d-Ivoire,CIV,E,player,
-CIV-11,11,Seko Fofana,Cote d-Ivoire,CIV,E,player,
-CIV-12,12,Ibrahim Sangare,Cote d-Ivoire,CIV,E,player,
-CIV-13,13,Foto Equipo,Cote d-Ivoire,CIV,E,player,
-CIV-14,14,Jean-Philippe Gbamin,Cote d-Ivoire,CIV,E,player,
-CIV-15,15,Amad Diallo,Cote d-Ivoire,CIV,E,player,
-CIV-16,16,Sebastien Haller,Cote d-Ivoire,CIV,E,player,
-CIV-17,17,Simon Adingra,Cote d-Ivoire,CIV,E,player,
-CIV-18,18,Yan Diomande,Cote d-Ivoire,CIV,E,player,
-CIV-19,19,Evann Guessand,Cote d-Ivoire,CIV,E,player,
-CIV-20,20,Oumar Diakite,Cote d-Ivoire,CIV,E,player,
-ECU-01,1,Escudo,Ecuador,ECU,E,team_badge,
-ECU-02,2,Herna Galindez,Ecuador,ECU,E,player,
-ECU-03,3,Gonzalo Valle,Ecuador,ECU,E,player,
-ECU-04,4,Piero Hincapie,Ecuador,ECU,E,player,
-ECU-05,5,Pervis Estupinan,Ecuador,ECU,E,player,
-ECU-06,6,Willian Pacho,Ecuador,ECU,E,player,
-ECU-07,7,Angelo Preciado,Ecuador,ECU,E,player,
-ECU-08,8,Joel Ordonez,Ecuador,ECU,E,player,
-ECU-09,9,Moises Caicedo,Ecuador,ECU,E,player,
-ECU-10,10,Alan Franco,Ecuador,ECU,E,player,
-ECU-11,11,Kendry Paez,Ecuador,ECU,E,player,
-ECU-12,12,Pedro Vite,Ecuador,ECU,E,player,
-ECU-13,13,Foto Equipo,Ecuador,ECU,E,player,
-ECU-14,14,John Yeboah,Ecuador,ECU,E,player,
-ECU-15,15,Leonardo Campana,Ecuador,ECU,E,player,
-ECU-16,16,Gonzalo Plata,Ecuador,ECU,E,player,
-ECU-17,17,Nilson Angulo,Ecuador,ECU,E,player,
-ECU-18,18,Alan Minda,Ecuador,ECU,E,player,
-ECU-19,19,Kevin Rodriguez,Ecuador,ECU,E,player,
-ECU-20,20,Enner Valencia,Ecuador,ECU,E,player,
-NED-01,1,Escudo,Netherlands,NED,F,team_badge,
-NED-02,2,Bart Verbruggen,Netherlands,NED,F,player,
-NED-03,3,Virgil van Dijk,Netherlands,NED,F,player,
-NED-04,4,Micky van de Ven,Netherlands,NED,F,player,
-NED-05,5,Jurrien Timber,Netherlands,NED,F,player,
-NED-06,6,Denzel Dumfries,Netherlands,NED,F,player,
-NED-07,7,Nathan Ake,Netherlands,NED,F,player,
-NED-08,8,Jeremie Frimpong,Netherlands,NED,F,player,
-NED-09,9,Jan Paul van Hecke,Netherlands,NED,F,player,
-NED-10,10,Tijjani Reijnders,Netherlands,NED,F,player,
-NED-11,11,Ryan Gravenberch,Netherlands,NED,F,player,
-NED-12,12,Teun Koopmeiners,Netherlands,NED,F,player,
-NED-13,13,Foto Equipo,Netherlands,NED,F,player,
-NED-14,14,Frenkie de Jong,Netherlands,NED,F,player,
-NED-15,15,Xavi Simons,Netherlands,NED,F,player,
-NED-16,16,Justin Kluivert,Netherlands,NED,F,player,
-NED-17,17,Memphis Depay,Netherlands,NED,F,player,
-NED-18,18,Donyel Malen,Netherlands,NED,F,player,
-NED-19,19,Wout Weghorst,Netherlands,NED,F,player,
-NED-20,20,Cody Gakpo,Netherlands,NED,F,player,
-JPN-01,1,Escudo,Japan,JPN,F,team_badge,
-JPN-02,2,Zion Suzuki,Japan,JPN,F,player,
-JPN-03,3,Heroki Mochizuki,Japan,JPN,F,player,
-JPN-04,4,Ayumu Seko,Japan,JPN,F,player,
-JPN-05,5,Junnosuke Suzuki,Japan,JPN,F,player,
-JPN-06,6,Shogo Taniguchi,Japan,JPN,F,player,
-JPN-07,7,Tsuyoshi Watanabe,Japan,JPN,F,player,
-JPN-08,8,Kaishu Sano,Japan,JPN,F,player,
-JPN-09,9,Yuki Soma,Japan,JPN,F,player,
-JPN-10,10,Ao Tanaka,Japan,JPN,F,player,
-JPN-11,11,Daichi Kamada,Japan,JPN,F,player,
-JPN-12,12,Takefusa Kubo,Japan,JPN,F,player,
-JPN-13,13,Foto Equipo,Japan,JPN,F,player,
-JPN-14,14,Ritsu Doan,Japan,JPN,F,player,
-JPN-15,15,Keito Nakamura,Japan,JPN,F,player,
-JPN-16,16,Takumi Minamino,Japan,JPN,F,player,
-JPN-17,17,Shuto Machino,Japan,JPN,F,player,
-JPN-18,18,Junya Ito,Japan,JPN,F,player,
-JPN-19,19,Koki Ogawa,Japan,JPN,F,player,
-JPN-20,20,Ayase Ueda,Japan,JPN,F,player,
-SWE-01,1,Escudo,Sweden,SWE,F,team_badge,
-SWE-02,2,Viktor Johansson,Sweden,SWE,F,player,
-SWE-03,3,Isak Hien,Sweden,SWE,F,player,
-SWE-04,4,Gabriel Dudmundsson,Sweden,SWE,F,player,
-SWE-05,5,Emil Holm,Sweden,SWE,F,player,
-SWE-06,6,Victor Nilsson Lindelof,Sweden,SWE,F,player,
-SWE-07,7,Gustaf Lagerbielke,Sweden,SWE,F,player,
-SWE-08,8,Lucas Bergvall,Sweden,SWE,F,player,
-SWE-09,9,Hugo Larsson,Sweden,SWE,F,player,
-SWE-10,10,Jesper Karlstrom,Sweden,SWE,F,player,
-SWE-11,11,Yasin Ayari,Sweden,SWE,F,player,
-SWE-12,12,Mattias Svanberg,Sweden,SWE,F,player,
-SWE-13,13,Foto Equipo,Sweden,SWE,F,player,
-SWE-14,14,Daniel Svensson,Sweden,SWE,F,player,
-SWE-15,15,Ken Sema,Sweden,SWE,F,player,
-SWE-16,16,Roony Bardghji,Sweden,SWE,F,player,
-SWE-17,17,Dejan Kulusevski,Sweden,SWE,F,player,
-SWE-18,18,Anthony Elanga,Sweden,SWE,F,player,
-SWE-19,19,Alexander Isak,Sweden,SWE,F,player,
-SWE-20,20,Viktor Gyokeres,Sweden,SWE,F,player,
-TUN-01,1,Escudo,Tunisia,TUN,F,team_badge,
-TUN-02,2,Bechir Ben Said,Tunisia,TUN,F,player,
-TUN-03,3,Aymen Dahmen,Tunisia,TUN,F,player,
-TUN-04,4,Van Valery,Tunisia,TUN,F,player,
-TUN-05,5,Montassar Talbi,Tunisia,TUN,F,player,
-TUN-06,6,Yassine Meriah,Tunisia,TUN,F,player,
-TUN-07,7,Ali Abdi,Tunisia,TUN,F,player,
-TUN-08,8,Dylan Bronn,Tunisia,TUN,F,player,
-TUN-09,9,Ellyes Skhiri,Tunisia,TUN,F,player,
-TUN-10,10,Aissa Laidouni,Tunisia,TUN,F,player,
-TUN-11,11,Ferjani Sassi,Tunisia,TUN,F,player,
-TUN-12,12,Mohamed Ali Ben Romdhane,Tunisia,TUN,F,player,
-TUN-13,13,Foto Equipo,Tunisia,TUN,F,player,
-TUN-14,14,Hannibal Mejbri,Tunisia,TUN,F,player,
-TUN-15,15,Elias Achouri,Tunisia,TUN,F,player,
-TUN-16,16,Elias Saad,Tunisia,TUN,F,player,
-TUN-17,17,Hazem Mastouri,Tunisia,TUN,F,player,
-TUN-18,18,Ismael Gharbi,Tunisia,TUN,F,player,
-TUN-19,19,Sayfallah Ltaief,Tunisia,TUN,F,player,
-TUN-20,20,Naim Sliti,Tunisia,TUN,F,player,
-BEL-01,1,Escudo,Belgium,BEL,G,team_badge,
-BEL-02,2,Thibaut Courtois,Belgium,BEL,G,player,
-BEL-03,3,Arthur Theate,Belgium,BEL,G,player,
-BEL-04,4,Timothy Castagne,Belgium,BEL,G,player,
-BEL-05,5,Zeno Debast,Belgium,BEL,G,player,
-BEL-06,6,Brandon Mechele,Belgium,BEL,G,player,
-BEL-07,7,Maxim De Cuyper,Belgium,BEL,G,player,
-BEL-08,8,Thomas Meunier,Belgium,BEL,G,player,
-BEL-09,9,Youri Tieleman,Belgium,BEL,G,player,
-BEL-10,10,Amadou Onana,Belgium,BEL,G,player,
-BEL-11,11,Nicolas Raskin,Belgium,BEL,G,player,
-BEL-12,12,Alexis Saelemaekers,Belgium,BEL,G,player,
-BEL-13,13,Foto Equipo,Belgium,BEL,G,player,
-BEL-14,14,Hans Vanaken,Belgium,BEL,G,player,
-BEL-15,15,Kevin De Bruyne,Belgium,BEL,G,player,
-BEL-16,16,Jeremy Doku,Belgium,BEL,G,player,
-BEL-17,17,Charles de Ketelaere,Belgium,BEL,G,player,
-BEL-18,18,Leandro Trossard,Belgium,BEL,G,player,
-BEL-19,19,Lois Openda,Belgium,BEL,G,player,
-BEL-20,20,Romelu Lukaku,Belgium,BEL,G,player,
-EGY-01,1,Escudo,Egypt,EGY,G,team_badge,
-EGY-02,2,Mohamed Elshenawy,Egypt,EGY,G,player,
-EGY-03,3,Mohamed Hany,Egypt,EGY,G,player,
-EGY-04,4,Mohamed Hamdy,Egypt,EGY,G,player,
-EGY-05,5,Yasser Ibrahim,Egypt,EGY,G,player,
-EGY-06,6,Khaled Sobhi,Egypt,EGY,G,player,
-EGY-07,7,Ramy Rabia,Egypt,EGY,G,player,
-EGY-08,8,Hossam Abdelmaguid,Egypt,EGY,G,player,
-EGY-09,9,Ahmes Fatouh,Egypt,EGY,G,player,
-EGY-10,10,Marwan Attia,Egypt,EGY,G,player,
-EGY-11,11,Zizo,Egypt,EGY,G,player,
-EGY-12,12,Hamdy Fathy,Egypt,EGY,G,player,
-EGY-13,13,Foto Equipo,Egypt,EGY,G,player,
-EGY-14,14,Mohanad Lasheen,Egypt,EGY,G,player,
-EGY-15,15,Emam Ashour,Egypt,EGY,G,player,
-EGY-16,16,Osama Faisal,Egypt,EGY,G,player,
-EGY-17,17,Mohamed Salah,Egypt,EGY,G,player,
-EGY-18,18,Mostafa Mohamed,Egypt,EGY,G,player,
-EGY-19,19,Trezeguet,Egypt,EGY,G,player,
-EGY-20,20,Omar Marsmoush,Egypt,EGY,G,player,
-IRN-01,1,Escudo,IR Iran,IRN,G,team_badge,
-IRN-02,2,Alireza Beiranvand,IR Iran,IRN,G,player,
-IRN-03,3,Morteza Pouraliganji,IR Iran,IRN,G,player,
-IRN-04,4,Ehsan Hajsafi,IR Iran,IRN,G,player,
-IRN-05,5,Milad Mohammadi,IR Iran,IRN,G,player,
-IRN-06,6,Shojae Khalilzadeh,IR Iran,IRN,G,player,
-IRN-07,7,Ramin Rezaeian,IR Iran,IRN,G,player,
-IRN-08,8,Hossein Kanaani,IR Iran,IRN,G,player,
-IRN-09,9,Saeid Moharrami,IR Iran,IRN,G,player,
-IRN-10,10,Saleh Hardani,IR Iran,IRN,G,player,
-IRN-11,11,Saeed Ezatolahi,IR Iran,IRN,G,player,
-IRN-12,12,Saman Ghoddos,IR Iran,IRN,G,player,
-IRN-13,13,Foto Equipo,IR Iran,IRN,G,player,
-IRN-14,14,Omid Noorafkan,IR Iran,IRN,G,player,
-IRN-15,15,Roozbeh Cheshmi,IR Iran,IRN,G,player,
-IRN-16,16,Mohammad Mohebi,IR Iran,IRN,G,player,
-IRN-17,17,Sardar Azmoun,IR Iran,IRN,G,player,
-IRN-18,18,Mehdi Taremi,IR Iran,IRN,G,player,
-IRN-19,19,Alireza Jahanbakhsh,IR Iran,IRN,G,player,
-IRN-20,20,Ali Gholizadeh,IR Iran,IRN,G,player,
-NZL-01,1,Escudo,New Zealand,NZL,G,team_badge,
-NZL-02,2,Max Crocombe,New Zealand,NZL,G,player,
-NZL-03,3,Alex Paulsen,New Zealand,NZL,G,player,
-NZL-04,4,Michael Boxall,New Zealand,NZL,G,player,
-NZL-05,5,Liberato Cacace,New Zealand,NZL,G,player,
-NZL-06,6,Tim Payne,New Zealand,NZL,G,player,
-NZL-07,7,Tyler Bindon,New Zealand,NZL,G,player,
-NZL-08,8,Francis de Vries,New Zealand,NZL,G,player,
-NZL-09,9,Finn Surman,New Zealand,NZL,G,player,
-NZL-10,10,Joe Bell,New Zealand,NZL,G,player,
-NZL-11,11,Sarpreet Singh,New Zealand,NZL,G,player,
-NZL-12,12,Ryan Thomas,New Zealand,NZL,G,player,
-NZL-13,13,Foto Equipo,New Zealand,NZL,G,player,
-NZL-14,14,Matthew Garbett,New Zealand,NZL,G,player,
-NZL-15,15,Marko Stamenic,New Zealand,NZL,G,player,
-NZL-16,16,Ben Old,New Zealand,NZL,G,player,
-NZL-17,17,Chris Wood,New Zealand,NZL,G,player,
-NZL-18,18,Elijah Just,New Zealand,NZL,G,player,
-NZL-19,19,Callum McCowatt,New Zealand,NZL,G,player,
-NZL-20,20,Kosta Barbarouses,New Zealand,NZL,G,player,
-ESP-01,1,Escudo,Spain,ESP,H,team_badge,
-ESP-02,2,Unai Simon,Spain,ESP,H,player,
-ESP-03,3,Robin Le Normand,Spain,ESP,H,player,
-ESP-04,4,Aymeric Laporte,Spain,ESP,H,player,
-ESP-05,5,Dean Huijsen,Spain,ESP,H,player,
-ESP-06,6,Pedro Porro,Spain,ESP,H,player,
-ESP-07,7,Dani Carvajal,Spain,ESP,H,player,
-ESP-08,8,Marc Cucurella,Spain,ESP,H,player,
-ESP-09,9,Martin Zubimendi,Spain,ESP,H,player,
-ESP-10,10,Rodri,Spain,ESP,H,player,
-ESP-11,11,Pedri,Spain,ESP,H,player,
-ESP-12,12,Fabian Ruiz,Spain,ESP,H,player,
-ESP-13,13,Foto Equipo,Spain,ESP,H,player,
-ESP-14,14,Mikel Merino,Spain,ESP,H,player,
-ESP-15,15,Lamine Yamal,Spain,ESP,H,player,
-ESP-16,16,Dani Olmo,Spain,ESP,H,player,
-ESP-17,17,Nico Williams,Spain,ESP,H,player,
-ESP-18,18,Ferran Torres,Spain,ESP,H,player,
-ESP-19,19,Alvaro Morata,Spain,ESP,H,player,
-ESP-20,20,Mikel Oyarzabal,Spain,ESP,H,player,
-CPV-01,1,Escudo,Cabo Verde,CPV,H,team_badge,
-CPV-02,2,Vozinha,Cabo Verde,CPV,H,player,
-CPV-03,3,Logan Costa,Cabo Verde,CPV,H,player,
-CPV-04,4,Pico,Cabo Verde,CPV,H,player,
-CPV-05,5,Dinev,Cabo Verde,CPV,H,player,
-CPV-06,6,Steven Moreira,Cabo Verde,CPV,H,player,
-CPV-07,7,Wagner Pina,Cabo Verde,CPV,H,player,
-CPV-08,8,Joao Paulo,Cabo Verde,CPV,H,player,
-CPV-09,9,Yannick Semedo,Cabo Verde,CPV,H,player,
-CPV-10,10,Kevin Pina,Cabo Verde,CPV,H,player,
-CPV-11,11,Patrick Andrade,Cabo Verde,CPV,H,player,
-CPV-12,12,Jamiro Monteiro,Cabo Verde,CPV,H,player,
-CPV-13,13,Foto Equipo,Cabo Verde,CPV,H,player,
-CPV-14,14,Deroy Duarte,Cabo Verde,CPV,H,player,
-CPV-15,15,Garry Rodrigues,Cabo Verde,CPV,H,player,
-CPV-16,16,Jovane Cabral,Cabo Verde,CPV,H,player,
-CPV-17,17,Ryan Mendes,Cabo Verde,CPV,H,player,
-CPV-18,18,Dailon Livramento,Cabo Verde,CPV,H,player,
-CPV-19,19,Willy Semedo,Cabo Verde,CPV,H,player,
-CPV-20,20,Beb,Cabo Verde,CPV,H,player,
-KSA-01,1,Escudo,Saudi Arabia,KSA,H,team_badge,
-KSA-02,2,Nawaf Alaqidi,Saudi Arabia,KSA,H,player,
-KSA-03,3,Abdulrahman Alsanbi,Saudi Arabia,KSA,H,player,
-KSA-04,4,Saud Abdulhamid,Saudi Arabia,KSA,H,player,
-KSA-05,5,Nawaf Bouwashl,Saudi Arabia,KSA,H,player,
-KSA-06,6,Jehad Thikri,Saudi Arabia,KSA,H,player,
-KSA-07,7,Moteb AlHarbi,Saudi Arabia,KSA,H,player,
-KSA-08,8,Hassan Altambakti,Saudi Arabia,KSA,H,player,
-KSA-09,9,Musab Aljuwayr,Saudi Arabia,KSA,H,player,
-KSA-10,10,Ziyad Aljohani,Saudi Arabia,KSA,H,player,
-KSA-11,11,Abdullah Alkhaibari,Saudi Arabia,KSA,H,player,
-KSA-12,12,Nasser Aldawsari,Saudi Arabia,KSA,H,player,
-KSA-13,13,Foto Equipo,Saudi Arabia,KSA,H,player,
-KSA-14,14,Saleh Abu Alshamat,Saudi Arabia,KSA,H,player,
-KSA-15,15,Marwan Alsahafi,Saudi Arabia,KSA,H,player,
-KSA-16,16,Salem Aldawsari,Saudi Arabia,KSA,H,player,
-KSA-17,17,Abdulrahman Alobud,Saudi Arabia,KSA,H,player,
-KSA-18,18,Feras Albrikan,Saudi Arabia,KSA,H,player,
-KSA-19,19,Saleh Alshehri,Saudi Arabia,KSA,H,player,
-KSA-20,20,Abdullah Alhamdan,Saudi Arabia,KSA,H,player,
-URU-01,1,Escudo,Uruguay,URU,H,team_badge,
-URU-02,2,Sergio Rochet,Uruguay,URU,H,player,
-URU-03,3,Santiago Mele,Uruguay,URU,H,player,
-URU-04,4,Ronald Araujo,Uruguay,URU,H,player,
-URU-05,5,Jose Maria Gimenez,Uruguay,URU,H,player,
-URU-06,6,Sebastian Caceres,Uruguay,URU,H,player,
-URU-07,7,Mathias Olivera,Uruguay,URU,H,player,
-URU-08,8,Guillermo Varela,Uruguay,URU,H,player,
-URU-09,9,Nahitan Nandez,Uruguay,URU,H,player,
-URU-10,10,Federico Valverde,Uruguay,URU,H,player,
-URU-11,11,Giorgian de Arrascaeta,Uruguay,URU,H,player,
-URU-12,12,Rodrigo Bentancur,Uruguay,URU,H,player,
-URU-13,13,Foto Equipo,Uruguay,URU,H,player,
-URU-14,14,Manuel Ugarte,Uruguay,URU,H,player,
-URU-15,15,Nicolas de la Cruz,Uruguay,URU,H,player,
-URU-16,16,Maxi Araujo,Uruguay,URU,H,player,
-URU-17,17,Darwin Nunez,Uruguay,URU,H,player,
-URU-18,18,Federico Vinas,Uruguay,URU,H,player,
-URU-19,19,Rodrigo Aguirre,Uruguay,URU,H,player,
-URU-20,20,Facundo Pellistri,Uruguay,URU,H,player,
-FRA-01,1,Escudo,France,FRA,I,team_badge,
-FRA-02,2,Mike Maignan,France,FRA,I,player,
-FRA-03,3,Theo Hernandez,France,FRA,I,player,
-FRA-04,4,William Saliba,France,FRA,I,player,
-FRA-05,5,Jules Kounde,France,FRA,I,player,
-FRA-06,6,Ibrahima Konate,France,FRA,I,player,
-FRA-07,7,Dayot Upamecano,France,FRA,I,player,
-FRA-08,8,Lucas Digne,France,FRA,I,player,
-FRA-09,9,Aurelien Tchouameni,France,FRA,I,player,
-FRA-10,10,Eduardo Camavinga,France,FRA,I,player,
-FRA-11,11,Manu Kone,France,FRA,I,player,
-FRA-12,12,Adrien Rabiot,France,FRA,I,player,
-FRA-13,13,Foto Equipo,France,FRA,I,player,
-FRA-14,14,Michael Olise,France,FRA,I,player,
-FRA-15,15,Ousmane Dembele,France,FRA,I,player,
-FRA-16,16,Bradley Barcola,France,FRA,I,player,
-FRA-17,17,Desire Doue,France,FRA,I,player,
-FRA-18,18,Kingsley Coman,France,FRA,I,player,
-FRA-19,19,Hugo Ekitike,France,FRA,I,player,
-FRA-20,20,Kylian Mbappe,France,FRA,I,player,
-SEN-01,1,Escudo,Senegal,SEN,I,team_badge,
-SEN-02,2,Eduardo Mendy,Senegal,SEN,I,player,
-SEN-03,3,Yehvann Diouf,Senegal,SEN,I,player,
-SEN-04,4,Moussa Niakhate,Senegal,SEN,I,player,
-SEN-05,5,Abdoulaye Seck,Senegal,SEN,I,player,
-SEN-06,6,Ismail Jakobs,Senegal,SEN,I,player,
-SEN-07,7,El Hadji Malick Diouf,Senegal,SEN,I,player,
-SEN-08,8,Kalidou Koulibaly,Senegal,SEN,I,player,
-SEN-09,9,Idrissa Gana Gueye,Senegal,SEN,I,player,
-SEN-10,10,Pape Mamadou Sarr,Senegal,SEN,I,player,
-SEN-11,11,Pape Gueye,Senegal,SEN,I,player,
-SEN-12,12,Habib Diarra,Senegal,SEN,I,player,
-SEN-13,13,Foto Equipo,Senegal,SEN,I,player,
-SEN-14,14,Lamine Camara,Senegal,SEN,I,player,
-SEN-15,15,Sadio Mane,Senegal,SEN,I,player,
-SEN-16,16,Ismaïla Sarr,Senegal,SEN,I,player,
-SEN-17,17,Boulaye Dia,Senegal,SEN,I,player,
-SEN-18,18,Iliman Ndiaye,Senegal,SEN,I,player,
-SEN-19,19,Nicolas Jackson,Senegal,SEN,I,player,
-SEN-20,20,Krepin Diatta,Senegal,SEN,I,player,
-IRQ-01,1,Escudo,Iraq,IRQ,I,team_badge,
-IRQ-02,2,Jalal Hassan,Iraq,IRQ,I,player,
-IRQ-03,3,Rebin Sulaka,Iraq,IRQ,I,player,
-IRQ-04,4,Hussein Ali,Iraq,IRQ,I,player,
-IRQ-05,5,Akam Hashem,Iraq,IRQ,I,player,
-IRQ-06,6,Merchas Doski,Iraq,IRQ,I,player,
-IRQ-07,7,Zaid Tahseen,Iraq,IRQ,I,player,
-IRQ-08,8,Manaf Younis,Iraq,IRQ,I,player,
-IRQ-09,9,Zidane Iqbal,Iraq,IRQ,I,player,
-IRQ-10,10,Amir Al-Ammari,Iraq,IRQ,I,player,
-IRQ-11,11,Ibrahim Bavesh,Iraq,IRQ,I,player,
-IRQ-12,12,Ali Jasim,Iraq,IRQ,I,player,
-IRQ-13,13,Foto Equipo,Iraq,IRQ,I,player,
-IRQ-14,14,Youssef Amyn,Iraq,IRQ,I,player,
-IRQ-15,15,Aimar Sher,Iraq,IRQ,I,player,
-IRQ-16,16,Marko Farji,Iraq,IRQ,I,player,
-IRQ-17,17,Osama Rashid,Iraq,IRQ,I,player,
-IRQ-18,18,Ali Al-Hamadi,Iraq,IRQ,I,player,
-IRQ-19,19,Aymen Hussein,Iraq,IRQ,I,player,
-IRQ-20,20,Mohanad Ali,Iraq,IRQ,I,player,
-NOR-01,1,Escudo,Norway,NOR,I,team_badge,
-NOR-02,2,Orjan Nyland,Norway,NOR,I,player,
-NOR-03,3,Julian Ryerson,Norway,NOR,I,player,
-NOR-04,4,Leo Ostigard,Norway,NOR,I,player,
-NOR-05,5,Kristoffer Vassbakk Ajer,Norway,NOR,I,player,
-NOR-06,6,Marcus Holmgren Pedersen,Norway,NOR,I,player,
-NOR-07,7,David Moller Wolfe,Norway,NOR,I,player,
-NOR-08,8,Torbjorn Heggem,Norway,NOR,I,player,
-NOR-09,9,Morten Thorsby,Norway,NOR,I,player,
-NOR-10,10,Martin Odegaard,Norway,NOR,I,player,
-NOR-11,11,Sander Berge,Norway,NOR,I,player,
-NOR-12,12,Andreas Schjelderup,Norway,NOR,I,player,
-NOR-13,13,Foto Equipo,Norway,NOR,I,player,
-NOR-14,14,Patrick Berg,Norway,NOR,I,player,
-NOR-15,15,Erling Haaland,Norway,NOR,I,player,
-NOR-16,16,Alexander Sorloth,Norway,NOR,I,player,
-NOR-17,17,Aron Dønnum,Norway,NOR,I,player,
-NOR-18,18,Jorgen Strand Larsen,Norway,NOR,I,player,
-NOR-19,19,Antonio Musa,Norway,NOR,I,player,
-NOR-20,20,Oscar Bobb,Norway,NOR,I,player,
-ENG-01,1,Escudo,England,ENG,J,team_badge,
-ENG-02,2,Jordan Pickford,England,ENG,J,player,
-ENG-03,3,John Stones,England,ENG,J,player,
-ENG-04,4,Marc Guehi,England,ENG,J,player,
-ENG-05,5,Ezri Konsa,England,ENG,J,player,
-ENG-06,6,Trent Alexander-Arnold,England,ENG,J,player,
-ENG-07,7,Reece James,England,ENG,J,player,
-ENG-08,8,Dan Burn,England,ENG,J,player,
-ENG-09,9,Jordan Henderson,England,ENG,J,player,
-ENG-10,10,Declan Rice,England,ENG,J,player,
-ENG-11,11,Jude Bellingham,England,ENG,J,player,
-ENG-12,12,Cole Palmer,England,ENG,J,player,
-ENG-13,13,Foto Equipo,England,ENG,J,player,
-ENG-14,14,Morgan Rogers,England,ENG,J,player,
-ENG-15,15,Anthony Gordon,England,ENG,J,player,
-ENG-16,16,Phil Foden,England,ENG,J,player,
-ENG-17,17,Bukayo Saka,England,ENG,J,player,
-ENG-18,18,Harry Kane,England,ENG,J,player,
-ENG-19,19,Marcus Rashford,England,ENG,J,player,
-ENG-20,20,Ollie Watkins,England,ENG,J,player,
-CRO-01,1,Escudo,Croatia,CRO,J,team_badge,
-CRO-02,2,Dominik Livakovic,Croatia,CRO,J,player,
-CRO-03,3,Duje Caleta-Car,Croatia,CRO,J,player,
-CRO-04,4,Josko Gvardiol,Croatia,CRO,J,player,
-CRO-05,5,Josip Stanisic,Croatia,CRO,J,player,
-CRO-06,6,Luka Vuskovic,Croatia,CRO,J,player,
-CRO-07,7,Josip Sutalo,Croatia,CRO,J,player,
-CRO-08,8,Kristijan Jakic,Croatia,CRO,J,player,
-CRO-09,9,Luka Modric,Croatia,CRO,J,player,
-CRO-10,10,Mateo Kovacic,Croatia,CRO,J,player,
-CRO-11,11,Martin Baturina,Croatia,CRO,J,player,
-CRO-12,12,Lovro Majer,Croatia,CRO,J,player,
-CRO-13,13,Foto Equipo,Croatia,CRO,J,player,
-CRO-14,14,Mario Pasalic,Croatia,CRO,J,player,
-CRO-15,15,Petar Suicic,Croatia,CRO,J,player,
-CRO-16,16,Ivan Perisic,Croatia,CRO,J,player,
-CRO-17,17,Marco Pasalic,Croatia,CRO,J,player,
-CRO-18,18,Ante Budimir,Croatia,CRO,J,player,
-CRO-19,19,Andrej Kramaric,Croatia,CRO,J,player,
-CRO-20,20,Franjo Ivanovic,Croatia,CRO,J,player,
-GHA-01,1,Escudo,Ghana,GHA,J,team_badge,
-GHA-02,2,Lawrence Ati Zigi,Ghana,GHA,J,player,
-GHA-03,3,Tariq Lamptey,Ghana,GHA,J,player,
-GHA-04,4,Mohammed Salisu,Ghana,GHA,J,player,
-GHA-05,5,Alidu Seidu,Ghana,GHA,J,player,
-GHA-06,6,Alexanderr Djiku,Ghana,GHA,J,player,
-GHA-07,7,Gideon Mensah,Ghana,GHA,J,player,
-GHA-08,8,Caleb Yirenkyi,Ghana,GHA,J,player,
-GHA-09,9,Abdul Issahaku Fatawu,Ghana,GHA,J,player,
-GHA-10,10,Thomas Partey,Ghana,GHA,J,player,
-GHA-11,11,Salis Abdul Samed,Ghana,GHA,J,player,
-GHA-12,12,Kamaldeen Sulemana,Ghana,GHA,J,player,
-GHA-13,13,Foto Equipo,Ghana,GHA,J,player,
-GHA-14,14,Mohammed Kudus,Ghana,GHA,J,player,
-GHA-15,15,Inaki Williams,Ghana,GHA,J,player,
-GHA-16,16,Jordan Ayew,Ghana,GHA,J,player,
-GHA-17,17,Andre Ayew,Ghana,GHA,J,player,
-GHA-18,18,Joseph Paintsil,Ghana,GHA,J,player,
-GHA-19,19,Osman Bukari,Ghana,GHA,J,player,
-GHA-20,20,Antoine Semenyo,Ghana,GHA,J,player,
-PAN-01,1,Escudo,Panama,PAN,J,team_badge,
-PAN-02,2,Orlando Mosquera,Panama,PAN,J,player,
-PAN-03,3,Luis Mejia,Panama,PAN,J,player,
-PAN-04,4,Fidel Escobar,Panama,PAN,J,player,
-PAN-05,5,Andres Andrade,Panama,PAN,J,player,
-PAN-06,6,Michael Amir Murillo,Panama,PAN,J,player,
-PAN-07,7,Eric Davies,Panama,PAN,J,player,
-PAN-08,8,Jose Cordoba,Panama,PAN,J,player,
-PAN-09,9,Cesar Blackman,Panama,PAN,J,player,
-PAN-10,10,Cristian Martin,Panama,PAN,J,player,
-PAN-11,11,Anibal Godoy,Panama,PAN,J,player,
-PAN-12,12,Adalberto Carrasquilla,Panama,PAN,J,player,
-PAN-13,13,Foto Equipo,Panama,PAN,J,player,
-PAN-14,14,Edgar Barcenas,Panama,PAN,J,player,
-PAN-15,15,Carlos Harvey,Panama,PAN,J,player,
-PAN-16,16,Ismael Diaz,Panama,PAN,J,player,
-PAN-17,17,Jose Fajardo,Panama,PAN,J,player,
-PAN-18,18,Cecilio Waterman,Panama,PAN,J,player,
-PAN-19,19,Jose Luis Rodriguez,Panama,PAN,J,player,
-PAN-20,20,Alberto Quintero,Panama,PAN,J,player,
-FWC-09,1,Italia - Mundial Italia 1934,FIFA,FWC,,fwc_special,
-FWC-10,2,Uruguay - Mundial Brasil 1950,FIFA,FWC,,fwc_special,
-FWC-11,3,Alemania - Mundial Suiza 1964,FIFA,FWC,,fwc_special,
-FWC-12,4,Brasil - Mundial Chile 1962,FIFA,FWC,,fwc_special,
-FWC-13,5,Alemania - Mundial Alemania 1974,FIFA,FWC,,fwc_special,
-FWC-14,6,Argentina - Mundial Mexico 1986,FIFA,FWC,,fwc_special,
-FWC-15,7,Brasil - Mundial USA 1994,FIFA,FWC,,fwc_special,
-FWC-16,8,Brasil - Mundial Corea - Japon 2002,FIFA,FWC,,fwc_special,
-FWC-17,9,Italia - Mundial Alemania 2006,FIFA,FWC,,fwc_special,
-FWC-18,10,Alemania - Mundial Brasil 2014,FIFA,FWC,,fwc_special,
-FWC-19,11,Argentina - Mundial Catar 2022,FIFA,FWC,,fwc_special,
-EXTRA-messi-purple,1,Lionel Messi,Argentina,ARG,,special,purple
-EXTRA-messi-bronze,2,Lionel Messi,Argentina,ARG,,special,bronze
-EXTRA-messi-silver,3,Lionel Messi,Argentina,ARG,,special,silver
-EXTRA-messi-gold,4,Lionel Messi,Argentina,ARG,,special,gold
-EXTRA-doku-purple,1,Jérémy Doku,Belgium,BEL,,special,purple
-EXTRA-doku-bronze,2,Jérémy Doku,Belgium,BEL,,special,bronze
-EXTRA-doku-silver,3,Jérémy Doku,Belgium,BEL,,special,silver
-EXTRA-doku-gold,4,Jérémy Doku,Belgium,BEL,,special,gold
-EXTRA-vinicius-purple,1,Vinícius Júnior,Brazil,BRA,,special,purple
-EXTRA-vinicius-bronze,2,Vinícius Júnior,Brazil,BRA,,special,bronze
-EXTRA-vinicius-silver,3,Vinícius Júnior,Brazil,BRA,,special,silver
-EXTRA-vinicius-gold,4,Vinícius Júnior,Brazil,BRA,,special,gold
-EXTRA-davies-purple,1,Alphonso Davies,Canada,CAN,,special,purple
-EXTRA-davies-bronze,2,Alphonso Davies,Canada,CAN,,special,bronze
-EXTRA-davies-silver,3,Alphonso Davies,Canada,CAN,,special,silver
-EXTRA-davies-gold,4,Alphonso Davies,Canada,CAN,,special,gold
-EXTRA-diaz-purple,1,Luis Díaz,Colombia,COL,,special,purple
-EXTRA-diaz-bronze,2,Luis Díaz,Colombia,COL,,special,bronze
-EXTRA-diaz-silver,3,Luis Díaz,Colombia,COL,,special,silver
-EXTRA-diaz-gold,4,Luis Díaz,Colombia,COL,,special,gold
-EXTRA-modric-purple,1,Luka Modrić,Croatia,CRO,,special,purple
-EXTRA-modric-bronze,2,Luka Modrić,Croatia,CRO,,special,bronze
-EXTRA-modric-silver,3,Luka Modrić,Croatia,CRO,,special,silver
-EXTRA-modric-gold,4,Luka Modrić,Croatia,CRO,,special,gold
-EXTRA-caicedo-purple,1,Moisés Caicedo,Ecuador,ECU,,special,purple
-EXTRA-caicedo-bronze,2,Moisés Caicedo,Ecuador,ECU,,special,bronze
-EXTRA-caicedo-silver,3,Moisés Caicedo,Ecuador,ECU,,special,silver
-EXTRA-caicedo-gold,4,Moisés Caicedo,Ecuador,ECU,,special,gold
-EXTRA-salah-purple,1,Mohamed Salah,Egypt,EGY,,special,purple
-EXTRA-salah-bronze,2,Mohamed Salah,Egypt,EGY,,special,bronze
-EXTRA-salah-silver,3,Mohamed Salah,Egypt,EGY,,special,silver
-EXTRA-salah-gold,4,Mohamed Salah,Egypt,EGY,,special,gold
-EXTRA-bellingham-purple,1,Jude Bellingham,England,ENG,,special,purple
-EXTRA-bellingham-bronze,2,Jude Bellingham,England,ENG,,special,bronze
-EXTRA-bellingham-silver,3,Jude Bellingham,England,ENG,,special,silver
-EXTRA-bellingham-gold,4,Jude Bellingham,England,ENG,,special,gold
-EXTRA-mbappe-purple,1,Kylian Mbappé,France,FRA,,special,purple
-EXTRA-mbappe-bronze,2,Kylian Mbappé,France,FRA,,special,bronze
-EXTRA-mbappe-silver,3,Kylian Mbappé,France,FRA,,special,silver
-EXTRA-mbappe-gold,4,Kylian Mbappé,France,FRA,,special,gold
-EXTRA-wirtz-purple,1,Florian Wirtz,Germany,GER,,special,purple
-EXTRA-wirtz-bronze,2,Florian Wirtz,Germany,GER,,special,bronze
-EXTRA-wirtz-silver,3,Florian Wirtz,Germany,GER,,special,silver
-EXTRA-wirtz-gold,4,Florian Wirtz,Germany,GER,,special,gold
-EXTRA-jimenez-purple,1,Raúl Jiménez,Mexico,MEX,,special,purple
-EXTRA-jimenez-bronze,2,Raúl Jiménez,Mexico,MEX,,special,bronze
-EXTRA-jimenez-silver,3,Raúl Jiménez,Mexico,MEX,,special,silver
-EXTRA-jimenez-gold,4,Raúl Jiménez,Mexico,MEX,,special,gold
-EXTRA-hakimi-purple,1,Achraf Hakimi,Morocco,MAR,,special,purple
-EXTRA-hakimi-bronze,2,Achraf Hakimi,Morocco,MAR,,special,bronze
-EXTRA-hakimi-silver,3,Achraf Hakimi,Morocco,MAR,,special,silver
-EXTRA-hakimi-gold,4,Achraf Hakimi,Morocco,MAR,,special,gold
-EXTRA-gakpo-purple,1,Cody Gakpo,Netherlands,NED,,special,purple
-EXTRA-gakpo-bronze,2,Cody Gakpo,Netherlands,NED,,special,bronze
-EXTRA-gakpo-silver,3,Cody Gakpo,Netherlands,NED,,special,silver
-EXTRA-gakpo-gold,4,Cody Gakpo,Netherlands,NED,,special,gold
-EXTRA-haaland-purple,1,Erling Haaland,Norway,NOR,,special,purple
-EXTRA-haaland-bronze,2,Erling Haaland,Norway,NOR,,special,bronze
-EXTRA-haaland-silver,3,Erling Haaland,Norway,NOR,,special,silver
-EXTRA-haaland-gold,4,Erling Haaland,Norway,NOR,,special,gold
-EXTRA-ronaldo-purple,1,Cristiano Ronaldo,Portugal,POR,,special,purple
-EXTRA-ronaldo-bronze,2,Cristiano Ronaldo,Portugal,POR,,special,bronze
-EXTRA-ronaldo-silver,3,Cristiano Ronaldo,Portugal,POR,,special,silver
-EXTRA-ronaldo-gold,4,Cristiano Ronaldo,Portugal,POR,,special,gold
-EXTRA-son-purple,1,Heung-min Son, Korea Republic,KOR,,special,purple
-EXTRA-son-bronze,2,Heung-min Son, Korea Republic,KOR,,special,bronze
-EXTRA-son-silver,3,Heung-min Son, Korea Republic,KOR,,special,silver
-EXTRA-son-gold,4,Heung-min Son, Korea Republic,KOR,,special,gold
-EXTRA-yamal-purple,1,Lamine Yamal,Spain,ESP,,special,purple
-EXTRA-yamal-bronze,2,Lamine Yamal,Spain,ESP,,special,bronze
-EXTRA-yamal-silver,3,Lamine Yamal,Spain,ESP,,special,silver
-EXTRA-yamal-gold,4,Lamine Yamal,Spain,ESP,,special,gold
-EXTRA-pulisic-purple,1,Christian Pulisic,USA,USA,,special,purple
-EXTRA-pulisic-bronze,2,Christian Pulisic,USA,USA,,special,bronze
-EXTRA-pulisic-silver,3,Christian Pulisic,USA,USA,,special,silver
-EXTRA-pulisic-gold,4,Christian Pulisic,USA,USA,,special,gold
-EXTRA-valverde-purple,1,Federico Valverde,Uruguay,URU,,special,purple
-EXTRA-valverde-bronze,2,Federico Valverde,Uruguay,URU,,special,bronze
-EXTRA-valverde-silver,3,Federico Valverde,Uruguay,URU,,special,silver
-EXTRA-valverde-gold,4,Federico Valverde,Uruguay,URU,,special,gold
-CC-01,1,Lamine Yamal - Spain,Spain,ESP,,coca_cola,
-CC-02,2,Joshua Kimmich - Germany,Germany,GER,,coca_cola,
-CC-03,3,Eduardo Camavinga - France,France,FRA,,coca_cola,
-CC-04,4,Josko Gvardiol - Croatia,Croatia,CRO,,coca_cola,
-CC-05,5,Federico Valverde - Uruguay,Uruguay,URU,,coca_cola,
-CC-06,6,Virgil van Dijk - Netherlands,Netherlands,NED,,coca_cola,
-CC-07,7,Alphonso Davies - Canada,Canada,CAN,,coca_cola,
-CC-08,8,Raúl Jiménez - Mexico,Mexico,MEX,,coca_cola,
-CC-09,9,William Saliba - France,France,FRA,,coca_cola,
-CC-10,10,Lautaro Martínez - Argentina,Argentina,ARG,,coca_cola,
-CC-11,11,Harry Kane - England,England,ENG,,coca_cola,
-CC-12,12,Antonee Robinson - USA,USA,USA,,coca_cola,
+id,name,team,type
+"0","Panini Logo","We Are Panini","logo"
+"FWC1","Official Emblem1","FIFA World Cup 2026","fwc_special"
+"FWC2","Official Emblem2","FIFA World Cup 2026","fwc_special"
+"FWC3","Official Mascots","FIFA World Cup 2026","fwc_special"
+"FWC4","Official Slogan","FIFA World Cup 2026","fwc_special"
+"FWC5","Official Ball","FIFA World Cup 2026","fwc_special"
+"FWC6","Canada","Host Countries and Cities","fwc_special"
+"FWC7","Mexico","Host Countries and Cities","fwc_special"
+"FWC8","USA","Host Countries and Cities","fwc_special"
+"MEX1","Emblem","Mexico","team_badge"
+"MEX2","Luis Malagón","Mexico","player"
+"MEX3","Johan Vasquez","Mexico","player"
+"MEX4","Jorge Sánchez","Mexico","player"
+"MEX5","Cesar Montes","Mexico","player"
+"MEX6","Jesus Gallardo","Mexico","player"
+"MEX7","Israel Reyes","Mexico","player"
+"MEX8","Diego Lainez","Mexico","player"
+"MEX9","Carlos Rodriguez","Mexico","player"
+"MEX10","Edson Alvarez","Mexico","player"
+"MEX11","Orbelin Pineda","Mexico","player"
+"MEX12","Marcel Ruiz","Mexico","player"
+"MEX13","Team Photo","Mexico","player"
+"MEX14","Érick Sánchez","Mexico","player"
+"MEX15","Hirving Lozano","Mexico","player"
+"MEX16","Santiago Giménez","Mexico","player"
+"MEX17","Raúl Jiménez","Mexico","player"
+"MEX18","Alexis Vega","Mexico","player"
+"MEX19","Roberto Alvarado","Mexico","player"
+"MEX20","Cesar Huerta","Mexico","player"
+"RSA1","Emblem","South Africa","team_badge"
+"RSA2","Ronwen Williams","South Africa","player"
+"RSA3","Sipho Chaine","South Africa","player"
+"RSA4","Aubrey Modiba","South Africa","player"
+"RSA5","Samukele Kabini","South Africa","player"
+"RSA6","Mbekezeli Mbokazi","South Africa","player"
+"RSA7","Khulumani Ndamane","South Africa","player"
+"RSA8","Siyabonga Ngezana","South Africa","player"
+"RSA9","Khuliso Mudau","South Africa","player"
+"RSA10","Nkosinathi Sibisi","South Africa","player"
+"RSA11","Teboho Mokoena","South Africa","player"
+"RSA12","Thalente Mbatha","South Africa","player"
+"RSA13","Team Photo","South Africa","player"
+"RSA14","Bathusi Aubaas","South Africa","player"
+"RSA15","Yaya Sithole","South Africa","player"
+"RSA16","Sipho Mbule","South Africa","player"
+"RSA17","Lyle Foster","South Africa","player"
+"RSA18","Iqraam Rayners","South Africa","player"
+"RSA19","Mohau Nkota","South Africa","player"
+"RSA20","Oswin Appollis","South Africa","player"
+"KOR1","Emblem","South Korea","team_badge"
+"KOR2","Hyeon-woo Jo","South Korea","player"
+"KOR3","Seung-Gyu Kim","South Korea","player"
+"KOR4","Min-jae Kim","South Korea","player"
+"KOR5","Yu-min Cho","South Korea","player"
+"KOR6","Young-woo Seol","South Korea","player"
+"KOR7","Han-beom Lee","South Korea","player"
+"KOR8","Tae-seok Lee","South Korea","player"
+"KOR9","Myung-jae Lee","South Korea","player"
+"KOR10","Jae-sung Lee","South Korea","player"
+"KOR11","In-beom Hwang","South Korea","player"
+"KOR12","Kang-in Lee","South Korea","player"
+"KOR13","Team Photo","South Korea","player"
+"KOR14","Seung-ho Paik","South Korea","player"
+"KOR15","Jens Castrop","South Korea","player"
+"KOR16","Dongg-yeong Lee","South Korea","player"
+"KOR17","Gue-sung Cho","South Korea","player"
+"KOR18","Heung-min Son","South Korea","player"
+"KOR19","Hee-chan Hwang","South Korea","player"
+"KOR20","Hyeon-Gyu Oh","South Korea","player"
+"CZE1","Emblem","Czechia","team_badge"
+"CZE2","Matej Kovar","Czechia","player"
+"CZE3","Jindrich Stanek","Czechia","player"
+"CZE4","Ladislav Krejci","Czechia","player"
+"CZE5","Vladimir Coufal","Czechia","player"
+"CZE6","Jaroslav Zeleny","Czechia","player"
+"CZE7","Tomas Holes","Czechia","player"
+"CZE8","David Zima","Czechia","player"
+"CZE9","Michal Sadilek","Czechia","player"
+"CZE10","Lukas Provod","Czechia","player"
+"CZE11","Lukas Cerv","Czechia","player"
+"CZE12","Tomas Soucek","Czechia","player"
+"CZE13","Team Photo","Czechia","player"
+"CZE14","Pavel Sulc","Czechia","player"
+"CZE15","Matej Vydra","Czechia","player"
+"CZE16","Vasil Kusej","Czechia","player"
+"CZE17","Tomas Chory","Czechia","player"
+"CZE18","Vaclav Cerny","Czechia","player"
+"CZE19","Adam Hlozek","Czechia","player"
+"CZE20","Patrik Schick","Czechia","player"
+"CAN1","Emblem","Canada","team_badge"
+"CAN2","Dayne St.Clair","Canada","player"
+"CAN3","Alphonso Davies","Canada","player"
+"CAN4","Alistair Johnston","Canada","player"
+"CAN5","Samuel Adekugbe","Canada","player"
+"CAN6","Richie Laryea","Canada","player"
+"CAN7","Derek Cornelius","Canada","player"
+"CAN8","Moïse Bombito","Canada","player"
+"CAN9","Kamal Miller","Canada","player"
+"CAN10","Stephen Eustáquio","Canada","player"
+"CAN11","Ismaël Koné","Canada","player"
+"CAN12","Jonathan Osorio","Canada","player"
+"CAN13","Team Photo","Canada","player"
+"CAN14","Jacob Shaffelburg","Canada","player"
+"CAN15","Mathieu Choinière","Canada","player"
+"CAN16","Niko Sigur","Canada","player"
+"CAN17","Tajon Buchanan","Canada","player"
+"CAN18","Liam Millar","Canada","player"
+"CAN19","Cyle Larin","Canada","player"
+"CAN20","Jonathan David","Canada","player"
+"BIH1","Emblem","Bosnia and Herzegovina","team_badge"
+"BIH2","Nikola Vasilj","Bosnia and Herzegovina","player"
+"BIH3","Amer Dedic","Bosnia and Herzegovina","player"
+"BIH4","Sead Kolasinac","Bosnia and Herzegovina","player"
+"BIH5","Tarik Muharemovic","Bosnia and Herzegovina","player"
+"BIH6","Nihad Mujakic","Bosnia and Herzegovina","player"
+"BIH7","Nikola Katic","Bosnia and Herzegovina","player"
+"BIH8","Amir Hadziahmetovic","Bosnia and Herzegovina","player"
+"BIH9","Benjamin Tahirovic","Bosnia and Herzegovina","player"
+"BIH10","Armin Gigovic","Bosnia and Herzegovina","player"
+"BIH11","Ivan Sunjic","Bosnia and Herzegovina","player"
+"BIH12","Ivan Basic","Bosnia and Herzegovina","player"
+"BIH13","Team Photo","Bosnia and Herzegovina","player"
+"BIH14","Dzenis Burnic","Bosnia and Herzegovina","player"
+"BIH15","Esmir Bajraktarevic","Bosnia and Herzegovina","player"
+"BIH16","Amar Memic","Bosnia and Herzegovina","player"
+"BIH17","Ermedin Demirovic","Bosnia and Herzegovina","player"
+"BIH18","Edin Dzeko","Bosnia and Herzegovina","player"
+"BIH19","Samed Bazdar","Bosnia and Herzegovina","player"
+"BIH20","Haris Tabakovic","Bosnia and Herzegovina","player"
+"QAT1","Emblem","Qatar","team_badge"
+"QAT2","Meshaal Barsham","Qatar","player"
+"QAT3","Sultan Albrake","Qatar","player"
+"QAT4","Lucas Mendes","Qatar","player"
+"QAT5","Homam Ahmed","Qatar","player"
+"QAT6","Boualem Khoukhi","Qatar","player"
+"QAT7","Pedro Miguel","Qatar","player"
+"QAT8","Tarek Salman","Qatar","player"
+"QAT9","Mohamed Al-Mannai","Qatar","player"
+"QAT10","Karim Boudiaf","Qatar","player"
+"QAT11","Assim Madibo","Qatar","player"
+"QAT12","Ahmed Fatehi","Qatar","player"
+"QAT13","Team Photo","Qatar","player"
+"QAT14","Mohammed Waad","Qatar","player"
+"QAT15","Abdulaziz Hatem","Qatar","player"
+"QAT16","Hassan Al-Haydos","Qatar","player"
+"QAT17","Edmilson Junior","Qatar","player"
+"QAT18","Akram Hassan Afif","Qatar","player"
+"QAT19","Ahmed Al Ganehi","Qatar","player"
+"QAT20","Almoez Ali","Qatar","player"
+"SUI1","Emblem","Switzerland","team_badge"
+"SUI2","Gregor Kobel","Switzerland","player"
+"SUI3","Yvon Mvogo","Switzerland","player"
+"SUI4","Manuel Akanji","Switzerland","player"
+"SUI5","Ricardo Rodriguez","Switzerland","player"
+"SUI6","Nico Elvedi","Switzerland","player"
+"SUI7","Aurèle Amenda","Switzerland","player"
+"SUI8","Silvan Widmer","Switzerland","player"
+"SUI9","Granit Xhaka","Switzerland","player"
+"SUI10","Denis Zakaria","Switzerland","player"
+"SUI11","Remo Freuler","Switzerland","player"
+"SUI12","Fabian Rieder","Switzerland","player"
+"SUI13","Team Photo","Switzerland","player"
+"SUI14","Ardon Jashari","Switzerland","player"
+"SUI15","Johan Manzambi","Switzerland","player"
+"SUI16","Michel Aebischer","Switzerland","player"
+"SUI17","Breel Embolo","Switzerland","player"
+"SUI18","Ruben Vargas","Switzerland","player"
+"SUI19","Dan Ndoye","Switzerland","player"
+"SUI20","Zeki Amdouni","Switzerland","player"
+"BRA1","Emblem","Brazil","team_badge"
+"BRA2","Alisson","Brazil","player"
+"BRA3","Bento","Brazil","player"
+"BRA4","Marquinhos","Brazil","player"
+"BRA5","Éder Militão","Brazil","player"
+"BRA6","Gabriel Magalhães","Brazil","player"
+"BRA7","Danilo","Brazil","player"
+"BRA8","Wesley","Brazil","player"
+"BRA9","Lucas Paquetá","Brazil","player"
+"BRA10","Casemiro","Brazil","player"
+"BRA11","Bruno Guimarães","Brazil","player"
+"BRA12","Luiz Henrique","Brazil","player"
+"BRA13","Team Photo","Brazil","player"
+"BRA14","Vinicius Júnior","Brazil","player"
+"BRA15","Rodrygo","Brazil","player"
+"BRA16","João Pedro","Brazil","player"
+"BRA17","Matheus Cunha","Brazil","player"
+"BRA18","Gabriel Martinelli","Brazil","player"
+"BRA19","Raphinha","Brazil","player"
+"BRA20","Estévão","Brazil","player"
+"MAR1","Emblem","Morocco","team_badge"
+"MAR2","Yassine Bounou","Morocco","player"
+"MAR3","Munir El Kajoui","Morocco","player"
+"MAR4","Achraf Hakimi","Morocco","player"
+"MAR5","Noussair Mazraoui","Morocco","player"
+"MAR6","Nayef Aguerd","Morocco","player"
+"MAR7","Romain Saïss","Morocco","player"
+"MAR8","Jawad El Yamiq","Morocco","player"
+"MAR9","Adam Masina","Morocco","player"
+"MAR10","Sofyan Amrabat","Morocco","player"
+"MAR11","Azzedine Ounahi","Morocco","player"
+"MAR12","Eliesse Ben Seghir","Morocco","player"
+"MAR13","Team Photo","Morocco","player"
+"MAR14","Bilal El Khannouss","Morocco","player"
+"MAR15","Ismael Saibari","Morocco","player"
+"MAR16","Youssef En-Nesyri","Morocco","player"
+"MAR17","Abde Ezzalzouli","Morocco","player"
+"MAR18","Soufiane Rahimi","Morocco","player"
+"MAR19","Brahim Diaz","Morocco","player"
+"MAR20","Ayoub El Kaabi","Morocco","player"
+"HAI1","Emblem","Haiti","team_badge"
+"HAI2","Johny Placide","Haiti","player"
+"HAI3","Carlens Arcus","Haiti","player"
+"HAI4","Martin Expérience","Haiti","player"
+"HAI5","Jean-Kevin Duverne","Haiti","player"
+"HAI6","Ricardo Adé","Haiti","player"
+"HAI7","Duke Lacroix","Haiti","player"
+"HAI8","Garven Metusala","Haiti","player"
+"HAI9","Hannes Delcroix","Haiti","player"
+"HAI10","Leverton Pierre","Haiti","player"
+"HAI11","Danley Jean Jacques","Haiti","player"
+"HAI12","Jean-Ricner Bellegarde","Haiti","player"
+"HAI13","Team Photo","Haiti","player"
+"HAI14","Christopher Attys","Haiti","player"
+"HAI15","Derrick Etienne Jr","Haiti","player"
+"HAI16","Josue Casimir","Haiti","player"
+"HAI17","Ruben Providence","Haiti","player"
+"HAI18","Duckens Nazon","Haiti","player"
+"HAI19","Louicius Deedson","Haiti","player"
+"HAI20","Frantzdy Pierrot","Haiti","player"
+"SCO1","Emblem","Scotland","team_badge"
+"SCO2","Angus Gunn","Scotland","player"
+"SCO3","Jack Hendry","Scotland","player"
+"SCO4","Kieran Tierney","Scotland","player"
+"SCO5","Aaron Hickey","Scotland","player"
+"SCO6","Andrew Robertson","Scotland","player"
+"SCO7","Scott McKenna","Scotland","player"
+"SCO8","John Souttar","Scotland","player"
+"SCO9","Anthony Ralston","Scotland","player"
+"SCO10","Grant Hanley","Scotland","player"
+"SCO11","Scott McTominay","Scotland","player"
+"SCO12","Billy Gilmour","Scotland","player"
+"SCO13","Team Photo","Scotland","player"
+"SCO14","Lewis Ferguson","Scotland","player"
+"SCO15","Ryan Christie","Scotland","player"
+"SCO16","Kenny McLean","Scotland","player"
+"SCO17","John McGinn","Scotland","player"
+"SCO18","Lyndon Dykes","Scotland","player"
+"SCO19","Che Adams","Scotland","player"
+"SCO20","Ben Gannon-Doak","Scotland","player"
+"USA1","Emblem","USA","team_badge"
+"USA2","Matt Freese","USA","player"
+"USA3","Chris Richards","USA","player"
+"USA4","Tim Ream","USA","player"
+"USA5","Mark McKenzie","USA","player"
+"USA6","Alex Freeman","USA","player"
+"USA7","Antonee Robinson","USA","player"
+"USA8","Tyler Adams","USA","player"
+"USA9","Tanner Tessmann","USA","player"
+"USA10","Weston McKenny","USA","player"
+"USA11","Christian Roldan","USA","player"
+"USA12","Timothy Weah","USA","player"
+"USA13","Team Photo","USA","player"
+"USA14","Diego Luna","USA","player"
+"USA15","Malik Tillman","USA","player"
+"USA16","Christian Pulisic","USA","player"
+"USA17","Brenden Aaronson","USA","player"
+"USA18","Ricardo Pepi","USA","player"
+"USA19","Haji Wright","USA","player"
+"USA20","Folarin Balogun","USA","player"
+"PAR1","Emblem","Paraguay","team_badge"
+"PAR2","Roberto Fernandez","Paraguay","player"
+"PAR3","Orlando Gill","Paraguay","player"
+"PAR4","Gustavo Gomez","Paraguay","player"
+"PAR5","Fabián Balbuena","Paraguay","player"
+"PAR6","Juan José Cáceres","Paraguay","player"
+"PAR7","Omar Alderete","Paraguay","player"
+"PAR8","Junior Alonso","Paraguay","player"
+"PAR9","Mathías Villasanti","Paraguay","player"
+"PAR10","Diego Gomez","Paraguay","player"
+"PAR11","Damián Bobadilla","Paraguay","player"
+"PAR12","Andres Cubas","Paraguay","player"
+"PAR13","Team Photo","Paraguay","player"
+"PAR14","Matias Galarza Fonda","Paraguay","player"
+"PAR15","Julio Enciso","Paraguay","player"
+"PAR16","Alejandro Romero Gamarra","Paraguay","player"
+"PAR17","Miguel Almirón","Paraguay","player"
+"PAR18","Ramon Sosa","Paraguay","player"
+"PAR19","Angel Romero","Paraguay","player"
+"PAR20","Antonio Sanabria","Paraguay","player"
+"AUS1","Emblem","Australia","team_badge"
+"AUS2","Mathew Ryan","Australia","player"
+"AUS3","Joe Gauci","Australia","player"
+"AUS4","Harry Souttar","Australia","player"
+"AUS5","Alessandro Circati","Australia","player"
+"AUS6","Jordan Bos","Australia","player"
+"AUS7","Aziz Behich","Australia","player"
+"AUS8","Cameron Burgess","Australia","player"
+"AUS9","Lewis Miller","Australia","player"
+"AUS10","Milos Degenek","Australia","player"
+"AUS11","Jackson Irvine","Australia","player"
+"AUS12","Riley McGree","Australia","player"
+"AUS13","Team Photo","Australia","player"
+"AUS14","Aiden O'Neill","Australia","player"
+"AUS15","Connor Metcalfe","Australia","player"
+"AUS16","Patrick Yazbek","Australia","player"
+"AUS17","Craig Goodwin","Australia","player"
+"AUS18","Kusini Yengi","Australia","player"
+"AUS19","Nestory Irankunda","Australia","player"
+"AUS20","Mohamed Touré","Australia","player"
+"TUR1","Emblem","Türkiye","team_badge"
+"TUR2","Ugurcan Cakir","Türkiye","player"
+"TUR3","Mert Muldur","Türkiye","player"
+"TUR4","Zeki Celik","Türkiye","player"
+"TUR5","Abdulkerim Bardakci","Türkiye","player"
+"TUR6","Caglar Soyuncu","Türkiye","player"
+"TUR7","Merih Demiral","Türkiye","player"
+"TUR8","Ferdi Kadioglu","Türkiye","player"
+"TUR9","Kaan Ayhan","Türkiye","player"
+"TUR10","Ismail Yuksek","Türkiye","player"
+"TUR11","Hakan Calhanoglu","Türkiye","player"
+"TUR12","Orkun Kokcu","Türkiye","player"
+"TUR13","Team Photo","Türkiye","player"
+"TUR14","Arda Guler","Türkiye","player"
+"TUR15","Irfan Can Kahveci","Türkiye","player"
+"TUR16","Yunus Akgun","Türkiye","player"
+"TUR17","Can Uzun","Türkiye","player"
+"TUR18","Baris Alper Yilmaz","Türkiye","player"
+"TUR19","Kerem Akturkoglu","Türkiye","player"
+"TUR20","Kenan Yildiz","Türkiye","player"
+"GER1","Emblem","Germany","team_badge"
+"GER2","Marc-André ter Stegen","Germany","player"
+"GER3","Jonathan Tah","Germany","player"
+"GER4","David Raum","Germany","player"
+"GER5","Nico Schlotterbeck","Germany","player"
+"GER6","Antonio Rüdiger","Germany","player"
+"GER7","Waldemar Anton","Germany","player"
+"GER8","Ridle Baku","Germany","player"
+"GER9","Maximilian Mittelstadt","Germany","player"
+"GER10","Joshua Kimmich","Germany","player"
+"GER11","Florian Wirtz","Germany","player"
+"GER12","Felix Nmecha","Germany","player"
+"GER13","Team Photo","Germany","player"
+"GER14","Leon Goretzka","Germany","player"
+"GER15","Jamal Musiala","Germany","player"
+"GER16","Serge Gnabry","Germany","player"
+"GER17","Kai Havertz","Germany","player"
+"GER18","Leroy Sane","Germany","player"
+"GER19","Karim Adeyemi","Germany","player"
+"GER20","Nick Woltemade","Germany","player"
+"GER2s","Marc-André ter Stegen","Germany","player"
+"GER3s","Jonathan Tah","Germany","player"
+"GER4s","David Raum","Germany","player"
+"GER5s","Nico Schlotterbeck","Germany","player"
+"GER6s","Antonio Rüdiger","Germany","player"
+"GER7s","Waldemar Anton","Germany","player"
+"GER8s","Ridle Baku","Germany","player"
+"GER9s","Maximilian Mittelstadt","Germany","player"
+"GER10s","Joshua Kimmich","Germany","player"
+"GER11s","Florian Wirtz","Germany","player"
+"GER12s","Felix Nmecha","Germany","player"
+"GER14s","Leon Goretzka","Germany","player"
+"GER15s","Jamal Musiala","Germany","player"
+"GER16s","Serge Gnabry","Germany","player"
+"GER17s","Kai Havertz","Germany","player"
+"GER18s","Leroy Sane","Germany","player"
+"GER19s","Karim Adeyemi","Germany","player"
+"GER20s","Nick Woltemade","Germany","player"
+"CUW1","Emblem","Curaçao","team_badge"
+"CUW2","Eloy Room","Curaçao","player"
+"CUW3","Armando Obispo","Curaçao","player"
+"CUW4","Sherel Floranus","Curaçao","player"
+"CUW5","Jurien Gaari","Curaçao","player"
+"CUW6","Joshua Brenet","Curaçao","player"
+"CUW7","Roshon Van Eijma","Curaçao","player"
+"CUW8","Shurandy Sambo","Curaçao","player"
+"CUW9","Livano Comenencia","Curaçao","player"
+"CUW10","Godfried Roemeratoe","Curaçao","player"
+"CUW11","Juninho Bacuna","Curaçao","player"
+"CUW12","Leandro Bacuna","Curaçao","player"
+"CUW13","Team Photo","Curaçao","player"
+"CUW14","Tahith Chong","Curaçao","player"
+"CUW15","Kenji Gorre","Curaçao","player"
+"CUW16","Jearl Margaritha","Curaçao","player"
+"CUW17","Jurgen Locadia","Curaçao","player"
+"CUW18","Jeremy Antonisse","Curaçao","player"
+"CUW19","Gervane Kastaneer","Curaçao","player"
+"CUW20","Sontje Hansen","Curaçao","player"
+"CIV1","Emblem","Ivory Coast","team_badge"
+"CIV2","Yahia Fofana","Ivory Coast","player"
+"CIV3","Ghislain Konan","Ivory Coast","player"
+"CIV4","Wilfried Singo","Ivory Coast","player"
+"CIV5","Odilon Kossounou","Ivory Coast","player"
+"CIV6","Evan Ndicka","Ivory Coast","player"
+"CIV7","Willy Boly","Ivory Coast","player"
+"CIV8","Emmanuel Agbadou","Ivory Coast","player"
+"CIV9","Ousmane Diomande","Ivory Coast","player"
+"CIV10","Franck Kessie","Ivory Coast","player"
+"CIV11","Seko Fofana","Ivory Coast","player"
+"CIV12","Ibrahim Sangare","Ivory Coast","player"
+"CIV13","Team Photo","Ivory Coast","player"
+"CIV14","Jean-Philippe Gbamin","Ivory Coast","player"
+"CIV15","Amad Diallo","Ivory Coast","player"
+"CIV16","Sébastien Haller","Ivory Coast","player"
+"CIV17","Simon Adingra","Ivory Coast","player"
+"CIV18","Yan Diomande","Ivory Coast","player"
+"CIV19","Evann Guessand","Ivory Coast","player"
+"CIV20","Oumar Diakite","Ivory Coast","player"
+"ECU1","Emblem","Ecuador","team_badge"
+"ECU2","Hernán Galíndez","Ecuador","player"
+"ECU3","Gonzalo Valle","Ecuador","player"
+"ECU4","Piero Hincapié","Ecuador","player"
+"ECU5","Pervis Estupiñán","Ecuador","player"
+"ECU6","Willian Pacho","Ecuador","player"
+"ECU7","Ángelo Preciado","Ecuador","player"
+"ECU8","Joel Ordóñez","Ecuador","player"
+"ECU9","Moises Caicedo","Ecuador","player"
+"ECU10","Alan Franco","Ecuador","player"
+"ECU11","Kendry Paez","Ecuador","player"
+"ECU12","Pedro Vite","Ecuador","player"
+"ECU13","Team Photo","Ecuador","player"
+"ECU14","John Yeboah","Ecuador","player"
+"ECU15","Leonardo Campana","Ecuador","player"
+"ECU16","Gonzalo Plata","Ecuador","player"
+"ECU17","Nilson Angulo","Ecuador","player"
+"ECU18","Alan Minda","Ecuador","player"
+"ECU19","Kevin Rodriguez","Ecuador","player"
+"ECU20","Enner Valencia","Ecuador","player"
+"NED1","Emblem","Netherlands","team_badge"
+"NED2","Bart Verbruggen","Netherlands","player"
+"NED3","Virgil van Dijk","Netherlands","player"
+"NED4","Micky van de Ven","Netherlands","player"
+"NED5","Jurrien Timber","Netherlands","player"
+"NED6","Denzel Dumfries","Netherlands","player"
+"NED7","Nathan Aké","Netherlands","player"
+"NED8","Jeremie Frimpong","Netherlands","player"
+"NED9","Jan Paul van Hecke","Netherlands","player"
+"NED10","Tijjani Reijnders","Netherlands","player"
+"NED11","Ryan Gravenberch","Netherlands","player"
+"NED12","Teun Koopmeiners","Netherlands","player"
+"NED13","Team Photo","Netherlands","player"
+"NED14","Frenkie de Jong","Netherlands","player"
+"NED15","Xavi Simons","Netherlands","player"
+"NED16","Justin Kluivert","Netherlands","player"
+"NED17","Memphis Depay","Netherlands","player"
+"NED18","Donyell Malen","Netherlands","player"
+"NED19","Wout Weghorst","Netherlands","player"
+"NED20","Cody Gakpo","Netherlands","player"
+"JPN1","Emblem","Japan","team_badge"
+"JPN2","Zion Suzuki","Japan","player"
+"JPN3","Henry Heroki Mochizuki","Japan","player"
+"JPN4","Ayumu Seko","Japan","player"
+"JPN5","Junnosuke Suzuki","Japan","player"
+"JPN6","Shogo Taniguchi","Japan","player"
+"JPN7","Tsuyoshi Watanabe","Japan","player"
+"JPN8","Kaishu Sano","Japan","player"
+"JPN9","Yuki Soma","Japan","player"
+"JPN10","Ao Tanaka","Japan","player"
+"JPN11","Daichi Kamada","Japan","player"
+"JPN12","Takefusa Kubo","Japan","player"
+"JPN13","Team Photo","Japan","player"
+"JPN14","Ritsu Doan","Japan","player"
+"JPN15","Keito Nakamura","Japan","player"
+"JPN16","Takumi Minamino","Japan","player"
+"JPN17","Shuto Machino","Japan","player"
+"JPN18","Junya Ito","Japan","player"
+"JPN19","Koki Ogawa","Japan","player"
+"JPN20","Ayase Ueda","Japan","player"
+"SWE1","Emblem","Sweden","team_badge"
+"SWE2","Victor Johansson","Sweden","player"
+"SWE3","Isak Hien","Sweden","player"
+"SWE4","Gabriel Gudmundsson","Sweden","player"
+"SWE5","Emil Holm","Sweden","player"
+"SWE6","Victor Nilsson Lindelöf","Sweden","player"
+"SWE7","Gustaf Lagerbielke","Sweden","player"
+"SWE8","Lucas Bergvall","Sweden","player"
+"SWE9","Hugo Larsson","Sweden","player"
+"SWE10","Jesper Karlström","Sweden","player"
+"SWE11","Yasin Ayari","Sweden","player"
+"SWE12","Mattias Svanberg","Sweden","player"
+"SWE13","Team Photo","Sweden","player"
+"SWE14","Daniel Svensson","Sweden","player"
+"SWE15","Ken Sema","Sweden","player"
+"SWE16","Roony Bardghji","Sweden","player"
+"SWE17","Dejan Kulusevski","Sweden","player"
+"SWE18","Anthony Elanga","Sweden","player"
+"SWE19","Alexander Isak","Sweden","player"
+"SWE20","Viktor Gyökeres","Sweden","player"
+"TUN1","Emblem","Tunisia","team_badge"
+"TUN2","Bechir Ben Said","Tunisia","player"
+"TUN3","Aymen Dahmen","Tunisia","player"
+"TUN4","Yan Valery","Tunisia","player"
+"TUN5","Montassar Talbi","Tunisia","player"
+"TUN6","Yassine Meriah","Tunisia","player"
+"TUN7","Ali Abdi","Tunisia","player"
+"TUN8","Dylan Bronn","Tunisia","player"
+"TUN9","Ellyes Skhiri","Tunisia","player"
+"TUN10","Aissa Laidouni","Tunisia","player"
+"TUN11","Ferjani Sassi","Tunisia","player"
+"TUN12","Mohamed Ali Ben Romdhane","Tunisia","player"
+"TUN13","Team Photo","Tunisia","player"
+"TUN14","Hannibal Mejbri","Tunisia","player"
+"TUN15","Elias Achouri","Tunisia","player"
+"TUN16","Elias Saad","Tunisia","player"
+"TUN17","Hazem Mastouri","Tunisia","player"
+"TUN18","Ismael Gharbi","Tunisia","player"
+"TUN19","Sayfallah Ltaief","Tunisia","player"
+"TUN20","Naim Sliti","Tunisia","player"
+"BEL1","Emblem","Belgium","team_badge"
+"BEL2","Thibaut Courtois","Belgium","player"
+"BEL3","Arthur Theate","Belgium","player"
+"BEL4","Timothy Castagne","Belgium","player"
+"BEL5","Zeno Debast","Belgium","player"
+"BEL6","Brandon Mechele","Belgium","player"
+"BEL7","Maxim De Cuyper","Belgium","player"
+"BEL8","Thomas Meunier","Belgium","player"
+"BEL9","Youri Tielemans","Belgium","player"
+"BEL10","Amadou Onana","Belgium","player"
+"BEL11","Nicolas Raskin","Belgium","player"
+"BEL12","Alexis Saelemaekers","Belgium","player"
+"BEL13","Team Photo","Belgium","player"
+"BEL14","Hans Vanaken","Belgium","player"
+"BEL15","Kevin De Bruyne","Belgium","player"
+"BEL16","Jérémy Doku","Belgium","player"
+"BEL17","Charles De Ketelaere","Belgium","player"
+"BEL18","Leandro Trossard","Belgium","player"
+"BEL19","Loïs Openda","Belgium","player"
+"BEL20","Romelu Lukaku","Belgium","player"
+"BEL2s","Thibaut Courtois","Belgium","player"
+"BEL3s","Arthur Theate","Belgium","player"
+"BEL4s","Timothy Castagne","Belgium","player"
+"BEL5s","Zeno Debast","Belgium","player"
+"BEL6s","Brandon Mechele","Belgium","player"
+"BEL7s","Maxim De Cuyper","Belgium","player"
+"BEL8s","Thomas Meunier","Belgium","player"
+"BEL9s","Youri Tielemans","Belgium","player"
+"BEL10s","Amadou Onana","Belgium","player"
+"BEL11s","Nicolas Raskin","Belgium","player"
+"BEL12s","Alexis Saelemaekers","Belgium","player"
+"BEL14s","Hans Vanaken","Belgium","player"
+"BEL15s","Kevin De Bruyne","Belgium","player"
+"BEL16s","Jérémy Doku","Belgium","player"
+"BEL17s","Charles De Ketelaere","Belgium","player"
+"BEL18s","Leandro Trossard","Belgium","player"
+"BEL19s","Loïs Openda","Belgium","player"
+"BEL20s","Romelu Lukaku","Belgium","player"
+"EGY1","Emblem","Egypt","team_badge"
+"EGY2","Mohamed El Shenawy","Egypt","player"
+"EGY3","Mohamed Hany","Egypt","player"
+"EGY4","Mohamed Hamdy","Egypt","player"
+"EGY5","Yasser Ibrahim","Egypt","player"
+"EGY6","Khaled Sobhi","Egypt","player"
+"EGY7","Ramy Rabia","Egypt","player"
+"EGY8","Hossam Abdelmaguid","Egypt","player"
+"EGY9","Ahmed Fatouh","Egypt","player"
+"EGY10","Marwan Attia","Egypt","player"
+"EGY11","Zizo","Egypt","player"
+"EGY12","Hamdy Fathy","Egypt","player"
+"EGY13","Team Photo","Egypt","player"
+"EGY14","Mohamed Lasheen","Egypt","player"
+"EGY15","Emam Ashour","Egypt","player"
+"EGY16","Osama Faisal","Egypt","player"
+"EGY17","Mohamed Salah","Egypt","player"
+"EGY18","Mostafa Mohamed","Egypt","player"
+"EGY19","Trezeguet","Egypt","player"
+"EGY20","Omar Marmoush","Egypt","player"
+"IRN1","Emblem","Iran","team_badge"
+"IRN2","Alireza Beiranvand","Iran","player"
+"IRN3","Morteza Pouraliganji","Iran","player"
+"IRN4","Ehsan Hajsafi","Iran","player"
+"IRN5","Milad Mohammadi","Iran","player"
+"IRN6","Shojae Khalilzadeh","Iran","player"
+"IRN7","Ramin Rezaeian","Iran","player"
+"IRN8","Hossein Kanaani","Iran","player"
+"IRN9","Sadegh Moharrami","Iran","player"
+"IRN10","Saleh Hardani","Iran","player"
+"IRN11","Saeed Ezatolahi","Iran","player"
+"IRN12","Saman Ghoddos","Iran","player"
+"IRN13","Team Photo","Iran","player"
+"IRN14","Omid Noorafkan","Iran","player"
+"IRN15","Roozbeh Cheshmi","Iran","player"
+"IRN16","Mohammad Mohebi","Iran","player"
+"IRN17","Sardar Azmoun","Iran","player"
+"IRN18","Mehdi Taremi","Iran","player"
+"IRN19","Alireza Jahanbakhsh","Iran","player"
+"IRN20","Ali Gholizadeh","Iran","player"
+"NZL1","Emblem","New Zealand","team_badge"
+"NZL2","Max Crocombe","New Zealand","player"
+"NZL3","Alex Paulsen","New Zealand","player"
+"NZL4","Michael Boxall","New Zealand","player"
+"NZL5","Liberato Cacace","New Zealand","player"
+"NZL6","Tim Payne","New Zealand","player"
+"NZL7","Tyler Bindon","New Zealand","player"
+"NZL8","Francis de Vries","New Zealand","player"
+"NZL9","Finn Surman","New Zealand","player"
+"NZL10","Joe Bell","New Zealand","player"
+"NZL11","Sarpreet Singh","New Zealand","player"
+"NZL12","Ryan Thomas","New Zealand","player"
+"NZL13","Team Photo","New Zealand","player"
+"NZL14","Matthew Garbett","New Zealand","player"
+"NZL15","Marko Stamenić","New Zealand","player"
+"NZL16","Ben Old","New Zealand","player"
+"NZL17","Chris Wood","New Zealand","player"
+"NZL18","Elijah Just","New Zealand","player"
+"NZL19","Callum McCowatt","New Zealand","player"
+"NZL20","Kosta Barbarouses","New Zealand","player"
+"ESP1","Emblem","Spain","team_badge"
+"ESP2","Unai Simon","Spain","player"
+"ESP3","Robin Le Normand","Spain","player"
+"ESP4","Aymeric Laporte","Spain","player"
+"ESP5","Dean Huijsen","Spain","player"
+"ESP6","Pedro Porro","Spain","player"
+"ESP7","Dani Carvajal","Spain","player"
+"ESP8","Marc Cucurella","Spain","player"
+"ESP9","Martín Zubimendi","Spain","player"
+"ESP10","Rodri","Spain","player"
+"ESP11","Pedri","Spain","player"
+"ESP12","Fabian Ruiz","Spain","player"
+"ESP13","Team Photo","Spain","player"
+"ESP14","Mikel Merino","Spain","player"
+"ESP15","Lamine Yamal","Spain","player"
+"ESP16","Dani Olmo","Spain","player"
+"ESP17","Nico Williams","Spain","player"
+"ESP18","Ferran Torres","Spain","player"
+"ESP19","Álvaro Morata","Spain","player"
+"ESP20","Mikel Oyarzabal","Spain","player"
+"CPV1","Emblem","Cape Verde","team_badge"
+"CPV2","Vozinha","Cape Verde","player"
+"CPV3","Logan Costa","Cape Verde","player"
+"CPV4","Pico","Cape Verde","player"
+"CPV5","Diney","Cape Verde","player"
+"CPV6","Steven Moreira","Cape Verde","player"
+"CPV7","Wagner Pina","Cape Verde","player"
+"CPV8","Joao Paulo","Cape Verde","player"
+"CPV9","Yannick Semedo","Cape Verde","player"
+"CPV10","Kevin Pina","Cape Verde","player"
+"CPV11","Patrick Andrade","Cape Verde","player"
+"CPV12","Jamiro Monteiro","Cape Verde","player"
+"CPV13","Team Photo","Cape Verde","player"
+"CPV14","Deroy Duarte","Cape Verde","player"
+"CPV15","Garry Rodrigues","Cape Verde","player"
+"CPV16","Jovane Cabral","Cape Verde","player"
+"CPV17","Ryan Mendes","Cape Verde","player"
+"CPV18","Dailon Livramento","Cape Verde","player"
+"CPV19","Willy Semedo","Cape Verde","player"
+"CPV20","Bebe","Cape Verde","player"
+"KSA1","Emblem","Saudi Arabia","team_badge"
+"KSA2","Nawaf Alaqidi","Saudi Arabia","player"
+"KSA3","Abdulrahman Al-Sanbi","Saudi Arabia","player"
+"KSA4","Saud Abdulhamid","Saudi Arabia","player"
+"KSA5","Nawaf Bouwashl","Saudi Arabia","player"
+"KSA6","Jihad Thakri","Saudi Arabia","player"
+"KSA7","Moteb Al-Harbi","Saudi Arabia","player"
+"KSA8","Hassan Altambakti","Saudi Arabia","player"
+"KSA9","Musab Aljuwayr","Saudi Arabia","player"
+"KSA10","Ziyad Aljohani","Saudi Arabia","player"
+"KSA11","Abdullah Alkhaibari","Saudi Arabia","player"
+"KSA12","Nasser Aldawsari","Saudi Arabia","player"
+"KSA13","Team Photo","Saudi Arabia","player"
+"KSA14","Saleh Abu Alshamat","Saudi Arabia","player"
+"KSA15","Marwan Alsahafi","Saudi Arabia","player"
+"KSA16","Salem Aldawsari","Saudi Arabia","player"
+"KSA17","Abdulrahman Al-Aboud","Saudi Arabia","player"
+"KSA18","Feras Akbrikan","Saudi Arabia","player"
+"KSA19","Saleh Alshehri","Saudi Arabia","player"
+"KSA20","Abdullah Al-Hamdan","Saudi Arabia","player"
+"URU1","Emblem","Uruguay","team_badge"
+"URU2","Sergio Rochet","Uruguay","player"
+"URU3","Santiago Mele","Uruguay","player"
+"URU4","Ronald Araujo","Uruguay","player"
+"URU5","José María Giménez","Uruguay","player"
+"URU6","Sebastian Caceres","Uruguay","player"
+"URU7","Mathias Olivera","Uruguay","player"
+"URU8","Guillermo Varela","Uruguay","player"
+"URU9","Nahitan Nandez","Uruguay","player"
+"URU10","Federico Valverde","Uruguay","player"
+"URU11","Giorgian De Arrascaeta","Uruguay","player"
+"URU12","Rodrigo Bentancur","Uruguay","player"
+"URU13","Team Photo","Uruguay","player"
+"URU14","Manuel Ugarte","Uruguay","player"
+"URU15","Nicolás de la Cruz","Uruguay","player"
+"URU16","Maxi Araujo","Uruguay","player"
+"URU17","Darwin Núñez","Uruguay","player"
+"URU18","Federico Viñas","Uruguay","player"
+"URU19","Rodrigo Aguirre","Uruguay","player"
+"URU20","Facundo Pellistri","Uruguay","player"
+"FRA1","Emblem","France","team_badge"
+"FRA2","Mike Maignan","France","player"
+"FRA3","Theo Hernandez","France","player"
+"FRA4","William Saliba","France","player"
+"FRA5","Jules Kounde","France","player"
+"FRA6","Ibrahima Konate","France","player"
+"FRA7","Dayot Upamecano","France","player"
+"FRA8","Lucas Digne","France","player"
+"FRA9","Aurélien Tchouaméni","France","player"
+"FRA10","Eduardo Camavinga","France","player"
+"FRA11","Manu Kone","France","player"
+"FRA12","Adrien Rabiot","France","player"
+"FRA13","Team Photo","France","player"
+"FRA14","Michael Olise","France","player"
+"FRA15","Ousmane Dembele","France","player"
+"FRA16","Bradley Barcola","France","player"
+"FRA17","Désiré Doué","France","player"
+"FRA18","Kingsley Coman","France","player"
+"FRA19","Hugo Ekitike","France","player"
+"FRA2s","Mike Maignan","France","player"
+"FRA3s","Theo Hernandez","France","player"
+"FRA4s","William Saliba","France","player"
+"FRA5s","Jules Kounde","France","player"
+"FRA6s","Ibrahima Konate","France","player"
+"FRA7s","Dayot Upamecano","France","player"
+"FRA8s","Lucas Digne","France","player"
+"FRA9s","Aurélien Tchouaméni","France","player"
+"FRA10s","Eduardo Camavinga","France","player"
+"FRA11s","Manu Kone","France","player"
+"FRA12s","Adrien Rabiot","France","player"
+"FRA14s","Michael Olise","France","player"
+"FRA15s","Ousmane Dembele","France","player"
+"FRA16s","Bradley Barcola","France","player"
+"FRA17s","Désiré Doué","France","player"
+"FRA18s","Kingsley Coman","France","player"
+"FRA19s","Hugo Ekitike","France","player"
+"FRA20","Kylian Mbappe","France","player"
+"FRA20s","Kylian Mbappe","France","player"
+"SEN1","Emblem","Senegal","team_badge"
+"SEN2","Édouard Mendy","Senegal","player"
+"SEN3","Yehvann Diouf","Senegal","player"
+"SEN4","Moussa Niakhaté","Senegal","player"
+"SEN5","Abdoulaye Seck","Senegal","player"
+"SEN6","Ismail Jakobs","Senegal","player"
+"SEN7","El Hadji Malick Diouf","Senegal","player"
+"SEN8","Kalidou Koulibaly","Senegal","player"
+"SEN9","Idrissa Gana Gueye","Senegal","player"
+"SEN10","Pape Matar Sarr","Senegal","player"
+"SEN11","Pape Gueye","Senegal","player"
+"SEN12","Habib Diarra","Senegal","player"
+"SEN13","Team Photo","Senegal","player"
+"SEN14","Lamine Camara","Senegal","player"
+"SEN15","Sadio Mane","Senegal","player"
+"SEN16","Ismaïla Sarr","Senegal","player"
+"SEN17","Boulaye Dia","Senegal","player"
+"SEN18","Iliman Ndiaye","Senegal","player"
+"SEN19","Nicolas Jackson","Senegal","player"
+"SEN20","Krepin Diatta","Senegal","player"
+"IRQ1","Emblem","Iraq","team_badge"
+"IRQ2","Jalal Hassan","Iraq","player"
+"IRQ3","Rebin Sulaka","Iraq","player"
+"IRQ4","Hussein Ali","Iraq","player"
+"IRQ5","Akam Hashem","Iraq","player"
+"IRQ6","Merchas Doski","Iraq","player"
+"IRQ7","Zaid Tahseen","Iraq","player"
+"IRQ8","Manaf Younis","Iraq","player"
+"IRQ9","Zidane Iqbal","Iraq","player"
+"IRQ10","Amir Al-Ammari","Iraq","player"
+"IRQ11","Ibrahim Bavesh","Iraq","player"
+"IRQ12","Ali Jasim","Iraq","player"
+"IRQ13","Team Photo","Iraq","player"
+"IRQ14","Youssef Amyn","Iraq","player"
+"IRQ15","Aimar Sher","Iraq","player"
+"IRQ16","Marko Farji","Iraq","player"
+"IRQ17","Osama Rashid","Iraq","player"
+"IRQ18","Ali Al-Hamadi","Iraq","player"
+"IRQ19","Aymen Hussein","Iraq","player"
+"IRQ20","Mohanad Ali","Iraq","player"
+"NOR1","Emblem","Norway","team_badge"
+"NOR2","Orjan Nyland","Norway","player"
+"NOR3","Julian Ryerson","Norway","player"
+"NOR4","Leo Ostigård","Norway","player"
+"NOR5","Kristoffer Vassbakk Ajer","Norway","player"
+"NOR6","Marcus Holmgren Pedersen","Norway","player"
+"NOR7","David Møller Wolfe","Norway","player"
+"NOR8","Torbjørn Heggem","Norway","player"
+"NOR9","Morten Thorsby","Norway","player"
+"NOR10","Martin Ødegaard","Norway","player"
+"NOR11","Sander Berge","Norway","player"
+"NOR12","Andreas Schjelderup","Norway","player"
+"NOR13","Team Photo","Norway","player"
+"NOR14","Patrick Berg","Norway","player"
+"NOR15","Erling Haaland","Norway","player"
+"NOR16","Alexander Sørloth","Norway","player"
+"NOR17","Aron Dønnum","Norway","player"
+"NOR18","Jorgen Strand Larsen","Norway","player"
+"NOR19","Antonio Nusa","Norway","player"
+"NOR20","Oscar Bobb","Norway","player"
+"ARG1","Emblem","Argentina","team_badge"
+"ARG2","Emiliano Martinez","Argentina","player"
+"ARG3","Nahuel Molina","Argentina","player"
+"ARG4","Cristian Romero","Argentina","player"
+"ARG5","Nicolas Otamendi","Argentina","player"
+"ARG6","Nicolas Tagliafico","Argentina","player"
+"ARG7","Leonardo Balerdi","Argentina","player"
+"ARG8","Enzo Fernandez","Argentina","player"
+"ARG9","Alexis Mac Allister","Argentina","player"
+"ARG10","Rodrigo De Paul","Argentina","player"
+"ARG11","Exequiel Palacios","Argentina","player"
+"ARG12","Leandro Paredes","Argentina","player"
+"ARG13","Team Photo","Argentina","player"
+"ARG14","Nico Paz","Argentina","player"
+"ARG15","Franco Mastantuono","Argentina","player"
+"ARG16","Nico Gonzalez","Argentina","player"
+"ARG17","Lionel Messi","Argentina","player"
+"ARG18","Lautaro Martinez","Argentina","player"
+"ARG19","Julian Alvarez","Argentina","player"
+"ARG20","Giuliano Simeone","Argentina","player"
+"ALG1","Emblem","Algeria","team_badge"
+"ALG2","Alexis Guendouz","Algeria","player"
+"ALG3","Ramy Bensebaini","Algeria","player"
+"ALG4","Youcef Atal","Algeria","player"
+"ALG5","Rayan Aït-Nouri","Algeria","player"
+"ALG6","Mohamed Amine Tougai","Algeria","player"
+"ALG7","Aïssa Mandi","Algeria","player"
+"ALG8","Ismael Bennacer","Algeria","player"
+"ALG9","Houssem Aouar","Algeria","player"
+"ALG10","Hicham Boudaoui","Algeria","player"
+"ALG11","Ramiz Zerrouki","Algeria","player"
+"ALG12","Nabil Bentaleb","Algeria","player"
+"ALG13","Team Photo","Algeria","player"
+"ALG14","Farés Chaibi","Algeria","player"
+"ALG15","Riyad Mahrez","Algeria","player"
+"ALG16","Said Benrahma","Algeria","player"
+"ALG17","Anis Hadj Moussa","Algeria","player"
+"ALG18","Amine Gouiri","Algeria","player"
+"ALG19","Baghdad Bounedjah","Algeria","player"
+"ALG20","Mohammed Amoura","Algeria","player"
+"AUT1","Emblem","Austria","team_badge"
+"AUT2","Alexander Schlager","Austria","player"
+"AUT3","Patrick Pentz","Austria","player"
+"AUT4","David Alaba","Austria","player"
+"AUT5","Kevin Danso","Austria","player"
+"AUT6","Philipp Lienhart","Austria","player"
+"AUT7","Stefan Posch","Austria","player"
+"AUT8","Phillipp Mwene","Austria","player"
+"AUT9","Alexander Prass","Austria","player"
+"AUT10","Xaver Schlager","Austria","player"
+"AUT11","Marcel Sabitzer","Austria","player"
+"AUT12","Konrad Laimer","Austria","player"
+"AUT13","Team Photo","Austria","player"
+"AUT14","Florian Grillitsch","Austria","player"
+"AUT15","Nicolas Seiwald","Austria","player"
+"AUT16","Romano Schmid","Austria","player"
+"AUT17","Patrick Wimmer","Austria","player"
+"AUT18","Christoph Baumgartner","Austria","player"
+"AUT19","Michael Gregoritsch","Austria","player"
+"AUT20","Marko Arnautović","Austria","player"
+"JOR1","Emblem","Jordan","team_badge"
+"JOR2","Yazeed Abulaila","Jordan","player"
+"JOR3","Ihsan Haddad","Jordan","player"
+"JOR4","Mohammad Abu Hashish","Jordan","player"
+"JOR5","Yazan Al-Arab","Jordan","player"
+"JOR6","Abdallah Nasib","Jordan","player"
+"JOR7","Saleem Obaid","Jordan","player"
+"JOR8","Mohammad Abualnadi","Jordan","player"
+"JOR9","Ibrahim Saadeh","Jordan","player"
+"JOR10","Nizar Al-Rashdan","Jordan","player"
+"JOR11","Noor Al-Rawabdeh","Jordan","player"
+"JOR12","Mohannad Abu Taha","Jordan","player"
+"JOR13","Team Photo","Jordan","player"
+"JOR14","Amer Jamous","Jordan","player"
+"JOR15","Musa Al-Taamari","Jordan","player"
+"JOR16","Yazan Al-Naimat","Jordan","player"
+"JOR17","Mahmoud Al-Mardi","Jordan","player"
+"JOR18","Ali Olwan","Jordan","player"
+"JOR19","Mohammad Abu Zrayq","Jordan","player"
+"JOR20","Ibrahim Sabra","Jordan","player"
+"POR1","Emblem","Portugal","team_badge"
+"POR2","Diogo Costa","Portugal","player"
+"POR3","José Sá","Portugal","player"
+"POR4","Ruben Dias","Portugal","player"
+"POR5","João Cancelo","Portugal","player"
+"POR6","Diogo Dalot","Portugal","player"
+"POR7","Nuno Mendes","Portugal","player"
+"POR8","Gonçalo Inácio","Portugal","player"
+"POR9","Bernardo Silva","Portugal","player"
+"POR10","Bruno Fernandes","Portugal","player"
+"POR11","Ruben Neves","Portugal","player"
+"POR12","Vitinha","Portugal","player"
+"POR13","Team Photo","Portugal","player"
+"POR14","João Neves","Portugal","player"
+"POR15","Cristiano Ronaldo","Portugal","player"
+"POR16","Francisco Trincao","Portugal","player"
+"POR17","João Felix","Portugal","player"
+"POR18","Gonçalo Ramos","Portugal","player"
+"POR19","Pedro Neto","Portugal","player"
+"POR20","Rafael Leão","Portugal","player"
+"COD1","Emblem","Congo DR","team_badge"
+"COD2","Lionel Mpasi-Nzau","Congo DR","player"
+"COD3","Aaron Wan-Bissaka","Congo DR","player"
+"COD4","Axel Tuanzebe","Congo DR","player"
+"COD5","Arthur Masuaku","Congo DR","player"
+"COD6","Chancel Mbemba","Congo DR","player"
+"COD7","Joris Kayembe","Congo DR","player"
+"COD8","Charles Pickel","Congo DR","player"
+"COD9","Ngal'ayel Mukau","Congo DR","player"
+"COD10","Edo Kayembe","Congo DR","player"
+"COD11","Samuel Moutoussamy","Congo DR","player"
+"COD12","Noah Sadiki","Congo DR","player"
+"COD13","Team Photo","Congo DR","player"
+"COD14","Théo Bongonda","Congo DR","player"
+"COD15","Meschak Elia","Congo DR","player"
+"COD16","Yoane Wissa","Congo DR","player"
+"COD17","Brian Cipenga","Congo DR","player"
+"COD18","Fiston Mayele","Congo DR","player"
+"COD19","Cédric Bakambu","Congo DR","player"
+"COD20","Nathanaël Mbuku","Congo DR","player"
+"UZB1","Emblem","Uzbekistan","team_badge"
+"UZB2","Utkir Yusupov","Uzbekistan","player"
+"UZB3","Farrukh Savfiev","Uzbekistan","player"
+"UZB4","Sherzod Nasrullaev","Uzbekistan","player"
+"UZB5","Umar Eshmurodov","Uzbekistan","player"
+"UZB6","Husniddin Aliqulov","Uzbekistan","player"
+"UZB7","Rustamjon Ashurmatov","Uzbekistan","player"
+"UZB8","Khojiakbar Alijonov","Uzbekistan","player"
+"UZB9","Abdukodir Khusanov","Uzbekistan","player"
+"UZB10","Odiljon Hamrobekov","Uzbekistan","player"
+"UZB11","Otabek Shukurov","Uzbekistan","player"
+"UZB12","Jamshid Iskanderov","Uzbekistan","player"
+"UZB13","Team Photo","Uzbekistan","player"
+"UZB14","Azizbek Turgunboev","Uzbekistan","player"
+"UZB15","Khojimat Erkinov","Uzbekistan","player"
+"UZB16","Eldor Shomurodov","Uzbekistan","player"
+"UZB17","Oston Urunov","Uzbekistan","player"
+"UZB18","Jaloliddin Masharipov","Uzbekistan","player"
+"UZB19","Igor Sergeev","Uzbekistan","player"
+"UZB20","Abbosbek Fayzullaev","Uzbekistan","player"
+"COL1","Emblem","Colombia","team_badge"
+"COL2","Camilo Vargas","Colombia","player"
+"COL3","David Ospina","Colombia","player"
+"COL4","Dávinson Sánchez","Colombia","player"
+"COL5","Yerry Mina","Colombia","player"
+"COL6","Daniel Munoz","Colombia","player"
+"COL7","Johan Mojica","Colombia","player"
+"COL8","Jhon Lucumí","Colombia","player"
+"COL9","Santiago Arias","Colombia","player"
+"COL10","Jefferson Lerma","Colombia","player"
+"COL11","Kevin Castaño","Colombia","player"
+"COL12","Richard Rios","Colombia","player"
+"COL13","Team Photo","Colombia","player"
+"COL14","James Rodriguez","Colombia","player"
+"COL15","Juan Fernando Quintero","Colombia","player"
+"COL16","Jorge Carrascal","Colombia","player"
+"COL17","Jhon Arias","Colombia","player"
+"COL18","Jhon Cordova","Colombia","player"
+"COL19","Luis Suarez","Colombia","player"
+"COL20","Luis Diaz","Colombia","player"
+"ENG1","Emblem","England","team_badge"
+"ENG2","Jordan Pickford","England","player"
+"ENG3","John Stones","England","player"
+"ENG4","Marc Guéhi","England","player"
+"ENG5","Ezri Konsa","England","player"
+"ENG6","Trent Alexander-Arnold","England","player"
+"ENG7","Reece James","England","player"
+"ENG8","Dan Burn","England","player"
+"ENG9","Jordan Henderson","England","player"
+"ENG10","Declan Rice","England","player"
+"ENG11","Jude Bellingham","England","player"
+"ENG12","Cole Palmer","England","player"
+"ENG13","Team Photo","England","player"
+"ENG14","Morgan Rogers","England","player"
+"ENG15","Anthony Gordon","England","player"
+"ENG16","Phil Foden","England","player"
+"ENG17","Bukayo Saka","England","player"
+"ENG18","Harry Kane","England","player"
+"ENG19","Marcus Rashford","England","player"
+"ENG20","Ollie Watkins","England","player"
+"CRO1","Emblem","Croatia","team_badge"
+"CRO2","Dominik Livaković","Croatia","player"
+"CRO3","Duje Caleta-Car","Croatia","player"
+"CRO4","Josko Gvardiol","Croatia","player"
+"CRO5","Josip Stanišić","Croatia","player"
+"CRO6","Luka Vušković","Croatia","player"
+"CRO7","Josip Sutalo","Croatia","player"
+"CRO8","Kristijan Jakic","Croatia","player"
+"CRO9","Luka Modrić","Croatia","player"
+"CRO10","Mateo Kovacic","Croatia","player"
+"CRO11","Martin Baturina","Croatia","player"
+"CRO12","Lovro Majer","Croatia","player"
+"CRO13","Team Photo","Croatia","player"
+"CRO14","Mario Pasalic","Croatia","player"
+"CRO15","Petar Sucic","Croatia","player"
+"CRO16","Ivan Perišić","Croatia","player"
+"CRO17","Marco Pasalic","Croatia","player"
+"CRO18","Ante Budimir","Croatia","player"
+"CRO19","Andrej Kramarić","Croatia","player"
+"CRO20","Franjo Ivanovic","Croatia","player"
+"GHA1","Emblem","Ghana","team_badge"
+"GHA2","Lawrence Ati Zigi","Ghana","player"
+"GHA3","Tariq Lamptey","Ghana","player"
+"GHA4","Mohammed Salisu","Ghana","player"
+"GHA5","Alidu Seidu","Ghana","player"
+"GHA6","Alexander Djiku","Ghana","player"
+"GHA7","Gideon Mensah","Ghana","player"
+"GHA8","Caleb Yirenkyi","Ghana","player"
+"GHA9","Abdul Issahaku Fatawu","Ghana","player"
+"GHA10","Thomas Partey","Ghana","player"
+"GHA11","Salis Abdul Samed","Ghana","player"
+"GHA12","Kamaldeen Sulemana","Ghana","player"
+"GHA13","Team Photo","Ghana","player"
+"GHA14","Mohammed Kudus","Ghana","player"
+"GHA15","Inaki Williams","Ghana","player"
+"GHA16","Jordan Ayew","Ghana","player"
+"GHA17","André Ayew","Ghana","player"
+"GHA18","Joseph Paintsil","Ghana","player"
+"GHA19","Osman Bukari","Ghana","player"
+"GHA20","Antoine Semenyo","Ghana","player"
+"PAN1","Emblem","Panama","team_badge"
+"PAN2","Orlando Mosquera","Panama","player"
+"PAN3","Luis Mejia","Panama","player"
+"PAN4","Fidel Escobar","Panama","player"
+"PAN5","Andres Andrade","Panama","player"
+"PAN6","Michael Amir Murillo","Panama","player"
+"PAN7","Eric Davis","Panama","player"
+"PAN8","Jose Cordoba","Panama","player"
+"PAN9","Cesar Blackman","Panama","player"
+"PAN10","Cristian Martinez","Panama","player"
+"PAN11","Aníbal Godoy","Panama","player"
+"PAN12","Adalberto Carrasquilla","Panama","player"
+"PAN13","Team Photo","Panama","player"
+"PAN14","Édgar Bárcenas","Panama","player"
+"PAN15","Carlos Harvey","Panama","player"
+"PAN16","Ismael Díaz","Panama","player"
+"PAN17","Jose Fajardo","Panama","player"
+"PAN18","Cecilio Waterman","Panama","player"
+"PAN19","Jose Luiz Rodriguez","Panama","player"
+"PAN20","Alberto Quintero","Panama","player"
+"FWC9","Italy 1934","FIFA World Cup History","fwc_special"
+"FWC10","Uruguay 1950","FIFA World Cup History","fwc_special"
+"FWC11","West Germany 1954","FIFA World Cup History","fwc_special"
+"FWC12","Brazil 1962","FIFA World Cup History","fwc_special"
+"FWC13","West Germany 1974","FIFA World Cup History","fwc_special"
+"FWC14","Argentina 1986","FIFA World Cup History","fwc_special"
+"FWC15","Brazil 1994","FIFA World Cup History","fwc_special"
+"FWC16","Brazil 2002","FIFA World Cup History","fwc_special"
+"FWC17","Italy 2006","FIFA World Cup History","fwc_special"
+"FWC18","Germany 2014","FIFA World Cup History","fwc_special"
+"FWC19","Argentina 2022","FIFA World Cup History","fwc_special"
+"CC-US1","Lamine Yamal","Spain","cocacola_us"
+"CC-US2","Joshua Kimmich","Germany","cocacola_us"
+"CC-US3","Harry Kane","England","cocacola_us"
+"CC-US4","Santiago Giménez","Mexico","cocacola_us"
+"CC-US5","Antonee Robinson","USA","cocacola_us"
+"CC-US6","Jefferson Lerma","Colombia","cocacola_us"
+"CC-US7","Edson Álvarez","Mexico","cocacola_us"
+"CC-US8","Virgil van Dijk","Netherlands","cocacola_us"
+"CC-US9","Alphonso Davies","Canada","cocacola_us"
+"CC-US10","Weston McKennie","USA","cocacola_us"
+"CC-US11","Lautaro Martínez","Argentina","cocacola_us"
+"CC-US12","Gabriel Magalhães","Brazil","cocacola_us"
+"CC-LAM1","Lamine Yamal","Spain","cocacola_lam"
+"CC-LAM2","Joshua Kimmich","Germany","cocacola_lam"
+"CC-LAM3","Harry Kane","England","cocacola_lam"
+"CC-LAM4","Santiago Giménez","Mexico","cocacola_lam"
+"CC-LAM5","Josko Gvardiol","Croatia","cocacola_lam"
+"CC-LAM6","Federico Valverde","Uruguay","cocacola_lam"
+"CC-LAM7","Jefferson Lerma","Colombia","cocacola_lam"
+"CC-LAM8","Enner Valencia","Ecuador","cocacola_lam"
+"CC-LAM9","Gabriel Magalhães","Brazil","cocacola_lam"
+"CC-LAM10","Virgil van Dijk","Netherlands","cocacola_lam"
+"CC-LAM11","Alphonso Davies","Canada","cocacola_lam"
+"CC-LAM12","Emiliano Martinez","Argentina","cocacola_lam"
+"CC-LAM13","Raúl Jiménez","Mexico","cocacola_lam"
+"CC-LAM14","Lautaro Martínez","Argentina","cocacola_lam"
+"CC-RW1","Lamine Yamal","Spain","cocacola_rw"
+"CC-RW2","Joshua Kimmich","Germany","cocacola_rw"
+"CC-RW3","Harry Kane","England","cocacola_rw"
+"CC-RW4","Edson Álvarez","Mexico","cocacola_rw"
+"CC-RW5","Josko Gvardiol","Croatia","cocacola_rw"
+"CC-RW6","Federico Valverde","Uruguay","cocacola_rw"
+"CC-RW7","Jefferson Lerma","Colombia","cocacola_rw"
+"CC-RW8","Enner Valencia","Ecuador","cocacola_rw"
+"CC-RW9","Jordan Ayew","Ghana","cocacola_rw"
+"CC-RW10","Virgil van Dijk","Netherlands","cocacola_rw"
+"CC-RW11","Alphonso Davies","Canada","cocacola_rw"
+"CC-RW12","Weston McKennie","USA","cocacola_rw"
+"CC-RW13","Eduardo Camavinga","France","cocacola_rw"
+"CC-RW14","Lautaro Martínez","Argentina","cocacola_rw"
+"CC-EU1","Lamine Yamal","Spain","cocacola_eu"
+"CC-EU2","Joshua Kimmich","Germany","cocacola_eu"
+"CC-EU3","Eduardo Camavinga","France","cocacola_eu"
+"CC-EU4","Josko Gvardiol","Croatia","cocacola_eu"
+"CC-EU5","Federico Valverde","Uruguay","cocacola_eu"
+"CC-EU6","Virgil van Dijk","Netherlands","cocacola_eu"
+"CC-EU7","Alphonso Davies","Canada","cocacola_eu"
+"CC-EU8","Raúl Jiménez","Mexico","cocacola_eu"
+"CC-EU9","William Saliba","France","cocacola_eu"
+"CC-EU10","Lautaro Martínez","Argentina","cocacola_eu"
+"CC-EU11","Harry Kane","England","cocacola_eu"
+"CC-EU12","Antonee Robinson","USA","cocacola_eu"
+"ARG13mc","Team Photo","Argentina","player"
+"AUS13mc","Team Photo","Australia","player"
+"BEL13mc","Team Photo","Belgium","player"
+"BRA13mc","Team Photo","Brazil","player"
+"CAN13mc","Team Photo","Canada","player"
+"CIV13mc","Team Photo","Ivory Coast","player"
+"COL13mc","Team Photo","Colombia","player"
+"CRO13mc","Team Photo","Croatia","player"
+"ECU13mc","Team Photo","Ecuador","player"
+"ENG13mc","Team Photo","England","player"
+"ESP13mc","Team Photo","Spain","player"
+"FRA13mc","Team Photo","France","player"
+"GER13mc","Team Photo","Germany","player"
+"GHA13mc","Team Photo","Ghana","player"
+"JPN13mc","Team Photo","Japan","player"
+"KOR13mc","Team Photo","South Korea","player"
+"RSA13mc","Team Photo","Saudi Arabia","player"
+"MAR13mc","Team Photo","Morocco","player"
+"MEX13mc","Team Photo","Mexico","player"
+"NED13mc","Team Photo","Netherlands","player"
+"NOR13mc","Team Photo","Norway","player"
+"PAN13mc","Team Photo","Panama","player"
+"QAT13mc","Team Photo","Qatar","player"
+"SEN13mc","Team Photo","Senegal","player"
+"SUI13mc","Team Photo","Switzerland","player"
+"TUN13mc","Team Photo","Tunisia","player"
+"URU13mc","Team Photo","Uruguay","player"
+"USA13mc","Team Photo","USA","player"
+"UZB13mc","Team Photo","Uzbekistan","player"
+"LM","Lionel Messi","Argentina","player"
+"JD","Jérémy Doku","Belgium","player"
+"VJ","Vinícíús Júnior","Brazil","player"
+"AD","Alphonso Davies","Canada","player"
+"LD","Luis Díaz","Colombia","player"
+"LMO","Luka Modrić","Croatia","player"
+"MC","Moisés Caicedo","Ecuador","player"
+"MS","Mohamed Salah","Egypt","player"
+"JB","Jude Bellingham","England","player"
+"KM","Kylian Mbappé","France","player"
+"FW","Florian Wirtz","Germany","player"
+"RJ","Raúl Jiménez","Mexico","player"
+"AH","Achraf Hakimi","Morocco","player"
+"EH","Erling Haaland","Norway","player"
+"CG","Cody Gakpo","Netherlands","player"
+"CR","Cristiano Ronaldo","Portugal","player"
+"HS","Heung-min Son","South Korea","player"
+"LY","Lamine Yamal","Spain","player"
+"CP","Christian Pulisic","USA","player"
+"FV","Federico Valverde","Uruguay","player"
+"LM-b","Lionel Messi","Argentina","extra_bronze"
+"JD-b","Jérémy Doku","Belgium","extra_bronze"
+"VJ-b","Vinícíús Júnior","Brazil","extra_bronze"
+"AD-b","Alphonso Davies","Canada","extra_bronze"
+"LD-b","Luis Díaz","Colombia","extra_bronze"
+"LMO-b","Luka Modrić","Croatia","extra_bronze"
+"MC-b","Moisés Caicedo","Ecuador","mcdonalds"
+"MS-b","Mohamed Salah","Egypt","extra_bronze"
+"JB-b","Jude Bellingham","England","extra_bronze"
+"KM-b","Kylian Mbappé","France","extra_bronze"
+"FW-b","Florian Wirtz","Germany","extra_bronze"
+"RJ-b","Raúl Jiménez","Mexico","extra_bronze"
+"AH-b","Achraf Hakimi","Morocco","extra_bronze"
+"EH-b","Erling Haaland","Norway","extra_bronze"
+"CG-b","Cody Gakpo","Netherlands","extra_bronze"
+"CR-b","Cristiano Ronaldo","Portugal","extra_bronze"
+"HS-b","Heung-min Son","South Korea","extra_bronze"
+"LY-b","Lamine Yamal","Spain","extra_bronze"
+"CP-b","Christian Pulisic","USA","extra_bronze"
+"FV-b","Federico Valverde","Uruguay","extra_bronze"
+"LM-s","Lionel Messi","Argentina","extra_silver"
+"JD-s","Jérémy Doku","Belgium","extra_silver"
+"VJ-s","Vinícíús Júnior","Brazil","extra_silver"
+"AD-s","Alphonso Davies","Canada","extra_silver"
+"LD-s","Luis Díaz","Colombia","extra_silver"
+"LMO-s","Luka Modrić","Croatia","extra_silver"
+"MC-s","Moisés Caicedo","Ecuador","mcdonalds"
+"MS-s","Mohamed Salah","Egypt","extra_silver"
+"JB-s","Jude Bellingham","England","extra_silver"
+"KM-s","Kylian Mbappé","France","extra_silver"
+"FW-s","Florian Wirtz","Germany","extra_silver"
+"RJ-s","Raúl Jiménez","Mexico","extra_silver"
+"AH-s","Achraf Hakimi","Morocco","extra_silver"
+"EH-s","Erling Haaland","Norway","extra_silver"
+"CG-s","Cody Gakpo","Netherlands","extra_silver"
+"CR-s","Cristiano Ronaldo","Portugal","extra_silver"
+"HS-s","Heung-min Son","South Korea","extra_silver"
+"LY-s","Lamine Yamal","Spain","extra_silver"
+"CP-s","Christian Pulisic","USA","extra_silver"
+"FV-s","Federico Valverde","Uruguay","extra_silver"
+"LM-g","Lionel Messi","Argentina","extra_gold"
+"JD-g","Jérémy Doku","Belgium","extra_gold"
+"VJ-g","Vinícíús Júnior","Brazil","extra_gold"
+"AD-g","Alphonso Davies","Canada","extra_gold"
+"LD-g","Luis Díaz","Colombia","extra_gold"
+"LMO-g","Luka Modrić","Croatia","extra_gold"
+"MC-g","Moisés Caicedo","Ecuador","mcdonalds"
+"MS-g","Mohamed Salah","Egypt","extra_gold"
+"JB-g","Jude Bellingham","England","extra_gold"
+"KM-g","Kylian Mbappé","France","extra_gold"
+"FW-g","Florian Wirtz","Germany","extra_gold"
+"RJ-g","Raúl Jiménez","Mexico","extra_gold"
+"AH-g","Achraf Hakimi","Morocco","extra_gold"
+"EH-g","Erling Haaland","Norway","extra_gold"
+"CG-g","Cody Gakpo","Netherlands","extra_gold"
+"CR-g","Cristiano Ronaldo","Portugal","extra_gold"
+"HS-g","Heung-min Son","South Korea","extra_gold"
+"LY-g","Lamine Yamal","Spain","extra_gold"
+"CP-g","Christian Pulisic","USA","extra_gold"
+"FV-g","Federico Valverde","Uruguay","extra_gold"

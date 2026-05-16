@@ -144,7 +144,7 @@ export function StatisticsScreen() {
               ))}
               {stats.topDuplicates.length === 0 && (
                 <p className="text-[var(--color-white)] opacity-40 text-sm">
-                  Aún no hay duplicadas
+                  Aún no hay repetidas
                 </p>
               )}
             </div>

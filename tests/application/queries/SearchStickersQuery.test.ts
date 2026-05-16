@@ -4,9 +4,9 @@ import { SearchStickersQuery } from '../../../src/application/queries/SearchStic
 vi.mock('../../../src/data/stickers', () => ({
   searchStickers: (query: string) => {
     const stickers = [
-      { id: 'MEX-01', name: 'Escudo', team: 'Mexico', teamCode: 'MEX', group: 'A' },
-      { id: 'MEX-02', name: 'Player One', team: 'Mexico', teamCode: 'MEX', group: 'A' },
-      { id: 'RSA-01', name: 'Escudo', team: 'South Africa', teamCode: 'RSA', group: 'A' },
+      { id: 'MEX-01', name: 'Escudo', team: 'Mexico', type: 'team_badge' },
+      { id: 'MEX-02', name: 'Player One', team: 'Mexico', type: 'player' },
+      { id: 'RSA-01', name: 'Player Two', team: 'South Africa', type: 'player' },
     ];
     return stickers.filter(s =>
       s.id.toLowerCase().includes(query.toLowerCase()) ||
@@ -32,7 +32,7 @@ describe('SearchStickersQuery', () => {
     });
 
     it('should search by name', () => {
-      const results = query.execute('Escudo');
+      const results = query.execute('Player');
 
       expect(results.length).toBe(2);
     });
@@ -43,14 +43,8 @@ describe('SearchStickersQuery', () => {
       expect(results.length).toBe(2);
     });
 
-    it('should filter by group', () => {
-      const results = query.execute('', { group: 'A' });
-
-      expect(results.length).toBe(3);
-    });
-
-    it('should filter by team code', () => {
-      const results = query.execute('', { team: 'MEX' });
+    it('should filter by type', () => {
+      const results = query.execute('', { type: 'player' });
 
       expect(results.length).toBe(2);
     });

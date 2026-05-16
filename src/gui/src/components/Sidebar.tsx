@@ -12,7 +12,7 @@ import {
 const navItems = [
   { path: '/', label: 'Colección', icon: LayoutGrid, shortcut: '1' },
   { path: '/mark-owned', label: 'En el álbum', icon: PlusCircle, shortcut: '2' },
-  { path: '/mark-duplicate', label: 'Duplicadas', icon: Repeat, shortcut: '3' },
+  { path: '/mark-duplicate', label: 'Repetidas', icon: Repeat, shortcut: '3' },
   { path: '/statistics', label: 'Estadísticas', icon: BarChart3, shortcut: '4' },
   { path: '/search', label: 'Buscar', icon: Search, shortcut: '5' },
   { path: '/export', label: 'Exportar', icon: Download, shortcut: '6' },

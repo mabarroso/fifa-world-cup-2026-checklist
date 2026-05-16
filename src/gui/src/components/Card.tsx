@@ -23,7 +23,7 @@ export function Card({
   if (duplicate) stateClass = 'border-2 border-[var(--color-orange)]';
   if (missing) stateClass = 'grayscale opacity-70';
 
-  return (
+return (
     <motion.div
       whileHover={{ y: -6, scale: 1.03 }}
       transition={{ duration: 0.22, ease: 'easeOut' }}

@@ -61,8 +61,7 @@ export class ViewCollectionMenu {
           statusIcon = chalk.green(`[OK:${ownedQty}]`);
         }
 
-        const groupInfo = sticker.group ? ` (${sticker.group})` : '';
-        console.log(`${statusIcon} ${chalk.white(`[${sticker.id}]`)} ${sticker.name} - ${sticker.team}${groupInfo}`);
+        console.log(`${statusIcon} ${chalk.white(`[${sticker.id}]`)} ${sticker.name} - ${sticker.team}`);
       }
 
       if (currentPage < totalPages - 1) {

@@ -60,8 +60,8 @@ export class SearchInterface {
           statusIcon = chalk.green(`[OK]`);
         }
 
-        const groupInfo = sticker.group ? ` (${sticker.group})` : '';
-        console.log(`${statusIcon} ${chalk.white(`[${sticker.id}]`)} ${sticker.name} - ${sticker.team}${groupInfo}`);
+        const typeInfo = sticker.type ? ` (${sticker.type})` : '';
+        console.log(`${statusIcon} ${chalk.white(`[${sticker.id}]`)} ${sticker.name} - ${sticker.team}${typeInfo}`);
       }
 
       if (currentPage < totalPages - 1) {

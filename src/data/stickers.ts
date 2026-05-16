@@ -5,27 +5,50 @@ import { resolve } from 'path';
 
 interface StickerCsvRow {
   id: string;
-  number: string;
   name: string;
   team: string;
-  teamCode: string;
-  group: string;
   type: string;
-  extraVariant: string;
+}
+
+function parseCSVLine(line: string): string[] {
+  const result: string[] = [];
+  let current = '';
+  let inQuotes = false;
+
+  for (let i = 0; i < line.length; i++) {
+    const char = line[i];
+    if (char === '"') {
+      if (inQuotes && line[i + 1] === '"') {
+        current += '"';
+        i++;
+      } else {
+        inQuotes = !inQuotes;
+      }
+    } else if (char === ',' && !inQuotes) {
+      result.push(current);
+      current = '';
+    } else {
+      current += char;
+    }
+  }
+  result.push(current);
+  return result;
 }
 
 function parseCSV(content: string): StickerCsvRow[] {
   const lines = content.trim().split('\n');
-  const header = lines[0].split(',');
   const rows: StickerCsvRow[] = [];
 
   for (let i = 1; i < lines.length; i++) {
-    const values = lines[i].split(',');
-    const row: Partial<StickerCsvRow> = {};
-    for (let j = 0; j < header.length; j++) {
-      (row as Record<string, string>)[header[j]] = values[j] || '';
+    const values = parseCSVLine(lines[i]);
+    if (values.length >= 4) {
+      rows.push({
+        id: values[0],
+        name: values[1],
+        team: values[2],
+        type: values[3],
+      });
     }
-    rows.push(row as StickerCsvRow);
   }
 
   return rows;
@@ -39,13 +62,9 @@ function loadStickersFromCsv(): Sticker[] {
   return rows.map((row) =>
     new Sticker({
       id: row.id,
-      number: parseInt(row.number, 10),
       name: row.name,
       team: row.team,
-      teamCode: row.teamCode,
-      group: row.group || null,
       type: StickerType.fromString(row.type),
-      extraVariant: row.extraVariant ? (row.extraVariant as 'purple' | 'bronze' | 'silver' | 'gold') : null,
     })
   );
 }
@@ -60,12 +79,12 @@ export function getStickerById(id: string): Sticker | undefined {
   return stickers.find((s) => s.id === id);
 }
 
-export function getStickersByGroup(group: string): Sticker[] {
-  return stickers.filter((s) => s.group === group);
+export function getStickersByType(type: StickerType): Sticker[] {
+  return stickers.filter((s) => s.type === type);
 }
 
-export function getStickersByTeam(teamCode: string): Sticker[] {
-  return stickers.filter((s) => s.teamCode === teamCode);
+export function getStickersByTeam(team: string): Sticker[] {
+  return stickers.filter((s) => s.team === team);
 }
 
 export function searchStickers(query: string): Sticker[] {

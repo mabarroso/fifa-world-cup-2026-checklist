@@ -1,4 +1,4 @@
-export type ExtraVariant = 'purple' | 'bronze' | 'silver' | 'gold';
+export type ExtraVariant = 'bronze' | 'silver' | 'gold';
 
 export class StickerId {
   readonly value: string;
@@ -11,72 +11,111 @@ export class StickerId {
     this.validate(value);
     this.value = value;
 
-    if (value.startsWith('EXTRA-')) {
-      this.teamCode = 'EXTRA';
-      this.isExtra = true;
-      const parts = value.substring(6).split('-');
-      this.extraVariant = parts[parts.length - 1] as ExtraVariant;
-      this.number = 1;
-    } else if (value === 'LOGO-00') {
+    // Logo (id: "0")
+    if (value === '0') {
       this.teamCode = 'LOGO';
       this.number = 0;
       this.isExtra = false;
       this.extraVariant = null;
-    } else if (value.startsWith('FWC-')) {
+      return;
+    }
+
+    // FWC specials (FWC1, FWC2, etc.)
+    if (value.startsWith('FWC')) {
       this.teamCode = 'FWC';
-      this.number = parseInt(value.substring(4), 10);
-      this.isExtra = false;
-      this.extraVariant = null;
-    } else if (value.startsWith('CC-')) {
-      this.teamCode = 'CC';
       this.number = parseInt(value.substring(3), 10);
       this.isExtra = false;
       this.extraVariant = null;
-    } else {
-      const dashIndex = value.indexOf('-');
+      return;
+    }
+
+    // Coca-Cola variants (CC-US1, CC-LAM1, CC-RW1, CC-EU1)
+    if (value.startsWith('CC-')) {
+      const parts = value.substring(3).match(/^([A-Z]+)(\d+)$/);
+      if (parts) {
+        this.teamCode = 'CC-' + parts[1];
+        this.number = parseInt(parts[2], 10);
+        this.isExtra = false;
+        this.extraVariant = null;
+        return;
+      }
+    }
+
+    // McDonald's (MC-1, MC-2, etc.)
+    if (value.startsWith('MC-')) {
+      this.teamCode = 'MC';
+      this.number = parseInt(value.substring(3), 10);
+      this.isExtra = false;
+      this.extraVariant = null;
+      return;
+    }
+
+    // Extra variants with suffixes (-b, -s, -g)
+    // For formats like LM-b (where LM is the base team code)
+    if (value.endsWith('-b')) {
+      const base = value.slice(0, -2);
+      const match = base.match(/^([A-Z]+)(\d*)$/);
+      if (match) {
+        this.teamCode = match[1];
+        this.number = match[2] ? parseInt(match[2], 10) : 0;
+        this.isExtra = true;
+        this.extraVariant = 'bronze';
+        return;
+      }
+    }
+
+    if (value.endsWith('-s')) {
+      const base = value.slice(0, -2);
+      const match = base.match(/^([A-Z]+)(\d*)$/);
+      if (match) {
+        this.teamCode = match[1];
+        this.number = match[2] ? parseInt(match[2], 10) : 0;
+        this.isExtra = true;
+        this.extraVariant = 'silver';
+        return;
+      }
+    }
+
+    if (value.endsWith('-g')) {
+      const base = value.slice(0, -2);
+      const match = base.match(/^([A-Z]+)(\d*)$/);
+      if (match) {
+        this.teamCode = match[1];
+        this.number = match[2] ? parseInt(match[2], 10) : 0;
+        this.isExtra = true;
+        this.extraVariant = 'gold';
+        return;
+      }
+    }
+
+    // Standard team stickers (MEX1, RSA1, etc.)
+    // Also handles MEX15, ARG20, etc. (no dash)
+    const match = value.match(/^([A-Z]+)(\d+)$/);
+    if (match) {
+      this.teamCode = match[1];
+      this.number = parseInt(match[2], 10);
+      this.isExtra = false;
+      this.extraVariant = null;
+      return;
+    }
+
+    // Fallback: try with dash for formats like MEX-15
+    const dashIndex = value.indexOf('-');
+    if (dashIndex > 0) {
       this.teamCode = value.substring(0, dashIndex);
       this.number = parseInt(value.substring(dashIndex + 1), 10);
       this.isExtra = false;
       this.extraVariant = null;
+      return;
     }
+
+    // If no pattern matched, throw error
+    throw new Error(`Invalid Sticker ID format: ${value}`);
   }
 
   private validate(value: string): void {
     if (!value || value.trim() === '') {
       throw new Error('Sticker ID cannot be empty');
-    }
-
-    if (value.startsWith('EXTRA-')) {
-      const parts = value.substring(6).split('-');
-      if (parts.length < 2) {
-        throw new Error('Invalid Extra sticker ID format');
-      }
-      const variant = parts[parts.length - 1];
-      const validVariants = ['purple', 'bronze', 'silver', 'gold'];
-      if (!validVariants.includes(variant)) {
-        throw new Error(`Invalid Extra variant: ${variant}`);
-      }
-      return;
-    }
-
-    if (value === 'LOGO-00') {
-      return;
-    }
-
-    const parts = value.split('-');
-    if (parts.length !== 2) {
-      throw new Error('Invalid Sticker ID format (expected TEAM-NUMBER)');
-    }
-
-    const [teamCode, numberStr] = parts;
-
-    if (!teamCode || teamCode.length < 2) {
-      throw new Error('Invalid team code');
-    }
-
-    const number = parseInt(numberStr, 10);
-    if (isNaN(number) || number < 0) {
-      throw new Error('Invalid sticker number');
     }
   }
 
