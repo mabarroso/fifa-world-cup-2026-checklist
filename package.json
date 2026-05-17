@@ -11,7 +11,9 @@
     "build": "bun run build.mjs",
     "test": "bun test",
     "lint": "echo 'Lint not configured'",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "gui:web": "cd src/gui && bun run dev",
+    "gui:desktop": "cd src/gui && bun run tauri dev"
   },
   "dependencies": {
     "chalk": "^5.3.0",

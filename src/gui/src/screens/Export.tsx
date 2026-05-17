@@ -138,9 +138,12 @@ export function ExportScreen() {
               </p>
               <Button
                 variant="secondary"
-                onClick={() => {
-                  setExported(false);
-                  setSelectedFormat(null);
+                onClick={async () => {
+                  try {
+                    await invoke('open_downloads_folder');
+                  } catch (err) {
+                    console.error('Error al abrir carpeta:', err);
+                  }
                 }}
               >
                 <FolderOpen size={16} className="mr-2" />

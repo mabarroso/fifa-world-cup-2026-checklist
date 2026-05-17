@@ -4,6 +4,19 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [Unreleased]
+
+### Fixed
+
+- GUI PDF export now generates valid PDF files (was plain text before)
+- Added printpdf crate for proper PDF generation in Tauri backend
+
+### Added
+
+- `bun run gui:web` — Run GUI web in development
+- `bun run gui:desktop` — Run GUI desktop in development
+- Tauri desktop GUI with dark gaming theme
+
 ## [1.0.0] - 2026-05-15
 
 ### Added

@@ -163,7 +163,9 @@ Auto-named with date stamp: `faltantes_YYYY-MM-DD.*`
 - **Bun** — runtime and build tool
 - **TypeScript** — type-safe codebase
 - **esbuild** — standalone binary compilation
-- **PDFKit** — PDF generation
+- **Tauri** — desktop GUI (Rust backend)
+- **printpdf** — PDF generation (GUI)
+- **PDFKit** — PDF generation (CLI)
 - **Inquirer** — interactive CLI menus
 - **Chalk** — terminal colors
 - **Conf** — JSON persistence (`~/.config/panini-stickers/`)
@@ -186,10 +188,12 @@ tests/
 ## Commands
 
 ```bash
-bun run dev       # Development mode
-bun run build     # Build standalone binary
-bun test          # Run tests
-bun run typecheck # TypeScript check
+bun run dev         # Run CLI in development mode
+bun run build       # Build standalone binary
+bun test            # Run tests
+bun run typecheck   # TypeScript check
+bun run gui:web     # Run GUI web in development (Vite)
+bun run gui:desktop # Run GUI desktop in development (Tauri)
 ```
 
 ## Data Storage

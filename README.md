@@ -16,7 +16,9 @@ A CLI application to track your Panini FIFA World Cup 2026 sticker collection. M
 - **Bun** — fast JavaScript runtime & bundler
 - **TypeScript** — type-safe codebase
 - **Rollup** — single-file binary compilation
-- **PDFKit** — PDF generation
+- **Tauri** — desktop GUI (Rust backend)
+- **printpdf** — PDF generation (GUI)
+- **PDFKit** — PDF generation (CLI)
 - **Inquirer** — interactive CLI menus
 - **Chalk** — terminal colors
 - **Conf** — cross-platform JSON persistence
@@ -43,9 +45,11 @@ tests/              # Unit and integration tests
 ## Commands
 
 ```bash
-bun run dev         # Run in development mode
-bun run build       # Build binary
+bun run dev         # Run CLI in development mode
+bun run build       # Build CLI binary
 bun test            # Run tests
+bun run gui:web     # Run GUI web in development (Vite)
+bun run gui:desktop # Run GUI desktop in development (Tauri)
 ```
 
 ## Architecture

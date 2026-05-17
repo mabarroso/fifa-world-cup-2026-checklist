@@ -1,73 +1,155 @@
 use tauri::{Manager, command};
 use serde::{Deserialize, Serialize};
-use std::fs;
+use std::fs::{self, File, create_dir_all};
+use std::io::BufWriter;
+use std::process::Command;
+use printpdf::*;
+
 use std::path::PathBuf;
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Serialize, Deserialize, Clone)]
 struct Sticker {
     id: String,
     name: String,
     team: String,
-    // Add other fields as needed for export
 }
 
 #[command]
 fn export_pdf(stickers: Vec<Sticker>) -> Result<String, String> {
-    // For now, we'll create a simple text file as placeholder
-    // In a real implementation, you would use a PDF library
     let downloads_dir = dirs::download_dir()
-        .ok_or_else(|| "Could not find downloads directory".to_string())?;
-    
-    let file_path = downloads_dir.join("panini_wc_2026_missing.pdf");
-    
-    // Simple text content for demo
-    let mut content = String::from("Panini FIFA World Cup 2026 - Cromos Faltantes\n\n");
-    for sticker in stickers {
-        content.push_str(&format!("[{}] {} - {}\n", sticker.id, sticker.name, sticker.team));
+        .ok_or_else(|| "No se encontró la carpeta de descargas".to_string())?;
+
+    create_dir_all(&downloads_dir).map_err(|e| format!("Error al crear directorio: {}", e))?;
+
+    let file_path: PathBuf = downloads_dir.join("faltantes.pdf");
+
+    let (doc, page1, layer1) = PdfDocument::new(
+        "Cromos Faltantes - Panini WC 2026",
+        Mm(210.0),
+        Mm(297.0),
+        "Layer 1",
+    );
+
+    let current_layer = doc.get_page(page1).get_layer(layer1);
+
+    let font = doc.add_builtin_font(BuiltinFont::Helvetica).map_err(|e| e.to_string())?;
+    let font_bold = doc.add_builtin_font(BuiltinFont::HelveticaBold).map_err(|e| e.to_string())?;
+
+    current_layer.use_text("PANINI FIFA WORLD CUP 2026 - CROMOS FALTANTES", 16.0, Mm(10.0), Mm(277.0), &font_bold);
+    current_layer.use_text(&format!("Total: {} cromos", stickers.len()), 12.0, Mm(10.0), Mm(267.0), &font);
+
+    const COLS: usize = 2;
+    const ROWS: usize = 35;
+    const STICKERS_PER_PAGE: usize = COLS * ROWS;
+
+    let chunks: Vec<_> = stickers.chunks(STICKERS_PER_PAGE).collect();
+    let total_pages = chunks.len();
+
+    for (page_idx, chunk) in chunks.iter().enumerate() {
+        let layer = if page_idx == 0 {
+            current_layer.clone()
+        } else {
+            let (new_page_idx, new_layer_idx) = doc.add_page(Mm(210.0), Mm(297.0), "Layer 1");
+            let new_page_ref = doc.get_page(new_page_idx);
+            new_page_ref.get_layer(new_layer_idx)
+        };
+
+        if total_pages > 1 {
+            layer.use_text(&format!("Página {} de {}", page_idx + 1, total_pages), 10.0, Mm(100.0), Mm(287.0), &font);
+        }
+
+        let start_y = 250.0;
+        let col_width = 90.0;
+        let row_height = 7.0;
+
+        for (i, sticker) in chunk.iter().enumerate() {
+            let col = i % COLS;
+            let row = i / COLS;
+
+            let x = 10.0 + (col as f32 * col_width);
+            let y = start_y - (row as f32 * row_height);
+
+            layer.use_text(&format!("[ ]"), 10.0, Mm(x), Mm(y), &font);
+            layer.use_text(&format!("{} - {}", sticker.id, sticker.name), 8.0, Mm(x + 8.0), Mm(y), &font);
+        }
     }
-    
-    fs::write(&file_path, content)
-        .map_err(|e| format!("Failed to write PDF: {}", e))?;
-    
+
+    let file = File::create(&file_path).map_err(|e| format!("Error al crear archivo: {}", e))?;
+    let mut buf_writer = BufWriter::new(file);
+    doc.save(&mut buf_writer).map_err(|e| format!("Error al guardar PDF: {}", e))?;
+
     Ok(file_path.to_string_lossy().to_string())
 }
 
 #[command]
 fn export_csv(stickers: Vec<Sticker>) -> Result<String, String> {
     let downloads_dir = dirs::download_dir()
-        .ok_or_else(|| "Could not find downloads directory".to_string())?;
-    
-    let file_path = downloads_dir.join("panini_wc_2026_missing.csv");
-    
-    // CSV header
+        .ok_or_else(|| "No se encontró la carpeta de descargas".to_string())?;
+
+    let file_path = downloads_dir.join("faltantes.csv");
+
     let mut content = String::from("ID,Nombre,Equipo\n");
     for sticker in stickers {
         content.push_str(&format!("{},{},{}\n", sticker.id, sticker.name, sticker.team));
     }
-    
+
     fs::write(&file_path, content)
-        .map_err(|e| format!("Failed to write CSV: {}", e))?;
-    
+        .map_err(|e| format!("Error al escribir CSV: {}", e))?;
+
     Ok(file_path.to_string_lossy().to_string())
 }
 
 #[command]
 fn export_txt(stickers: Vec<Sticker>) -> Result<String, String> {
     let downloads_dir = dirs::download_dir()
-        .ok_or_else(|| "Could not find downloads directory".to_string())?;
-    
-    let file_path = downloads_dir.join("panini_wc_2026_missing.txt");
-    
-    // Simple text list
-    let mut content = String::new();
+        .ok_or_else(|| "No se encontró la carpeta de descargas".to_string())?;
+
+    let file_path = downloads_dir.join("faltantes.txt");
+
+    let mut content = String::from("PANINI FIFA WORLD CUP 2026 - CROMOS FALTANTES\n\n");
     for sticker in stickers {
         content.push_str(&format!("[{}] {} - {}\n", sticker.id, sticker.name, sticker.team));
     }
-    
+
     fs::write(&file_path, content)
-        .map_err(|e| format!("Failed to write TXT: {}", e))?;
-    
+        .map_err(|e| format!("Error al escribir TXT: {}", e))?;
+
     Ok(file_path.to_string_lossy().to_string())
+}
+
+#[cfg(target_os = "windows")]
+fn open_folder(path: &std::path::Path) -> Result<(), String> {
+    Command::new("explorer")
+        .arg(path)
+        .spawn()
+        .map_err(|e| format!("Error al abrir carpeta: {}", e))?;
+    Ok(())
+}
+
+#[cfg(target_os = "macos")]
+fn open_folder(path: &std::path::Path) -> Result<(), String> {
+    Command::new("open")
+        .arg(path)
+        .spawn()
+        .map_err(|e| format!("Error al abrir carpeta: {}", e))?;
+    Ok(())
+}
+
+#[cfg(target_os = "linux")]
+fn open_folder(path: &std::path::Path) -> Result<(), String> {
+    Command::new("xdg-open")
+        .arg(path)
+        .spawn()
+        .map_err(|e| format!("Error al abrir carpeta: {}", e))?;
+    Ok(())
+}
+
+#[command]
+fn open_downloads_folder() -> Result<(), String> {
+    let downloads_dir = dirs::download_dir()
+        .ok_or_else(|| "No se encontró la carpeta de descargas".to_string())?;
+
+    open_folder(&downloads_dir)
 }
 
 #[cfg_attr(mobile, tauri::mobile_entry_point)]
@@ -76,7 +158,7 @@ pub fn run() {
         .plugin(tauri_plugin_opener::init())
         .plugin(tauri_plugin_fs::init())
         .plugin(tauri_plugin_dialog::init())
-        .invoke_handler(tauri::generate_handler![export_pdf, export_csv, export_txt])
+        .invoke_handler(tauri::generate_handler![export_pdf, export_csv, export_txt, open_downloads_folder])
         .setup(|app| {
             let window = app.get_webview_window("main").unwrap();
             window.set_title("Panini WC 2026 Checklist").unwrap();
