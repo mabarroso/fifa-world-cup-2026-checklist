@@ -1,5 +1,4 @@
-import { NavLink } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import { useLocation, useNavigate } from 'react-router-dom';
 import {
   LayoutGrid,
   PlusCircle,
@@ -19,8 +18,11 @@ const navItems = [
 ];
 
 export function Sidebar() {
+  const location = useLocation();
+  const navigate = useNavigate();
+
   return (
-    <aside className="w-64 h-screen bg-[var(--color-surface)] border-r border-white/10 flex flex-col">
+    <aside className="w-64 h-screen shrink-0 relative z-20 bg-[var(--color-surface)] border-r border-white/10 flex flex-col">
       <div className="p-6 border-b border-white/10">
         <h1 className="text-2xl font-bold tracking-wider text-[var(--color-blue)]">
           PANINI WC 2026
@@ -28,28 +30,40 @@ export function Sidebar() {
       </div>
 
       <nav className="flex-1 p-4 space-y-2">
-        {navItems.map((item) => (
-          <NavLink
-            key={item.path}
-            to={item.path}
-            className={({ isActive }) =>
-              `flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-200 ${
+        {navItems.map((item) => {
+          const isActive = location.pathname === item.path;
+
+          return (
+            <button
+              key={item.path}
+              type="button"
+              onMouseDown={(e) => {
+                if (e.button !== 0 || isActive) {
+                  return;
+                }
+                e.preventDefault();
+                navigate(item.path);
+              }}
+              onClick={() => {
+                if (!isActive) {
+                  navigate(item.path);
+                }
+              }}
+              className={`w-full text-left flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-200 ${
                 isActive
                   ? 'bg-[var(--color-blue)]/15 border-l-4 border-[var(--color-blue)] text-[var(--color-blue)]'
                   : 'hover:bg-white/5 text-[var(--color-white)] opacity-70 hover:opacity-100'
-              }`
-            }
+              }`}
+              aria-current={isActive ? 'page' : undefined}
           >
-            <motion.div
-              animate={{ scale: 1 }}
-              transition={{ duration: 0.2 }}
-            >
+            <span className="pointer-events-none">
               <item.icon size={20} />
-            </motion.div>
+            </span>
             <span className="flex-1 font-medium">{item.label}</span>
             <span className="text-xs opacity-50">{item.shortcut}</span>
-          </NavLink>
-        ))}
+            </button>
+          );
+        })}
       </nav>
 
       <div className="p-4 border-t border-white/10">

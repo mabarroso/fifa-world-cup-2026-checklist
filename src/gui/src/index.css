@@ -55,6 +55,7 @@
     left: -200px;
     opacity: 0.15;
     z-index: 0;
+    pointer-events: none;
   }
 
   body::after {
@@ -68,6 +69,7 @@
     right: -150px;
     opacity: 0.15;
     z-index: 0;
+    pointer-events: none;
   }
 
   ::selection {

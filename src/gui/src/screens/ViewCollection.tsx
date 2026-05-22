@@ -1,9 +1,10 @@
 import { useMemo, useState, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import { Trash2, Plus, Repeat } from 'lucide-react';
 import { useCollectionStore, type FilterType, type SortOrder } from '../stores';
 import { getAllStickers } from '../data/stickers';
-import { Card, Badge, Header, Button } from '../components';
+import { Card, Badge, Header } from '../components';
+import { type StickerSection } from '../lib/sticker-sections';
+import { buildTeamOptions, filterCollectionStickers, getActiveTeamFilter } from '../lib/collection-view-model';
 
 const filters: { key: FilterType; label: string }[] = [
   { key: 'all', label: 'Todas' },
@@ -17,58 +18,44 @@ const sortOptions: { key: SortOrder; label: string }[] = [
   { key: 'cromo', label: 'Cromo' },
 ];
 
+const sectionOptions: Array<{ value: 'Todas' | StickerSection; label: string }> = [
+  { value: 'Todas', label: 'Todas' },
+  { value: 'Panini', label: 'Panini' },
+  { value: 'Coca Cola', label: 'Coca cola' },
+  { value: "McDonald's", label: "McDonald's" },
+  { value: 'Extras', label: 'Extras' },
+];
+
 export function ViewCollectionScreen() {
   const { owned, duplicates, filter, sortOrder, setFilter, setSortOrder, markOwned, markDuplicate, unmarkOwned } = useCollectionStore();
   const [selectedSticker, setSelectedSticker] = useState<string | null>(null);
+  const [sectionFilter, setSectionFilter] = useState<'Todas' | StickerSection>('Panini');
   const [teamFilter, setTeamFilter] = useState<string>('all');
 
   const allStickers = useMemo(() => getAllStickers(), []);
 
-  const teamOptions = useMemo(() => {
-    const teams = new Map<string, { team: string; id: string }>();
-    allStickers.forEach((sticker) => {
-      const idFix = sticker.id.replace(/[-0-9]/g, '').substring(0, 3);
-      if (!teams.has(idFix)) {
-        teams.set(idFix, { team: sticker.team, id: idFix });
-      }
-    });
-    const options: { value: string; label: string }[] = [{ value: 'all', label: 'Todos' }];
-    Array.from(teams.values())
-      .sort((a, b) => a.team.localeCompare(b.team))
-      .forEach((t) => options.push({ value: t.id, label: `${t.id} - ${t.team}` }));
-    return options;
-  }, [allStickers]);
+  const teamOptions = useMemo(
+    () => buildTeamOptions(allStickers, sectionFilter),
+    [allStickers, sectionFilter],
+  );
 
-  const filteredStickers = useMemo(() => {
-    const filtered = allStickers.filter((sticker) => {
-      const ownedQty = owned[sticker.id] || 0;
-      const dupQty = duplicates[sticker.id] || 0;
+  const activeTeamFilter = useMemo(
+    () => getActiveTeamFilter(teamFilter, teamOptions),
+    [teamFilter, teamOptions],
+  );
 
-      switch (filter) {
-        case 'missing':
-          return ownedQty === 0;
-        case 'owned':
-          return ownedQty > 0;
-        case 'duplicates':
-          return dupQty > 0;
-        default:
-          return true;
-      }
-    });
-
-    if (teamFilter !== 'all') {
-      return filtered.filter((sticker) => {
-        const idFix = sticker.id.replace(/[-0-9]/g, '').substring(0, 3);
-        return idFix === teamFilter;
-      });
-    }
-
-    if (sortOrder === 'cromo') {
-      return [...filtered].sort((a, b) => a.id.localeCompare(b.id));
-    }
-
-    return filtered;
-  }, [allStickers, owned, duplicates, filter, sortOrder, teamFilter]);
+  const filteredStickers = useMemo(
+    () => filterCollectionStickers({
+      allStickers,
+      owned,
+      duplicates,
+      filter,
+      sortOrder,
+      sectionFilter,
+      teamFilter: activeTeamFilter,
+    }),
+    [allStickers, owned, duplicates, filter, sortOrder, sectionFilter, activeTeamFilter],
+  );
 
   const handleCardClick = useCallback((stickerId: string) => {
     setSelectedSticker(stickerId);
@@ -122,7 +109,29 @@ export function ViewCollectionScreen() {
           <div className="flex-1" />
           <div className="relative">
             <select
-              value={teamFilter}
+              value={sectionFilter}
+              onChange={(e) => {
+                setSectionFilter(e.target.value as 'Todas' | StickerSection);
+                setTeamFilter('all');
+              }}
+              className="appearance-none bg-[var(--color-surface)] text-[var(--color-white)] font-semibold px-4 py-2 pr-10 rounded-lg cursor-pointer border-2 border-[var(--color-surface)] focus:outline-none focus:ring-2 focus:ring-[var(--color-cyan)] focus:ring-opacity-50 mr-2"
+              style={{
+                backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23ffffff'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'/%3E%3C/svg%3E")`,
+                backgroundRepeat: 'no-repeat',
+                backgroundPosition: 'right 0.75rem center',
+                backgroundSize: '1rem',
+              }}
+            >
+              {sectionOptions.map((opt) => (
+                <option key={opt.value} value={opt.value} className="bg-[var(--color-surface)] text-[var(--color-white)]">
+                  {opt.label}
+                </option>
+              ))}
+            </select>
+          </div>
+          <div className="relative">
+            <select
+              value={activeTeamFilter}
               onChange={(e) => setTeamFilter(e.target.value)}
               className="appearance-none bg-[var(--color-surface)] text-[var(--color-white)] font-semibold px-4 py-2 pr-10 rounded-lg cursor-pointer border-2 border-[var(--color-surface)] focus:outline-none focus:ring-2 focus:ring-[var(--color-cyan)] focus:ring-opacity-50 mr-2"
               style={{
@@ -160,22 +169,14 @@ export function ViewCollectionScreen() {
           </div>
         </div>
 
-        <motion.div
-          className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-4"
-          layout
-        >
-          <AnimatePresence mode="popLayout">
-            {filteredStickers.map((sticker) => (
-              <motion.div
-                key={sticker.id}
-                layout
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.8 }}
-                className={`cursor-pointer rounded-3xl overflow-hidden transition-all duration-200 ${
-                  selectedSticker === sticker.id ? 'ring-4 ring-[var(--color-lime)] ring-offset-2 ring-offset-[var(--color-bg)]' : ''
-                }`}
-              >
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-4">
+          {filteredStickers.map((sticker) => (
+            <div
+              key={sticker.id}
+              className={`cursor-pointer rounded-3xl overflow-hidden transition-all duration-200 ${
+                selectedSticker === sticker.id ? 'ring-4 ring-[var(--color-lime)] ring-offset-2 ring-offset-[var(--color-bg)]' : ''
+              }`}
+            >
                 <Card
                   onClick={() => {
                     handleCardClick(sticker.id);
@@ -239,10 +240,9 @@ export function ViewCollectionScreen() {
                     )}
                   </div>
                 </Card>
-              </motion.div>
-            ))}
-          </AnimatePresence>
-        </motion.div>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

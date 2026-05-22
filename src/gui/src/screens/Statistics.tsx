@@ -2,47 +2,24 @@ import { useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { useCollectionStore } from '../stores';
 import { getAllStickers } from '../data/stickers';
-import { ProgressRing, Panel, Badge, Header, Button } from '../components';
+import { ProgressRing, Panel, Header, Button } from '../components';
 import { Trash2 } from 'lucide-react';
-
-const GROUPS = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L'];
+import { computeStatisticsModel, SORTED_PANINI_GROUPS, STATISTICS_SECTION_ORDER } from '../lib/statistics-model';
 
 export function StatisticsScreen() {
   const { owned, duplicates, reset } = useCollectionStore();
   const allStickers = useMemo(() => getAllStickers(), []);
 
-   const stats = useMemo(() => {
-     const total = allStickers.length;
-     const uniqueOwned = Object.keys(owned).length;
-     const totalOwned = Object.values(owned).reduce((a, b) => a + b, 0);
-     const totalDuplicates = Object.values(duplicates).reduce((a, b) => a + b, 0);
-     const missing = total - uniqueOwned;
-     const percentage = Math.round((uniqueOwned / total) * 100);
+  const stats = useMemo(
+    () => computeStatisticsModel(allStickers, owned, duplicates),
+    [allStickers, owned, duplicates],
+  );
 
-     const groupStats: Record<string, { owned: number; total: number }> = {};
-     GROUPS.forEach((g) => {
-       const groupStickers = allStickers.filter((s) => s.group === g);
-       const groupOwned = groupStickers.filter((s) => owned[s.id]).length;
-       groupStats[g] = { owned: groupOwned, total: groupStickers.length };
-     });
-
-     const topDuplicates = Object.entries(duplicates)
-       .sort((a, b) => b[1] - a[1])
-       .slice(0, 5)
-       .map(([id, qty]) => ({
-         id,
-         qty,
-         sticker: allStickers.find((s) => s.id === id),
-       }));
-
-     return { total, uniqueOwned, totalOwned, totalDuplicates, missing, percentage, groupStats, topDuplicates };
-   }, [allStickers, owned, duplicates]);
-
-   const handleReset = () => {
-     if (window.confirm('¿Estás seguro de que quieres borrar toda la colección y comenzar de nuevo? Esta acción no se puede deshacer.')) {
-       reset();
-     }
-   };
+  const handleReset = () => {
+    if (window.confirm('¿Estás seguro de que quieres borrar toda la colección y comenzar de nuevo? Esta acción no se puede deshacer.')) {
+      reset();
+    }
+  };
 
    return (
      <div>
@@ -73,83 +50,52 @@ export function StatisticsScreen() {
         </Panel>
       </div>
 
+      <div className="grid grid-cols-1 md:grid-cols-5 gap-4 mb-8">
+        <Panel className="p-4 flex flex-col items-center">
+          <ProgressRing progress={stats.percentage} size={130} strokeWidth={10} />
+          <p className="mt-3 text-sm text-[var(--color-white)]">Total</p>
+        </Panel>
+        {STATISTICS_SECTION_ORDER.map((section) => (
+          <Panel key={section} className="p-4 flex flex-col items-center">
+            <ProgressRing progress={stats.sectionStats[section].percentage} size={130} strokeWidth={10} />
+            <p className="mt-3 text-sm text-[var(--color-white)]">{section}</p>
+            <p className="text-xs text-[var(--color-white)] opacity-60">
+              {stats.sectionStats[section].owned}/{stats.sectionStats[section].total}
+            </p>
+          </Panel>
+        ))}
+      </div>
+
       <div className="flex gap-8">
-        <div className="flex-shrink-0">
-          <Panel className="p-8 flex flex-col items-center">
-            <ProgressRing progress={stats.percentage} size={180} strokeWidth={12} />
-            <p className="mt-4 text-lg text-[var(--color-white)]">Completado</p>
-          </Panel>
-        </div>
-
-        <div className="flex-1 grid grid-cols-2 gap-6">
-          <Panel className="p-4">
-            <h2 className="text-lg font-semibold mb-4 text-[var(--color-white)]">
-              Por Grupo
-            </h2>
-            <div className="space-y-3">
-              {GROUPS.map((g) => {
-                const { owned, total } = stats.groupStats[g];
-                const pct = total > 0 ? (owned / total) * 100 : 0;
-                return (
-                  <div key={g} className="flex items-center gap-3">
-                    <span className="w-8 text-sm font-mono text-[var(--color-cyan)]">
-                      {g}
-                    </span>
-                    <div className="flex-1 h-3 bg-[var(--color-surface-2)] rounded-full overflow-hidden">
-                      <motion.div
-                        initial={{ width: 0 }}
-                        animate={{ width: `${pct}%` }}
-                        transition={{ duration: 0.5, ease: 'easeOut' }}
-                        className="h-full bg-gradient-to-r from-[var(--color-cyan)] to-[var(--color-cyan-dark)]"
-                      />
-                    </div>
-                    <span className="w-12 text-right text-sm text-[var(--color-white)] opacity-60">
-                      {pct}%
-                    </span>
-                  </div>
-                );
-              })}
-            </div>
-          </Panel>
-
-          <Panel className="p-4">
-            <h2 className="text-lg font-semibold mb-4 text-[var(--color-white)]">
-              Top Duplicadas
-            </h2>
-            <div className="space-y-2">
-              {stats.topDuplicates.map((item, i) => (
-                <motion.div
-                  key={item.id}
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: i * 0.1 }}
-                  className="flex items-center gap-3 p-2 rounded-lg hover:bg-white/5"
-                >
-                  <span className="w-8 text-center">
-                    {i === 0 && '🥇'}
-                    {i === 1 && '🥈'}
-                    {i === 2 && '🥉'}
-                    {i > 2 && <span className="text-lg">{i + 1}</span>}
+        <Panel className="p-4 flex-1">
+          <h2 className="text-lg font-semibold mb-4 text-[var(--color-white)]">
+            Por equipo
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-3">
+            {SORTED_PANINI_GROUPS.map((g) => {
+              const { owned, total } = stats.groupStats[g];
+              const pct = total > 0 ? Math.round((owned / total) * 100) : 0;
+              return (
+                <div key={g} className="flex items-center gap-3">
+                  <span className="w-12 text-sm font-mono text-[var(--color-cyan)]">
+                    {g}
                   </span>
-                  <div className="flex-1">
-                    <p className="text-sm font-mono text-[var(--color-orange)]">
-                      {item.id}
-                    </p>
-                    <p className="text-xs text-[var(--color-white)] opacity-60">
-                      {item.sticker?.name}
-                    </p>
+                  <div className="flex-1 h-3 bg-[var(--color-surface-2)] rounded-full overflow-hidden">
+                    <motion.div
+                      initial={{ width: 0 }}
+                      animate={{ width: `${pct}%` }}
+                      transition={{ duration: 0.5, ease: 'easeOut' }}
+                      className="h-full bg-gradient-to-r from-[var(--color-cyan)] to-[var(--color-cyan-dark)]"
+                    />
                   </div>
-                  <Badge variant="orange">x{item.qty}</Badge>
-                </motion.div>
-              ))}
-              {stats.topDuplicates.length === 0 && (
-                <p className="text-[var(--color-white)] opacity-40 text-sm">
-                  Aún no hay repetidas
-                </p>
-              )}
-            </div>
-          </Panel>
-        </div>
+                  <span className="w-12 text-right text-sm text-[var(--color-white)] opacity-60">
+                    {pct}%
+                  </span>
+                </div>
+              );
+            })}
+          </div>
+        </Panel>
       </div>
     </div>
   );
