@@ -1,10 +1,17 @@
 import { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
-import { FileText, Table, List, Download, FolderOpen } from 'lucide-react';
+import { FileText, Table, List, Download, FolderOpen, Save, Upload } from 'lucide-react';
 import { useCollectionStore } from '../stores';
 import { getAllStickers } from '../data/stickers';
 import { Button, Panel, Badge, Header } from '../components';
 import { invoke } from '@tauri-apps/api/core';
+import {
+  assertCompatibleBackup,
+  buildBackupPayload,
+  GUI_APP_VERSION,
+  parseBackup,
+  serializeBackup,
+} from '../lib/backup-file';
 
 const formats = [
   { id: 'pdf', label: 'PDF', icon: FileText, color: 'var(--color-red)', desc: 'Lista para imprimir' },
@@ -13,11 +20,13 @@ const formats = [
 ];
 
 export function ExportScreen() {
-  const { owned } = useCollectionStore();
+  const { owned, duplicates, setOwned, setDuplicates } = useCollectionStore();
   const [selectedFormat, setSelectedFormat] = useState<string | null>(null);
   const [exporting, setExporting] = useState(false);
   const [exported, setExported] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [backupMessage, setBackupMessage] = useState<string | null>(null);
+  const [backupBusy, setBackupBusy] = useState(false);
 
   const allStickers = useMemo(() => getAllStickers(), []);
 
@@ -26,6 +35,12 @@ export function ExportScreen() {
   }, [allStickers, owned]);
 
   const missingCount = missing.length;
+
+  const hasData = useMemo(() => {
+    const ownedCount = Object.values(owned).some((qty) => qty > 0);
+    const duplicatesCount = Object.values(duplicates).some((qty) => qty > 0);
+    return ownedCount || duplicatesCount;
+  }, [owned, duplicates]);
 
   const handleExport = async (format: string) => {
     setSelectedFormat(format);
@@ -59,6 +74,121 @@ export function ExportScreen() {
     }
   };
 
+  const handleSaveBackup = async () => {
+    setBackupBusy(true);
+    setError(null);
+    setBackupMessage(null);
+
+    try {
+      const payload = buildBackupPayload({ owned, duplicates }, GUI_APP_VERSION);
+      const content = serializeBackup(payload);
+      const suggestedName = 'coleccion.fwc26';
+      const isTauri = typeof window !== 'undefined' && '__TAURI_INTERNALS__' in window;
+
+      if (isTauri) {
+        const { save } = await import('@tauri-apps/plugin-dialog');
+        const { writeTextFile } = await import('@tauri-apps/plugin-fs');
+
+        const selectedPath = await save({
+          defaultPath: suggestedName,
+          filters: [{ name: 'Backup Panini FWC26', extensions: ['fwc26'] }],
+        });
+
+        if (!selectedPath) {
+          setBackupMessage('Guardado cancelado.');
+          return;
+        }
+
+        const finalPath = selectedPath.toLowerCase().endsWith('.fwc26')
+          ? selectedPath
+          : `${selectedPath}.fwc26`;
+
+        await writeTextFile(finalPath, content);
+        setBackupMessage(`Copia de seguridad guardada correctamente: ${finalPath}`);
+      } else {
+        const blob = new Blob([content], { type: 'application/json' });
+        const link = document.createElement('a');
+        const url = URL.createObjectURL(blob);
+        link.href = url;
+        link.download = suggestedName;
+        link.click();
+        URL.revokeObjectURL(url);
+        setBackupMessage('Copia de seguridad guardada correctamente (.fwc26).');
+      }
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Error al guardar backup');
+    } finally {
+      setBackupBusy(false);
+    }
+  };
+
+  const handleOpenBackup = async () => {
+    setBackupBusy(true);
+    setError(null);
+    setBackupMessage(null);
+
+    try {
+      if (hasData) {
+        const accepted = window.confirm(
+          'ATENCION: tu colección actual no está vacía. Si continúas, será reemplazada por el contenido del backup. ¿Deseas continuar?',
+        );
+
+        if (!accepted) {
+          setBackupMessage('Importación cancelada.');
+          return;
+        }
+      }
+
+      const isTauri = typeof window !== 'undefined' && '__TAURI_INTERNALS__' in window;
+      let content = '';
+
+      if (isTauri) {
+        const { open } = await import('@tauri-apps/plugin-dialog');
+        const { readTextFile } = await import('@tauri-apps/plugin-fs');
+
+        const selectedPath = await open({
+          multiple: false,
+          filters: [{ name: 'Backup Panini FWC26', extensions: ['fwc26'] }],
+        });
+
+        if (!selectedPath || Array.isArray(selectedPath)) {
+          setBackupMessage('Importación cancelada.');
+          return;
+        }
+
+        content = await readTextFile(selectedPath);
+      } else {
+        const input = document.createElement('input');
+        input.type = 'file';
+        input.accept = '.fwc26';
+
+        const file = await new Promise<File>((resolve, reject) => {
+          input.onchange = () => {
+            const selected = input.files?.[0];
+            if (!selected) {
+              reject(new Error('No se seleccionó ningún archivo.'));
+              return;
+            }
+            resolve(selected);
+          };
+          input.click();
+        });
+
+        content = await file.text();
+      }
+
+      const backup = parseBackup(content);
+      assertCompatibleBackup(backup.appVersion, GUI_APP_VERSION);
+      setOwned(backup.collection.owned);
+      setDuplicates(backup.collection.duplicates);
+      setBackupMessage(`Backup cargado correctamente (versión ${backup.appVersion}).`);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Error al abrir backup');
+    } finally {
+      setBackupBusy(false);
+    }
+  };
+
   const getPreview = () => {
     return missing.slice(0, 5).map((s) => `${s.id},${s.name},${s.team}`).join('\n');
   };
@@ -77,6 +207,28 @@ export function ExportScreen() {
 
       <div className="flex gap-6">
         <div className="flex-1">
+          <Panel className="p-6 mb-6">
+            <h2 className="text-lg font-semibold mb-4 text-[var(--color-white)]">
+              Copia de seguridad
+            </h2>
+            <p className="text-sm text-[var(--color-white)] opacity-70 mb-4">
+              Guarda o abre tu colección en archivos .fwc26
+            </p>
+            <div className="flex gap-3 flex-wrap">
+              <Button variant="secondary" onClick={handleSaveBackup} disabled={backupBusy}>
+                <Save size={16} className="mr-2" />
+                Guardar backup
+              </Button>
+              <Button variant="secondary" onClick={handleOpenBackup} disabled={backupBusy}>
+                <Upload size={16} className="mr-2" />
+                Abrir backup
+              </Button>
+            </div>
+            {backupMessage && (
+              <p className="text-sm text-[var(--color-green)] mt-4">{backupMessage}</p>
+            )}
+          </Panel>
+
           <div className="grid grid-cols-3 gap-4 mb-6">
             {formats.map((format) => (
               <motion.div

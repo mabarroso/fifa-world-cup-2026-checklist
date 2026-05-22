@@ -5,5 +5,6 @@ export { MarkDuplicateMenu } from './MarkDuplicateMenu';
 export { StatisticsDisplay } from './StatisticsDisplay';
 export { SearchInterface } from './SearchInterface';
 export { ExportMenu } from './ExportMenu';
+export { BackupMenu } from './BackupMenu';
 export type { ViewFilter } from './ViewCollectionMenu';
 export type { ExportFormat } from './ExportMenu';

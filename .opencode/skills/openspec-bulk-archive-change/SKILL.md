@@ -127,8 +127,8 @@ This skill allows you to batch-archive changes, handling spec conflicts intellig
 
    b. **Perform the archive**:
       ```bash
-      mkdir -p openspec/changes/archive
-      mv openspec/changes/<name> openspec/changes/archive/YYYY-MM-DD-HHmm-<name>
+      mkdir -p openspec/changes/archive/YYYY/MM
+      mv openspec/changes/<name> openspec/changes/archive/YYYY/MM/YYYY-MM-DD-HHMM-<name>
       ```
 
    c. **Track outcome** for each change:
@@ -144,9 +144,9 @@ This skill allows you to batch-archive changes, handling spec conflicts intellig
    ## Bulk Archive Complete
 
    Archived 3 changes:
-   - schema-management-cli -> archive/2026-01-19-schema-management-cli/
-   - project-config -> archive/2026-01-19-project-config/
-   - add-oauth -> archive/2026-01-19-add-oauth/
+   - schema-management-cli -> archive/2026/01/2026-01-19-1200-schema-management-cli/
+   - project-config -> archive/2026/01/2026-01-19-1200-project-config/
+   - add-oauth -> archive/2026/01/2026-01-19-1200-add-oauth/
 
    Skipped 1 change:
    - add-verify-skill (user chose not to archive incomplete)
@@ -201,8 +201,8 @@ then add-graphql specs (chronological order, newer takes precedence).
 ## Bulk Archive Complete
 
 Archived N changes:
-- <change-1> -> archive/YYYY-MM-DD-HHmm-<change-1>/
-- <change-2> -> archive/YYYY-MM-DD-HHmm-<change-2>/
+- <change-1> -> archive/YYYY/MM/YYYY-MM-DD-HHMM-<change-1>/
+- <change-2> -> archive/YYYY/MM/YYYY-MM-DD-HHMM-<change-2>/
 
 Spec sync summary:
 - N delta specs synced to main specs
@@ -215,7 +215,7 @@ Spec sync summary:
 ## Bulk Archive Complete (partial)
 
 Archived N changes:
-- <change-1> -> archive/YYYY-MM-DD-HHmm-<change-1>/
+- <change-1> -> archive/YYYY/MM/YYYY-MM-DD-HHMM-<change-1>/
 
 Skipped M changes:
 - <change-2> (user chose not to archive incomplete)
@@ -242,5 +242,5 @@ No active changes found. Use `/opsx-new` to create a new change.
 - Use single confirmation for entire batch
 - Track and report all outcomes (success/skip/fail)
 - Preserve .openspec.yaml when moving to archive
-- Archive directory target uses current date: YYYY-MM-DD-HHmm-<name>
+- Archive directory target uses current date and time: YYYY-MM-DD-HHMM-<name>
 - If archive target exists, fail that change but continue with others

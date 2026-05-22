@@ -65,14 +65,14 @@ Archive a completed change in the experimental workflow.
    mkdir -p openspec/changes/archive/YYYY/MM
    ```
 
-   Generate target name using current date: `YYYY-MM-DD-HHmm-<change-name>`
+   Generate target name using current date and time: `YYYY-MM-DD-HHMM-<change-name>`
 
    **Check if target already exists:**
    - If yes: Fail with error, suggest renaming existing archive or using different date
    - If no: Move the change directory to archive
 
    ```bash
-   mv openspec/changes/<name> openspec/changes/archive/YYYY/MM/YYYY-MM-DD-HHmm-<name>
+   mv openspec/changes/<name> openspec/changes/archive/YYYY/MM/YYYY-MM-DD-HHMM-<name>
    ```
 
 6. **Display summary**
@@ -91,7 +91,7 @@ Archive a completed change in the experimental workflow.
 
 **Change:** <change-name>
 **Schema:** <schema-name>
-**Archived to:** openspec/changes/archive/YYYY/MM/YYYY-MM-DD-HHmm-<name>/
+**Archived to:** openspec/changes/archive/YYYY/MM/YYYY-MM-DD-HHMM-<name>/
 **Specs:** ✓ Synced to main specs
 
 All artifacts complete. All tasks complete.
@@ -104,7 +104,7 @@ All artifacts complete. All tasks complete.
 
 **Change:** <change-name>
 **Schema:** <schema-name>
-**Archived to:** openspec/changes/archive/YYYY/MM/YYYY-MM-DD-HHmm-<name>/
+**Archived to:** openspec/changes/archive/YYYY/MM/YYYY-MM-DD-HHMM-<name>/
 **Specs:** No delta specs
 
 All artifacts complete. All tasks complete.
@@ -117,7 +117,7 @@ All artifacts complete. All tasks complete.
 
 **Change:** <change-name>
 **Schema:** <schema-name>
-**Archived to:** openspec/changes/archive/YYYY/MM/YYYY-MM-DD-HHmm-<name>/
+**Archived to:** openspec/changes/archive/YYYY/MM/YYYY-MM-DD-HHMM-<name>/
 **Specs:** Sync skipped (user chose to skip)
 
 **Warnings:**
@@ -134,7 +134,7 @@ Review the archive if this was not intentional.
 ## Archive Failed
 
 **Change:** <change-name>
-**Target:** openspec/changes/archive/YYYY/MM/YYYY-MM-DD-HHmm-<name>/
+**Target:** openspec/changes/archive/YYYY/MM/YYYY-MM-DD-HHMM-<name>/
 
 Target archive directory already exists.
 

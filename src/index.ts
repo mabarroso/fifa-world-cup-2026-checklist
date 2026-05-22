@@ -1,5 +1,6 @@
 import chalk from 'chalk';
 import { ConfStorageAdapter } from './infrastructure/storage/ConfStorageAdapter';
+import { FileBackupAdapter } from './infrastructure/storage/FileBackupAdapter';
 import {
   MainMenu,
   ViewCollectionMenu,
@@ -8,13 +9,17 @@ import {
   StatisticsDisplay,
   SearchInterface,
   ExportMenu,
+  BackupMenu,
 } from './infrastructure/cli';
 import {
   MarkStickerOwnedCommand,
   MarkStickerDuplicateCommand,
   ResetCollectionCommand,
   GetCollectionStatsQuery,
+  SaveCollectionBackupCommand,
+  LoadCollectionBackupCommand,
 } from './application';
+import { APP_VERSION } from './config/appVersion';
 
 async function main(): Promise<void> {
   console.log(chalk.bold.cyan('\n====================================='));
@@ -23,10 +28,13 @@ async function main(): Promise<void> {
   console.log(chalk.bold.cyan('=====================================\n'));
 
   const storageAdapter = new ConfStorageAdapter();
+  const backupAdapter = new FileBackupAdapter();
 
   const markOwnedCommand = new MarkStickerOwnedCommand(storageAdapter);
   const markDuplicateCommand = new MarkStickerDuplicateCommand(storageAdapter);
   const resetCollectionCommand = new ResetCollectionCommand(storageAdapter);
+  const saveBackupCommand = new SaveCollectionBackupCommand(storageAdapter, backupAdapter, APP_VERSION);
+  const loadBackupCommand = new LoadCollectionBackupCommand(storageAdapter, backupAdapter, APP_VERSION);
   const getStatsQuery = new GetCollectionStatsQuery(storageAdapter);
 
   const mainMenu = new MainMenu();
@@ -36,6 +44,7 @@ async function main(): Promise<void> {
   const statsDisplay = new StatisticsDisplay();
   const searchInterface = new SearchInterface();
   const exportMenu = new ExportMenu();
+  const backupMenu = new BackupMenu(saveBackupCommand, loadBackupCommand, storageAdapter);
 
   let running = true;
 
@@ -78,6 +87,16 @@ async function main(): Promise<void> {
         case 'search': {
           const state = await storageAdapter.load();
           await searchInterface.show(state);
+          break;
+        }
+
+        case 'save_backup': {
+          await backupMenu.save();
+          break;
+        }
+
+        case 'load_backup': {
+          await backupMenu.load();
           break;
         }
 

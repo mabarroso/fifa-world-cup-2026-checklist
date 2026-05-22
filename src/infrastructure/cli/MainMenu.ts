@@ -20,11 +20,13 @@ export class MainMenu {
           { name: '🔄 Marcar cromo como repetido', value: 'mark_duplicate' },
           { name: '📊 Estadísticas', value: 'stats' },
           { name: '🔍 Buscar cromo', value: 'search' },
+          { name: '💾 Guardar copia de seguridad', value: 'save_backup' },
+          { name: '📂 Abrir copia de seguridad', value: 'load_backup' },
           { name: '📤 Exportar faltantes', value: 'export' },
           { name: '🔄 Resetear colección', value: 'reset' },
           { name: '👋 Salir', value: 'exit' },
         ],
-        pageSize: 8,
+        pageSize: 10,
       },
     ]);
 
