@@ -1,0 +1,17 @@
+Tag: v1.0.2
+Title: v1.0.2 — Backup & Source Export Filters
+
+---
+
+This release improves portability and export precision for collectors. Includes:
+
+- Backup save/load for full collection state in CLI and GUI (`.fwc26`)
+- Backup compatibility checks using app version metadata
+- Missing sticker export filters by source in PDF/CSV/TXT:
+  - Panini
+  - Extra
+  - Coca cola
+  - McDonald's
+  - Todos
+- Export screen UX updates with clearer separation between backup actions and checklist generation
+- OpenSpec archive conventions standardized for year/month + timestamp naming

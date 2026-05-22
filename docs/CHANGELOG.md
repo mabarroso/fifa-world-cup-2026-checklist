@@ -18,6 +18,19 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 
+## [1.0.2] - 2026-05-23
+
+### Added
+
+- Backup save/load support in CLI with `.fwc26` files
+- Backup save/load support in GUI with native file dialogs
+- Source-based missing export filters (`Panini`, `Extra`, `Coca cola`, `McDonald's`, `Todos`) for PDF/CSV/TXT in CLI and GUI
+
+### Changed
+
+- Backup format now includes app version metadata for compatibility validation
+- OpenSpec archive conventions standardized to `archive/YYYY/MM/YYYY-MM-DD-HHMM-<change-name>` in project command/skill docs
+
 ## [1.0.0] - 2026-05-15
 
 ### Added
