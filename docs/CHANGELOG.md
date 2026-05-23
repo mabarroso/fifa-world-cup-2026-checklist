@@ -18,6 +18,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 
+### Changed
+
+- Team filter dropdown options in GUI collection view are now sorted alphabetically by `ID_FIX` (format `<ID_FIX> - <TEAM>`)
+
+### Fixed
+
+- Marking a sticker as duplicated/repeated in GUI no longer clears previously marked duplicated stickers
+
 ## [1.0.2] - 2026-05-23
 
 ### Added

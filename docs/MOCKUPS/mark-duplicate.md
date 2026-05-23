@@ -36,6 +36,8 @@ After marking a duplicate, the sticker appears with `[R:N]` status:
 [ ]    [MEX-04] Jorge Sánchez - Mexico (A)
 ```
 
+Previously marked repeated stickers remain unchanged when a different sticker is marked as repeated.
+
 ## Input Validation
 
 | Field | Validation |

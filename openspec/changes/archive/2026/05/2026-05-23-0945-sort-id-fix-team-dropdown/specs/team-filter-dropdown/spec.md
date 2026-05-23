@@ -1,20 +1,4 @@
-# team-filter-dropdown Specification
-
-## Purpose
-Legacy synchronized capability specification for team-filter-dropdown.
-
-## Requirements
-### Requirement: team-filter-dropdown capability behavior
-The system SHALL implement the capability behavior described in this specification.
-
-#### Scenario: Capability behavior is used as baseline
-- **WHEN** this capability is implemented, tested, or reviewed
-- **THEN** the behavior captured in this specification MUST be treated as the baseline
-- **AND** legacy archived notes MUST remain available for reference
-
-## Legacy Notes
-
-## ADDED Requirements
+## MODIFIED Requirements
 
 ### Requirement: Team filter dropdown in collection view
 A dropdown filter SHALL be displayed to the right of the "Repetidas" filter button, allowing users to filter stickers by team.
@@ -36,7 +20,7 @@ A dropdown filter SHALL be displayed to the right of the "Repetidas" filter butt
 - **AND** the sticker count shown above the grid reflects only filtered stickers
 
 #### Scenario: Team filter persists across view changes
-- **WHEN** user changes filter view (Todas/Faltantes/En el álbum/Repetidas)
+- **WHEN** user changes filter view (Todas/Faltantes/En el album/Repetidas)
 - **THEN** the selected team filter value is retained
 - **AND** the filtered results still respect the selected team
 

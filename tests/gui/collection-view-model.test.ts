@@ -31,9 +31,11 @@ describe('collection view model', () => {
   it('builds team options scoped by selected section', () => {
     const paniniOptions = buildTeamOptions(stickers, 'Panini');
     const cocaOptions = buildTeamOptions(stickers, 'Coca Cola');
+    const allOptions = buildTeamOptions(stickers, 'Todas');
 
     expect(paniniOptions.map((o) => o.value)).toEqual(['all', 'ARG', 'MEX']);
     expect(cocaOptions.map((o) => o.value)).toEqual(['all', 'CC-EU', 'CC-US']);
+    expect(allOptions.map((o) => o.value)).toEqual(['all', 'ARG', 'AUS', 'CC-EU', 'CC-US', 'LEG', 'MEX']);
   });
 
   it('falls back to all when selected team is not valid in section', () => {

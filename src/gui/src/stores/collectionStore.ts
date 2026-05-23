@@ -72,8 +72,19 @@ export const useCollectionStore = create<CollectionStore>()(
             newDuplicates = 1 - currentDuplicates;
           }
 
-          const ownedUpdate = newOwned > 0 ? { ...state.owned, [stickerId]: newOwned } : {};
-          const duplicatesUpdate = newDuplicates > 0 ? { ...state.duplicates, [stickerId]: newDuplicates } : {};
+          const ownedUpdate = { ...state.owned };
+          if (newOwned > 0) {
+            ownedUpdate[stickerId] = newOwned;
+          } else {
+            delete ownedUpdate[stickerId];
+          }
+
+          const duplicatesUpdate = { ...state.duplicates };
+          if (newDuplicates > 0) {
+            duplicatesUpdate[stickerId] = newDuplicates;
+          } else {
+            delete duplicatesUpdate[stickerId];
+          }
 
           return {
             owned: ownedUpdate,

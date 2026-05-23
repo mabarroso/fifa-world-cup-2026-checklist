@@ -62,6 +62,12 @@ The system SHALL allow marking a sticker as repeated (duplicate).
 - **AND** the sticker is NOT owned
 - **THEN** duplicates["MEX1"] SHALL NOT be set (repeated requires ownership)
 
+#### Scenario: Marking one repeated sticker preserves existing repeated stickers
+- **WHEN** duplicates already contains entries for other sticker IDs
+- **AND** markDuplicate("MEX1", 1) is called
+- **THEN** the repeated entries for other sticker IDs SHALL remain unchanged
+- **AND** only the repeated state for "MEX1" MAY be updated
+
 ### Requirement: Unmark repeated sticker
 The system SHALL allow removing a sticker from the repeated list.
 

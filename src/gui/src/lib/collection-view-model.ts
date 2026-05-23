@@ -37,7 +37,7 @@ export function buildTeamOptions(
   const options: TeamOption[] = [{ value: 'all', label: 'Todos' }];
 
   Array.from(teams.values())
-    .sort((a, b) => a.team.localeCompare(b.team))
+    .sort((a, b) => a.id.localeCompare(b.id))
     .forEach((team) => options.push({ value: team.id, label: `${team.id} - ${team.team}` }));
 
   return options;
