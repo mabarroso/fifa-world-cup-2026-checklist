@@ -18,6 +18,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 
+## [1.0.3] - 2026-05-23
+
 ### Changed
 
 - Team filter dropdown options in GUI collection view are now sorted alphabetically by `ID_FIX` (format `<ID_FIX> - <TEAM>`)

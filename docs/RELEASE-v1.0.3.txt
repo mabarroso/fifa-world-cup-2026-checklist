@@ -1,0 +1,11 @@
+Tag: v1.0.3
+Title: v1.0.3 — Stability Fixes for Duplicates and Team Filter
+
+---
+
+Release focused on GUI consistency and collection reliability. Includes:
+
+- Duplicate marking in GUI now preserves previously marked duplicated stickers
+- Team filter dropdown (`<ID_FIX> - <TEAM>`) now sorts alphabetically by `ID_FIX`
+- Regression test coverage for duplicate-state persistence in GUI store
+- OpenSpec and project docs synchronized with the updated behavior
