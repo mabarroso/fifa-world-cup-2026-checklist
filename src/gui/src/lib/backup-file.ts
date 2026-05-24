@@ -8,7 +8,7 @@ export interface BackupFilePayload {
   collection: GuiCollectionState;
 }
 
-export const GUI_APP_VERSION = '1.0.3';
+export const GUI_APP_VERSION = '1.0.4';
 
 function parseSemver(version: string): [number, number, number] {
   const match = version.trim().match(/^(\d+)\.(\d+)\.(\d+)$/);

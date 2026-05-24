@@ -1,6 +1,6 @@
 {
   "name": "panini-stickers",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "CLI tool to track Panini FIFA World Cup 2026 sticker collection",
   "type": "module",
   "bin": {

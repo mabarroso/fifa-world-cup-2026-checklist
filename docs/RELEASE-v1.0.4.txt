@@ -1,0 +1,10 @@
+Tag: v1.0.4
+Title: v1.0.4 — Release Packaging and Binary Fixes
+
+---
+
+Release focused on making the packaged release usable outside the source tree. Includes:
+
+- CLI binary now resolves `stickers.csv` correctly in the bundled ESM output
+- GitHub Linux release bundle includes the executable, `stickers.csv`, and release notes
+- App and backup metadata updated to version `1.0.4`

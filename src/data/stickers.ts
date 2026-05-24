@@ -1,7 +1,8 @@
 import { Sticker } from '../domain/entities/Sticker';
 import { StickerType } from '../domain/value-objects/StickerType';
 import { readFileSync } from 'fs';
-import { resolve } from 'path';
+import { dirname, resolve } from 'path';
+import { fileURLToPath } from 'url';
 
 interface StickerCsvRow {
   id: string;
@@ -55,7 +56,8 @@ function parseCSV(content: string): StickerCsvRow[] {
 }
 
 function loadStickersFromCsv(): Sticker[] {
-  const csvPath = resolve(__dirname, 'stickers.csv');
+  const csvDir = dirname(fileURLToPath(import.meta.url));
+  const csvPath = resolve(csvDir, 'stickers.csv');
   const csvContent = readFileSync(csvPath, 'utf-8');
   const rows = parseCSV(csvContent);
 
