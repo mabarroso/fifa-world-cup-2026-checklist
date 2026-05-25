@@ -19,8 +19,8 @@ This is a **Bun + TypeScript CLI application** for tracking a Panini FIFA World 
 
 | File | Purpose |
 | ---- | ------- |
-| `docs/README.md` | Project documentation (English) |
-| `docs/README-es.md` | Project documentation (Spanish) |
+| `docs/index.md` | Project documentation (English) |
+| `docs/index-es.md` | Project documentation (Spanish) |
 | `docs/STYLE-GUIDE.md` | Code style guide (also read as project spec) |
 | `docs/CHANGELOG.md` | Change history |
 | `docs/MOCKUPS/*.md` | CLI screen mockups |

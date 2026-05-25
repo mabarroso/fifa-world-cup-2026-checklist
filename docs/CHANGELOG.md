@@ -18,6 +18,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 
+## [1.1.0] - 2026-05-25
+
 ### Added
 
 - Android mobile support: APK build via `npx tauri android build`, app data dir for exports, hidden "Abrir Carpeta" button on mobile

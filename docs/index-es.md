@@ -1,6 +1,6 @@
 # Panini FIFA World Cup 2026 - Lista de Cromos
 
-Aplicación CLI para gestionar tu álbum de cromos Panini del Mundial 2026. Registra los cromos que tienes, los que te faltan y los repetidos, y exporta listas de deseos en PDF, CSV y TXT.
+Aplicación CLI y GUI para gestionar tu álbum de cromos Panini del Mundial 2026. Registra los cromos que tienes, los que te faltan y los repetidos, y exporta listas de deseos en PDF, CSV y TXT.
 
 ## Funcionalidades
 
@@ -19,7 +19,21 @@ bun run build
 ./dist/panini-stickers
 ```
 
-## Compilar GUI (Tauri)
+## Plataformas
+
+| Modo | Plataforma | Formato | Cómo ejecutar |
+|------|-----------|---------|---------------|
+| CLI | Linux, macOS, Windows | JS standalone (via Bun) | `./dist/panini-stickers.js` |
+| GUI | Linux (Debian) | `.deb` | Instalar via `dpkg -i` |
+| GUI | Linux (Fedora/RHEL) | `.rpm` | Instalar via `rpm -i` |
+| GUI | Windows | `.exe` (NSIS) | Ejecutar instalador |
+| GUI | macOS | `.dmg` | Montar y arrastrar a Applications |
+| GUI | Android | `.apk` | `adb install` o descargar |
+| GUI | iOS | `.ipa` | Via TestFlight o sideload (solo macOS) |
+| GUI | Web (dev) | Servidor Vite | `bun run gui:web` → `http://localhost:5173` |
+| GUI | Web (estático) | HTML/JS estático | `cd src/gui && bun run build` → `src/gui/dist/` |
+
+## Compilar (Tauri)
 
 Requiere Rust instalado:
 ```bash
@@ -27,16 +41,31 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 source ~/.cargo/env
 ```
 
-**Desktop:**
+**Desktop (Linux, Windows, macOS):**
 ```bash
 cd src/gui
 bun run tauri build
 ```
 
+Salidas por plataforma:
+
+| Plataforma | Formato | Ubicación |
+|-----------|---------|-----------|
+| Linux (Debian) | `.deb` | `src/gui/src-tauri/target/release/bundle/deb/` |
+| Linux (Fedora) | `.rpm` | `src/gui/src-tauri/target/release/bundle/rpm/` |
+| Windows | `.exe` | `src/gui/src-tauri/target/release/bundle/nsis/` |
+| macOS | `.dmg` | `src/gui/src-tauri/target/release/bundle/dmg/` |
+
 **Android:**
 ```bash
 cd src/gui
 bun run tauri android build
+# Salida: src/gui/src-tauri/gen/android/app/build/outputs/apk/universal/release/app-universal-release.apk
+```
+
+Instalar en dispositivo:
+```bash
+adb install src/gui/src-tauri/gen/android/app/build/outputs/apk/universal/release/app-universal-release.apk
 ```
 
 **iOS (requiere macOS/Xcode):**
@@ -46,10 +75,15 @@ npx tauri ios init
 bun run tauri ios build
 ```
 
-**Web (sin instalación):**
+**Web (sin instalación, desarrollo):**
 ```bash
 cd src/gui
 bun run dev       # http://localhost:5173
+```
+
+**Web (compilación estática):**
+```bash
+cd src/gui
 bun run build     # Compilación estática en src/gui/dist/
 ```
 

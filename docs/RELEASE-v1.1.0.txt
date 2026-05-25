@@ -1,0 +1,13 @@
+Tag: v1.1.0
+Title: v1.1.0 - Major Release with Mobile App Support
+
+---
+
+This release introduces the first mobile edition of the project and consolidates the app as a cross-platform experience (CLI + GUI + mobile). Includes:
+
+- First Android release build (APK) for the Panini WC 2026 app
+- iOS project scaffolding prepared (final build requires macOS/Xcode)
+- Responsive UI refinements for mobile navigation and touch interactions
+- Android native sharing flow for exported files
+- Version alignment across CLI, Tauri config, and Rust backend to `1.1.0`
+- Updated release packaging for GitHub distribution (CLI and mobile artifacts)
