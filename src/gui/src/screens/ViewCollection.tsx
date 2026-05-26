@@ -62,15 +62,16 @@ export function ViewCollectionScreen() {
   }, []);
 
   const handleRemoveFromAlbum = (stickerId: string) => {
-    const ownedQty = owned[stickerId] || 0;
-    if (ownedQty > 0) {
-      unmarkOwned(stickerId);
-    }
     const dupQty = duplicates[stickerId] || 0;
-    if (dupQty > 0) {
+    if (dupQty > 1) {
+      const newDuplicates = { ...duplicates, [stickerId]: dupQty - 1 };
+      useCollectionStore.getState().setDuplicates(newDuplicates);
+    } else if (dupQty === 1) {
       const newDuplicates = { ...duplicates };
       delete newDuplicates[stickerId];
       useCollectionStore.getState().setDuplicates(newDuplicates);
+    } else {
+      unmarkOwned(stickerId);
     }
     setSelectedSticker(null);
   };

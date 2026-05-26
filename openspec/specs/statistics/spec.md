@@ -14,6 +14,15 @@ The system SHALL implement the capability behavior described in this specificati
 
 ## Legacy Notes
 
+## ADDED Requirements
+
+### Requirement: Statistics screen excludes reset action
+The statistics screen SHALL NOT include any "reset collection" or "borrar colección" action. The reset action is exclusively available in the export/backup screen.
+
+#### Scenario: Statistics screen has no reset button
+- **WHEN** user views the statistics screen
+- **THEN** there is no button or control to reset/delete the collection
+
 ## statistics
 
 ### Screen Description

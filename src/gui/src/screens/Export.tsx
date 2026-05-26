@@ -247,40 +247,6 @@ export function ExportScreen() {
         Exporta tus cromos faltantes en diferentes formatos
       </p>
 
-      <Panel className="p-6 mb-6">
-        <h2 className="text-lg font-semibold mb-4 text-[var(--color-white)]">
-          Copia de seguridad
-        </h2>
-        <p className="text-sm text-[var(--color-white)] opacity-70 mb-2">
-          Guarda o abre tu colección completa en archivos .fwc26
-        </p>
-        <p className="text-xs text-[var(--color-white)] opacity-50 mb-4">
-          La copia de seguridad siempre incluye toda la colección actual.
-        </p>
-        <div className="flex gap-3 flex-wrap">
-          <Button variant="secondary" onClick={handleSaveBackup} disabled={backupBusy}>
-            <Save size={16} className="mr-2" />
-            Guardar backup
-          </Button>
-          <Button variant="secondary" onClick={handleOpenBackup} disabled={backupBusy}>
-            <Upload size={16} className="mr-2" />
-            Abrir backup
-          </Button>
-          <Button
-            variant="secondary"
-            onClick={() => setShowDeleteConfirmation(true)}
-            disabled={backupBusy}
-            className="bg-[var(--color-red)]/20 text-[var(--color-red)] hover:bg-[var(--color-red)]/30"
-          >
-            <Trash2 size={16} className="mr-2" />
-            Borrar colección
-          </Button>
-        </div>
-        {backupMessage && (
-          <p className="text-sm text-[var(--color-green)] mt-4">{backupMessage}</p>
-        )}
-      </Panel>
-
       <div className="flex gap-6">
         <div className="flex-1">
           <Panel className="p-6 mb-6">
@@ -447,6 +413,40 @@ export function ExportScreen() {
           </Panel>
         </div>
       </div>
+
+      <Panel className="p-6 mb-6">
+        <h2 className="text-lg font-semibold mb-4 text-[var(--color-white)]">
+          Copia de seguridad
+        </h2>
+        <p className="text-sm text-[var(--color-white)] opacity-70 mb-2">
+          Guarda o abre tu colección completa en archivos .fwc26
+        </p>
+        <p className="text-xs text-[var(--color-white)] opacity-50 mb-4">
+          La copia de seguridad siempre incluye toda la colección actual.
+        </p>
+        <div className="flex gap-3 flex-wrap">
+          <Button variant="secondary" onClick={handleSaveBackup} disabled={backupBusy}>
+            <Save size={16} className="mr-2" />
+            Guardar backup
+          </Button>
+          <Button variant="secondary" onClick={handleOpenBackup} disabled={backupBusy}>
+            <Upload size={16} className="mr-2" />
+            Abrir backup
+          </Button>
+          <Button
+            variant="secondary"
+            onClick={() => setShowDeleteConfirmation(true)}
+            disabled={backupBusy}
+            className="bg-[var(--color-red)]/20 text-[var(--color-red)] hover:bg-[var(--color-red)]/30"
+          >
+            <Trash2 size={16} className="mr-2" />
+            Borrar colección
+          </Button>
+        </div>
+        {backupMessage && (
+          <p className="text-sm text-[var(--color-green)] mt-4">{backupMessage}</p>
+        )}
+      </Panel>
 
       {showShareDialog && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60">

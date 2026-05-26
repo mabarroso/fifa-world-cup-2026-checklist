@@ -21,6 +21,7 @@ export function SearchScreen() {
     markOwned,
     markDuplicate,
     unmarkOwned,
+    setDuplicates,
   } = useCollectionStore();
   const [query, setQuery] = useState('');
   const [showAutocomplete, setShowAutocomplete] = useState(false);
@@ -279,11 +280,19 @@ export function SearchScreen() {
                         <button
                           onClick={(e) => {
                             e.stopPropagation();
-                            unmarkOwned(sticker.id);
+                            if (dupQty > 1) {
+                              setDuplicates({ ...duplicates, [sticker.id]: dupQty - 1 });
+                            } else if (dupQty === 1) {
+                              const newDuplicates = { ...duplicates };
+                              delete newDuplicates[sticker.id];
+                              setDuplicates(newDuplicates);
+                            } else {
+                              unmarkOwned(sticker.id);
+                            }
                           }}
-                          disabled={ownedQty === 0}
+                          disabled={ownedQty === 0 && dupQty === 0}
                           className={`text-sm px-3 py-2 min-h-[36px] rounded transition-all ${
-                            ownedQty === 0
+                            ownedQty === 0 && dupQty === 0
                               ? 'bg-[var(--color-surface)] text-[var(--color-white)] opacity-30 cursor-not-allowed'
                               : 'bg-[var(--color-white)]/10 text-[var(--color-white)] hover:bg-[var(--color-white)]/20'
                           }`}
@@ -295,12 +304,7 @@ export function SearchScreen() {
                             e.stopPropagation();
                             markDuplicate(sticker.id);
                           }}
-                          disabled={dupQty > 0}
-                          className={`text-sm px-3 py-2 min-h-[36px] rounded transition-all ${
-                            dupQty > 0
-                              ? 'bg-[var(--color-surface)] text-[var(--color-white)] opacity-30 cursor-not-allowed'
-                              : 'bg-[var(--color-orange)]/20 text-[var(--color-orange)] hover:bg-[var(--color-orange)]/30'
-                          }`}
+                          className="text-sm px-3 py-2 min-h-[36px] rounded transition-all bg-[var(--color-orange)]/20 text-[var(--color-orange)] hover:bg-[var(--color-orange)]/30"
                         >
                           Repetir
                         </button>
@@ -352,9 +356,20 @@ export function SearchScreen() {
                 </Button>
                 <Button
                   variant="secondary"
-                  onClick={() => unmarkOwned(selectedSticker.id)}
+                  onClick={() => {
+                    const dupQty = getDupQty(selectedSticker.id);
+                    if (dupQty > 1) {
+                      setDuplicates({ ...duplicates, [selectedSticker.id]: dupQty - 1 });
+                    } else if (dupQty === 1) {
+                      const newDups = { ...duplicates };
+                      delete newDups[selectedSticker.id];
+                      setDuplicates(newDups);
+                    } else {
+                      unmarkOwned(selectedSticker.id);
+                    }
+                  }}
                   className="w-full"
-                  disabled={getOwnedQty(selectedSticker.id) === 0}
+                  disabled={getOwnedQty(selectedSticker.id) === 0 && getDupQty(selectedSticker.id) === 0}
                 >
                   <Trash2 size={16} className="mr-2" />
                   Quitar del álbum
@@ -363,7 +378,6 @@ export function SearchScreen() {
                   variant="secondary"
                   onClick={() => markDuplicate(selectedSticker.id)}
                   className="w-full"
-                  disabled={getDupQty(selectedSticker.id) > 0}
                 >
                   <Repeat size={16} className="mr-2" />
                   Marcar como repetida

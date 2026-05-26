@@ -50,7 +50,8 @@ describe('collection store duplicate state', () => {
     store.markDuplicate('BRA01');
 
     const state = useCollectionStore.getState();
-    expect(state.duplicates).toEqual({ ARG01: 1 });
+    expect(state.duplicates).toEqual({ ARG01: 1, BRA01: 1 });
     expect(state.owned.BRA01).toBe(1);
+    expect(state.duplicates.BRA01).toBe(1);
   });
 });

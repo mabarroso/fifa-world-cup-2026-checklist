@@ -2,12 +2,11 @@ import { useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { useCollectionStore } from '../stores';
 import { getAllStickers } from '../data/stickers';
-import { ProgressRing, Panel, Header, Button } from '../components';
-import { Trash2 } from 'lucide-react';
+import { ProgressRing, Panel, Header } from '../components';
 import { computeStatisticsModel, STATISTICS_SECTION_ORDER } from '../lib/statistics-model';
 
 export function StatisticsScreen() {
-  const { owned, duplicates, reset } = useCollectionStore();
+  const { owned, duplicates } = useCollectionStore();
   const allStickers = useMemo(() => getAllStickers(), []);
 
   const stats = useMemo(
@@ -15,20 +14,8 @@ export function StatisticsScreen() {
     [allStickers, owned, duplicates],
   );
 
-  const handleReset = () => {
-    if (window.confirm('¿Estás seguro de que quieres borrar toda la colección y comenzar de nuevo? Esta acción no se puede deshacer.')) {
-      reset();
-    }
-  };
-
    return (
      <div>
-       <div className="mb-6">
-         <Button onClick={handleReset} className="w-full">
-           <Trash2 size={18} className="mr-2" />
-           Borrar colección y comenzar de nuevo
-         </Button>
-       </div>
        <Header />
 
       <div className="grid grid-cols-4 gap-4 mb-8">
