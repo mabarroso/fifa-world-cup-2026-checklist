@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import { MoreVertical, Sun, Moon, FileText, Info, Flag } from 'lucide-react';
+import { MoreVertical, Sun, Moon, Monitor, FileText, Info, Flag, Check } from 'lucide-react';
 import { useTheme } from '../stores/ThemeContext';
 import { useDisclaimerStore } from '../stores/disclaimerStore';
 import { useFlagStore } from '../stores/flagStore';
@@ -18,7 +18,7 @@ const titles: Record<string, string> = {
 export function Header() {
   const location = useLocation();
   const title = titles[location.pathname] || 'Colección';
-  const { theme, toggleTheme } = useTheme();
+  const { themeSetting, setThemeSetting } = useTheme();
   const setShowDisclaimer = useDisclaimerStore((s) => s.setShow);
   const { showFlags, toggleFlags } = useFlagStore();
 
@@ -38,8 +38,8 @@ export function Header() {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, [menuOpen]);
 
-  function handleToggleTheme() {
-    toggleTheme();
+  function handleSelectTheme(setting: 'auto' | 'dark' | 'light') {
+    setThemeSetting(setting);
     setMenuOpen(false);
   }
 
@@ -74,13 +74,45 @@ export function Header() {
           </button>
 
           {menuOpen && (
-            <div className="absolute right-0 top-full mt-1 z-50 min-w-[200px] bg-[var(--color-surface)] border border-[var(--color-border)] rounded-xl overflow-hidden shadow-xl">
+            <div className="absolute right-0 top-full mt-1 z-50 min-w-[240px] bg-[var(--color-surface)] border border-[var(--color-border)] rounded-xl overflow-hidden shadow-xl">
+              <div className="px-4 pt-3 pb-1 text-xs font-semibold text-[var(--text-muted)] uppercase tracking-wider">
+                Tema
+              </div>
               <button
-                onClick={handleToggleTheme}
-                className="w-full flex items-center gap-3 px-4 py-3 min-h-[44px] text-left text-sm text-[var(--color-white)] hover:bg-[var(--color-hover)] transition-colors"
+                onClick={() => handleSelectTheme('auto')}
+                className={`w-full flex items-center gap-3 px-4 py-3 min-h-[44px] text-left text-sm transition-colors ${
+                  themeSetting === 'auto'
+                    ? 'text-[var(--color-cyan)]'
+                    : 'text-[var(--color-white)] hover:bg-[var(--color-hover)]'
+                }`}
               >
-                {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
-                <span className="flex-1">Tema: {theme === 'dark' ? 'Claro' : 'Oscuro'}</span>
+                <Monitor size={18} />
+                <span className="flex-1">Auto</span>
+                {themeSetting === 'auto' && <Check size={16} />}
+              </button>
+              <button
+                onClick={() => handleSelectTheme('light')}
+                className={`w-full flex items-center gap-3 px-4 py-3 min-h-[44px] text-left text-sm transition-colors ${
+                  themeSetting === 'light'
+                    ? 'text-[var(--color-cyan)]'
+                    : 'text-[var(--color-white)] hover:bg-[var(--color-hover)]'
+                }`}
+              >
+                <Sun size={18} />
+                <span className="flex-1">Claro</span>
+                {themeSetting === 'light' && <Check size={16} />}
+              </button>
+              <button
+                onClick={() => handleSelectTheme('dark')}
+                className={`w-full flex items-center gap-3 px-4 py-3 min-h-[44px] text-left text-sm transition-colors ${
+                  themeSetting === 'dark'
+                    ? 'text-[var(--color-cyan)]'
+                    : 'text-[var(--color-white)] hover:bg-[var(--color-hover)]'
+                }`}
+              >
+                <Moon size={18} />
+                <span className="flex-1">Oscuro</span>
+                {themeSetting === 'dark' && <Check size={16} />}
               </button>
 
               <div className="h-px bg-[var(--color-border-light)] mx-2" />
@@ -123,7 +155,7 @@ export function Header() {
           onClick={() => setAboutOpen(false)}
         >
           <div
-            className="bg-[var(--color-surface)] border border-[var(--color-border)] rounded-2xl p-6 max-w-sm w-full shadow-xl"
+            className="bg-[var(--color-surface)] border border-[var(--color-border)] rounded-2xl p-6 max-w-sm w-full max-h-[90vh] overflow-y-auto shadow-xl"
             onClick={(e) => e.stopPropagation()}
           >
             <h3 className="text-lg font-bold text-[var(--color-white)] mb-2">

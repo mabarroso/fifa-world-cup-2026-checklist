@@ -16,7 +16,7 @@ export function DisclaimerModal({ show, onClose }: DisclaimerModalProps) {
           exit={{ opacity: 0 }}
         >
           <motion.div
-            className="w-full max-w-md rounded-2xl bg-[var(--bg-card)] p-6 shadow-2xl"
+            className="w-full max-w-md max-h-[90vh] overflow-y-auto rounded-2xl bg-[var(--bg-card)] p-6 shadow-2xl"
             initial={{ scale: 0.9, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.9, opacity: 0 }}

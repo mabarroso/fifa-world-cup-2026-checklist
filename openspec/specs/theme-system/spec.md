@@ -1,7 +1,7 @@
 # theme-system Specification
 
 ## Purpose
-Theme switching system with dark (current) and light modes, persisted preference, and UI toggle.
+Theme switching system with auto (device), dark, and light modes, persisted preference, and UI toggle.
 
 ## Requirements
 ### Requirement: ui-theme-tokens capability behavior
@@ -15,21 +15,34 @@ The system SHALL implement the capability behavior described in this specificati
 ## ADDED Requirements
 
 ### Requirement: Theme switching
-The GUI SHALL support switching between two themes: dark (default) and light.
+The GUI SHALL support switching between three theme settings: auto (match device), dark, and light. The default setting SHALL be auto.
 
-#### Scenario: Theme toggle
+#### Scenario: Theme toggle cycles through modes
 - **WHEN** the user activates the theme toggle
-- **THEN** the GUI SHALL switch from the current theme to the other theme
+- **THEN** the GUI SHALL cycle the theme setting in order: auto → light → dark → auto
 - **AND** all visual elements SHALL update immediately to match the selected theme
 
-#### Scenario: Default theme
+#### Scenario: Default theme setting
 - **WHEN** the application loads for the first time
-- **THEN** the GUI SHALL use the dark theme as the default theme
+- **THEN** the GUI SHALL use auto as the default theme setting
 
 #### Scenario: Persisted preference
-- **WHEN** the user selects a theme
+- **WHEN** the user selects a theme setting
 - **THEN** the preference SHALL be persisted in localStorage
-- **AND** on subsequent loads, the GUI SHALL apply the persisted theme preference
+- **AND** on subsequent loads, the GUI SHALL apply the persisted theme setting preference
+
+#### Scenario: Auto theme matches device
+- **WHEN** the theme setting is auto
+- **THEN** the actual applied theme SHALL match the device's preferred color scheme via `prefers-color-scheme`
+- **AND** when the device preference changes, the actual theme SHALL update accordingly without user interaction
+
+#### Scenario: Light theme setting
+- **WHEN** the theme setting is light
+- **THEN** the actual applied theme SHALL be light regardless of device preference
+
+#### Scenario: Dark theme setting
+- **WHEN** the theme setting is dark
+- **THEN** the actual applied theme SHALL be dark regardless of device preference
 
 ### Requirement: All FIFA colors always visible
 The GUI SHALL ensure all 6 Panini/FIFA colors (blue, cyan, green, yellow, orange, red) are visible on every screen in both themes.
@@ -73,7 +86,7 @@ The GUI SHALL provide a kebab menu (⋮) in the top-right of the Header with app
 #### Scenario: Menu items order
 - **WHEN** the dropdown menu is open
 - **THEN** the menu SHALL show these items in order:
-  1. Tema (theme toggle — Claro/Oscuro)
+  1. Tema (theme toggle — Auto/Claro/Oscuro)
   2. Aviso legal (re-open DisclaimerModal)
   3. Acerca de (app information modal)
 
@@ -83,13 +96,13 @@ The GUI SHALL provide a kebab menu (⋮) in the top-right of the Header with app
 - **THEN** the menu SHALL close
 
 ### Requirement: Theme toggle in menu
-The theme toggle SHALL be accessible from the 3-dot menu.
+The theme toggle SHALL be accessible from the 3-dot menu and SHALL display the current setting.
 
 #### Scenario: Toggle via menu
 - **WHEN** the user clicks "Tema" in the 3-dot menu
-- **THEN** the theme SHALL switch between Claro (light) and Oscuro (dark)
-- **AND** the label SHALL show the current option (e.g. "Tema: Oscuro" when in light mode)
-- **AND** a Sun/Moon icon SHALL reflect the current theme
+- **THEN** the theme setting SHALL cycle to the next option (auto → light → dark → auto)
+- **AND** the label SHALL show the current setting (e.g. "Tema: Auto", "Tema: Claro", "Tema: Oscuro")
+- **AND** a Sun/Moon icon SHALL reflect the actual applied theme
 
 ### Requirement: About modal
 The GUI SHALL provide an "Acerca de" modal with app information.
