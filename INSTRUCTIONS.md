@@ -160,3 +160,6 @@ For every requested release, use this default workflow:
 9. Publish GitHub release and upload all artifacts.
 10. Validate uploaded assets and checksums.
 11. If a new artifact is added later (for example Debian `.deb`), upload it to the existing release and refresh `SHA256SUMS.txt`.
+12. Archive the OpenSpec change and enforce archive path format `openspec/changes/archive/YYYY/MM/YYYY-MM-DD-HHMM-<change-name>`.
+
+Detailed operational guide (commands, browser fallback, and `v1.2.0` example): `docs/release-workflow.md`.
